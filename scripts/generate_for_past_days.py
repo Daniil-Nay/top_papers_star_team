@@ -253,19 +253,20 @@ def generate_for_day(day_str):
                 paper["data"] = api.get_json(
                     prompt=prompt,
                     system_prompt=system_prompt,
-                    api="claude",
-                    model="claude-haiku-4-5",
+                    api="gigachat",
+                    model=api.GIGACHAT_MODEL,
                     temperature=1.0,
                 )
                 # fallback
                 if "error" in paper["data"]:
-                    log("Fallback to OpenAI.")
+                    log("Fallback to Gigachat structured parsing.")
                     paper["data"] = api.get_structured(
                         prompt=prompt,
                         system_prompt=system_prompt,
                         cls=api.ArticleFull,
                         temperature=0,
-                        model="gpt-4o",
+                        model=api.GIGACHAT_MODEL,
+                        api="gigachat",
                     )
 
                 if not "error" in paper["data"]:
@@ -278,7 +279,8 @@ def generate_for_day(day_str):
                         system_prompt=system_prompt_en,
                         cls=api.Article,
                         temperature=0,
-                        model="gpt-4o-mini",
+                        model=api.GIGACHAT_MODEL,
+                        api="gigachat",
                     )
                     # add Chinese desc
                     paper["data_zh"] = api.get_structured(
@@ -286,7 +288,8 @@ def generate_for_day(day_str):
                         system_prompt=system_prompt_zh,
                         cls=api.Article,
                         temperature=0,
-                        model="gpt-4o-mini",
+                        model=api.GIGACHAT_MODEL,
+                        api="gigachat",
                     )
 
                     # rearrange localized data

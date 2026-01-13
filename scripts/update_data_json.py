@@ -42,7 +42,9 @@ for i,data in enumerate(prev_data):
         # print(len(acc))
         # print(acc)
 
-        affiliations = extra.get_affiliations(acc[:6500], api='mistral', model='mistral-large-latest')
+        affiliations = extra.get_affiliations(
+            acc[:6500], api="gigachat", model=api.GIGACHAT_MODEL
+        )
         print(affiliations)
 
         if affiliations:

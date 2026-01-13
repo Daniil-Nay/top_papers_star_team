@@ -2,13 +2,12 @@ import io
 import json
 import os
 import re
+import uuid
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
-import anthropic
 import fal_client
 import numpy as np
-import openai
-from openai import OpenAI
 import requests
 from PIL import Image
 from pydantic import BaseModel
@@ -16,26 +15,26 @@ from pydantic import BaseModel
 import constants as con
 from helper import log
 
-CLAUDE_KEY = os.getenv("CLAUDE_KEY")
-claude_client = anthropic.Anthropic(
-    api_key=CLAUDE_KEY,
-)
-MISTRAL_KEY = os.getenv("MISTRAL_KEY")
-openai.api_key = os.getenv("OPENAI_KEY")
+GIGACHAT_BASIC_AUTH = os.getenv("GIGACHAT_BASIC_AUTH")
+GIGACHAT_SCOPE = os.getenv("GIGACHAT_SCOPE")
+GIGACHAT_TOKEN_URL = os.getenv("GIGACHAT_TOKEN_URL")
+GIGACHAT_API_BASE = os.getenv( "GIGACHAT_API_BASE")
+GIGACHAT_MODEL = os.getenv("GIGACHAT_MODEL")
+GIGACHAT_EMBEDDING_MODEL = os.getenv("GIGACHAT_EMBEDDING_MODEL")
+GIGACHAT_VERIFY = os.getenv("GIGACHAT_VERIFY", "false").lower() == "true"
 
-XAI_API_KEY = os.getenv("XAIAPI_KEY")
-# client_xai = OpenAI(
-#     api_key=XAI_API_KEY,
-#     base_url="https://api.x.ai/v1",
-# )
+_gigachat_token = None
+_gigachat_token_expiry = None
 
 
 class Article(BaseModel):
     desc: str
     title: str
 
+
 class List(BaseModel):
     items: list[str]
+
 
 class ArticleFull(BaseModel):
     desc: str
@@ -43,8 +42,101 @@ class ArticleFull(BaseModel):
     title: str
 
 
+def get_gigachat_token():
+    """fetch and cache gigachat oauth token"""
+    global _gigachat_token, _gigachat_token_expiry
+
+    now = datetime.now(timezone.utc)
+    if (
+        _gigachat_token
+        and _gigachat_token_expiry
+        and now < _gigachat_token_expiry - timedelta(seconds=30)
+    ):
+        return _gigachat_token
+
+    headers = {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Accept": "application/json",
+        "RqUID": str(uuid.uuid4()),
+        "Authorization": f"Basic {GIGACHAT_BASIC_AUTH}",
+    }
+    payload = {"scope": GIGACHAT_SCOPE}
+
+    response = requests.post(
+        GIGACHAT_TOKEN_URL,
+        headers=headers,
+        data=payload,
+        timeout=30,
+        verify=GIGACHAT_VERIFY,
+    )
+    response.raise_for_status()
+    data = response.json()
+
+    _gigachat_token = data.get("access_token")
+    expires_at = data.get("expires_at") or data.get("expires_in")
+    try:
+        if isinstance(expires_at, (int, float)):
+            seconds = expires_at / 1000.0 if expires_at > 10 * 365 * 24 * 3600 else expires_at
+            _gigachat_token_expiry = now + timedelta(seconds=int(seconds))
+        elif isinstance(expires_at, str):
+            _gigachat_token_expiry = (
+                datetime.fromisoformat(expires_at.replace("Z", "+00:00"))
+                if "T" in expires_at
+                else now + timedelta(minutes=30)
+            )
+        else:
+            _gigachat_token_expiry = now + timedelta(minutes=30)
+    except Exception:
+        _gigachat_token_expiry = now + timedelta(minutes=30)
+
+    return _gigachat_token
+
+
+def gigachat_chat_completion(messages, model=GIGACHAT_MODEL, temperature=0.5, max_tokens=1024):
+    token = get_gigachat_token()
+    url = f"{GIGACHAT_API_BASE}/chat/completions"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+    }
+    payload = {
+        "model": model or GIGACHAT_MODEL,
+        "messages": messages,
+        "temperature": temperature,
+        "max_tokens": max_tokens,
+    }
+
+    response = requests.post(
+        url, headers=headers, json=payload, timeout=60, verify=GIGACHAT_VERIFY
+    )
+    response.raise_for_status()
+    data = response.json()
+    return data["choices"][0]["message"]["content"]
+
+
+def gigachat_embedding(text, model=GIGACHAT_EMBEDDING_MODEL):
+    token = get_gigachat_token()
+    url = f"{GIGACHAT_API_BASE}/embeddings"
+    headers = {
+        "Authorization": f"Bearer {token}",
+        "Content-Type": "application/json",
+    }
+    payload = {"model": model or GIGACHAT_EMBEDDING_MODEL, "input": [text]}
+
+    response = requests.post(
+        url, headers=headers, json=payload, timeout=60, verify=GIGACHAT_VERIFY
+    )
+    response.raise_for_status()
+    data = response.json()
+    return data["data"][0]["embedding"]
+
+
 def get_json(
-    prompt, api, model, temperature, system_prompt="You are a helpful assistant."
+    prompt,
+    api="gigachat",
+    model=GIGACHAT_MODEL,
+    temperature=0.0001,
+    system_prompt="You are a helpful assistant.",
 ):
     text = get_text(
         prompt=prompt,
@@ -67,91 +159,58 @@ def get_json(
 
 
 def get_structured(
-    prompt, cls, model, temperature, system_prompt="You are a helpful assistant."
+    prompt,
+    cls,
+    model=GIGACHAT_MODEL,
+    temperature=0.0001,
+    api="gigachat",
+    system_prompt="You are a helpful assistant.",
 ):
     doc = {"error": "Parsing error"}
-    resp = ""
+    schema = json.dumps(cls.model_json_schema(), ensure_ascii=False)
+    structured_prompt = (
+        f"{prompt}\n\nReturn JSON that matches this schema: {schema}. "
+        "Respond with JSON only."
+    )
+
+    raw = get_text(
+        prompt=structured_prompt,
+        api=api,
+        model=model,
+        temperature=temperature,
+        system_prompt=system_prompt,
+    )
     try:
-        completion = openai.beta.chat.completions.parse(
-            model=model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            response_format=cls,
-            max_tokens=1024,
-            temperature=temperature,
-        )
-        resp = completion.choices[0].message
-        if resp.parsed:
-            log(f"Response: {resp}")
-            doc = resp.parsed.dict()
-        elif resp.refusal:
-            log(f"Error. Refused. Failed to parse JSON. Response: {resp}")
+        doc = json.loads(raw)
+        if isinstance(doc, dict):
+            allowed_keys = set(cls.model_fields.keys())
+            filtered = {k: v for k, v in doc.items() if k in allowed_keys}
+            if filtered:
+                doc = filtered
     except Exception as e:
-        log(f"Error. Failed to parse JSON. Details: {e}. Response: {resp}")
-        doc["raw_data"] = resp
+        log(f"Error. Failed to parse JSON. Details: {e}. Response: {raw}")
+        doc = {"error": "Parsing error", "raw_data": raw, "details": str(e)}
 
     return doc
 
 
 def get_text(
-    prompt, api, model, temperature=0.5, system_prompt="You are a helpful assistant."
+    prompt,
+    api="gigachat",
+    model=GIGACHAT_MODEL,
+    temperature=0.5,
+    system_prompt="You are a helpful assistant.",
 ):
-    if api == "claude":
-        log(f"Claude request. Model: {model}. Prompt: {prompt}")
-        message = claude_client.messages.create(
-            model=model,
-            max_tokens=512,
-            system=system_prompt,
-            messages=[
-                {"role": "user", "content": prompt},
-            ],
-            temperature=temperature,
-        )
-        text = message.content[0].text.strip('"')
-    elif api == "mistral":
-        log(f"Mistral request. Model: {model}. Prompt: {prompt}")
-        base_url = "https://api.mistral.ai/v1/chat/completions"
-        headers = {
-            "Authorization": f"Bearer {MISTRAL_KEY}",
-            "Content-Type": "application/json",
-        }
-        payload = {
-            "model": model,
-            "temperature": temperature,
-            "top_p": 1 if temperature == 0 else 0.95,
-            "max_tokens": 2048,
-            "messages": [{"role": "user", "content": prompt}],
-        }
-        response = requests.post(base_url, headers=headers, json=payload)
-        log(f"Mistral response. {json.dumps(response.json())}")
-        text = response.json()["choices"][0]["message"]["content"]
-    elif api == "openai":
-        log(f"OpenAI request. Model: {model}. Prompt: {prompt}")
-        completion = openai.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=temperature,
-        )
-        text = completion.choices[0].message.content
-    elif api == "xai":
-        log(f"XAI request. Model: {model}. Prompt: {prompt}")
-        completion = client_xai.chat.completions.create(
-            model=model,
-            messages=[
-                {"role": "system", "content": system_prompt},
-                {"role": "user", "content": prompt},
-            ],
-            temperature=temperature,
-        )
-        text = completion.choices[0].message.content
-    else:
-        log(f"Error. Unknown API: {api}.")
-        text = ""
+    if api != "gigachat":
+        log(f"Warning. Unknown API '{api}', falling back to Gigachat.")
+    log(f"Gigachat request. Model: {model}. Prompt: {prompt}")
+    messages = [
+        {"role": "system", "content": system_prompt},
+        {"role": "user", "content": prompt},
+    ]
+    text = gigachat_chat_completion(
+        messages, model=model, temperature=temperature, max_tokens=2048 #1024
+    )
 
     log(f"Response: {text}")
     if any([x in text for x in con.RENAME_TERMS.keys()]):
@@ -164,10 +223,7 @@ def get_text(
 
 def get_embedding(text, size=256):
     try:
-        response = openai.embeddings.create(
-            input=text, model="text-embedding-3-small", encoding_format="float"
-        )
-        res = response.data[0].embedding[:256]
+        res = gigachat_embedding(text)[:size]
         res = normalize_l2(res)
 
         return res.tolist()
@@ -232,12 +288,14 @@ def generate_image_for_paper(paper, img_name):
     title = paper["title"]
     abstract = paper["abstract"]
     prompt = f"Write a text with image prompt in style of surrealism and modern art based on the following paper. Use key themes and elements from it. Add instruction to write a text that reads as brief paper title as a label on some object on an image. Style: linear art on white background. Return only prompt and nothing else. Title: '{title}' Text: '{abstract}'"
-    img_prompt = get_text(prompt, api="openai", model="gpt-4o-mini", temperature=0.8)
+    img_prompt = get_text(
+        prompt, api="gigachat", model=GIGACHAT_MODEL, temperature=0.8
+    )
     img_dir = os.path.join(con.IMG_DIR, paper["pub_date"].replace("-", ""))
     generate_and_save_image(name=img_name, img_dir=img_dir, prompt=img_prompt)
 
 
-def get_categories(text, api="claude", model="claude-haiku-4-5"):
+def get_categories(text, api="gigachat", model=GIGACHAT_MODEL):
     prompt_cls_1 = f"""Analyze the following research paper text and classify it into one or more relevant topics from the list below. Consider only information from the provided text. Don't add a tag if the topic is not directly related to the article.
 
 Topics:
@@ -485,8 +543,12 @@ Paper text to classify:\n\n"{text}"
     #         res.append(CAT_MAPPING[c])
 
     # Make sure we always operate on lists, even if get_json returned a dict
+    if isinstance(categories_1, str):
+        categories_1 = [categories_1]
     if isinstance(categories_1, dict):
         categories_1 = categories_1.get("categories") or categories_1.get("topics") or []
+    if isinstance(categories_2, str):
+        categories_2 = [categories_2]
     if isinstance(categories_2, dict):
         categories_2 = categories_2.get("categories") or categories_2.get("topics") or []
     categories = list(set((categories_1 or []) + (categories_2 or [])))
@@ -494,7 +556,7 @@ Paper text to classify:\n\n"{text}"
     return categories
 
 
-def get_categories_additional(text, api="claude", model="claude-haiku-4-5"):
+def get_categories_additional(text, api="gigachat", model=GIGACHAT_MODEL):
     prompt_cls = f"""You are an expert classifier of machine learning research papers. Analyze the following research paper text and classify it into one or more relevant categories from the list below.
 
 Categories:
@@ -512,6 +574,8 @@ Paper text to classify:\n\n"{text}"
         prompt_cls, api=api, model=model, temperature=0.0
     )
     # Normalize possible dict outputs into a flat list
+    if isinstance(categories, str):
+        categories = [categories]
     if isinstance(categories, dict):
         for key in ("categories", "topics", "tags", "data", "result"):
             if key in categories and isinstance(categories[key], list):

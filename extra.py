@@ -202,7 +202,9 @@ class ArxivParser:
                 if start:
                     acc += section['content'] + " "
 
-            affiliations = get_affiliations(acc[:2000], api="claude", model="claude-haiku-4-5")
+            affiliations = get_affiliations(
+                acc[:2000], api="gigachat", model=api_helper.GIGACHAT_MODEL
+            )
 
             #fallback
             if "error" in affiliations:
@@ -225,7 +227,9 @@ class ArxivParser:
                     rest_len -= len(acc)
                 else:
                     break
-            affiliations = get_affiliations(acc[:6500], api='mistral', model='mistral-large-latest')
+            affiliations = get_affiliations(
+                acc[:6500], api="gigachat", model=api_helper.GIGACHAT_MODEL
+            )
             if affiliations and not "error" in affiliations:
                 parsed_data['affiliations'] = affiliations
 
@@ -383,7 +387,7 @@ def get_pdf_image(pdf_path, output_path, zoom=2, crop_percent=30, threshold=250)
         log(f"Error generating title image for PDF (pdf_path): {str(e)}")
         return None
     
-def get_affiliations(text, api='mistral', model='open-mistral-nemo'):
+def get_affiliations(text, api="gigachat", model=api_helper.GIGACHAT_MODEL):
     log("Extracting affiliations from text.")
     prompt = f"I give you a contaminated text with start of ML paper. Extract all authors affiliations as a single institute, firm, company, etc. Return items as a Python plain list only with affiliations. Do not provide commentaries. If there are no affiliations return empty list.\n\nText:\"{text}\""
 

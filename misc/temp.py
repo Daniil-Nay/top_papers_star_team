@@ -210,12 +210,12 @@ Paper text to classify:\n\n""{abs}"""
             paper["data"] = api.get_json(
                 prompt,
                 system_prompt=system_prompt,
-                api="claude",
-                model="claude-sonnet-4-5-20250929",
+                api="gigachat",
+                model=api.GIGACHAT_MODEL,
                 temperature=1.0,
             )
             paper["data"]["categories"] = api.get_json(
-                prompt_cls, api="openai", model="gpt-4o-mini", temperature=0.0
+                prompt_cls, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.0
             )
         except Exception as e:
             paper["data"] = {"error": str(e)}
@@ -261,7 +261,7 @@ try:
         first_abstract = feed["papers"][0]["abstract"]
         zh_prompt = f"Write simple and brief explanation (4-5 sentences) of an article in Chinese. Use short sentences. Text:\n\n{first_abstract}"
         zh_text = api.get_text(
-            zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.5
+            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.5
         )
         feed["zh"] = {"text": zh_text}
         feed["zh"]["title"] = feed["papers"][0]["title"]
@@ -270,19 +270,19 @@ try:
             f"Write pinyin transcription for text. Text:\n\n{feed['zh']['text']}"
         )
         zh_text = api.get_text(
-            zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.0
+            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.0
         )
         feed["zh"]["pinyin"] = zh_text
 
         zh_prompt = f"Write vocab of difficult words for this text as an array of objects with fields 'word', 'pinyin', 'trans'. Return as python list without formatting. Return list and nothing else. Text:\n\n{feed['zh']['text']}"
         zh_text = api.get_text(
-            zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.0
+            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.0
         )
         feed["zh"]["vocab"] = zh_text
 
         zh_prompt = f"Translate this text in English. Text:\n\n{feed['zh']['text']}"
         zh_text = api.get_text(
-            zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.5
+            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.5
         )
         feed["zh"]["trans"] = zh_text
         feed["zh"]["update_ts"] = formatted_time_utc

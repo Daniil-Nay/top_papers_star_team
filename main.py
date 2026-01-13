@@ -275,19 +275,20 @@ for paper in tqdm(feed["papers"]):
             paper["data"] = api.get_json(
                 prompt=prompt,
                 system_prompt=system_prompt,
-                api="claude",
-                model="claude-haiku-4-5",
+                api="gigachat",
+                model=api.GIGACHAT_MODEL,
                 temperature=1.0,
             )
             # fallback
             if "error" in paper["data"]:
-                log("Fallback to OpenAI.")
+                log("Fallback to Gigachat structured parsing.")
                 paper["data"] = api.get_structured(
                     prompt=prompt,
                     system_prompt=system_prompt,
                     cls=api.ArticleFull,
                     temperature=0,
-                    model="gpt-4o",
+                    model=api.GIGACHAT_MODEL,
+                    api="gigachat",
                 )
 
             if not "error" in paper["data"]:
@@ -300,7 +301,8 @@ for paper in tqdm(feed["papers"]):
                     system_prompt=system_prompt_en,
                     cls=api.Article,
                     temperature=0,
-                    model="gpt-4o-mini",
+                    model=api.GIGACHAT_MODEL,
+                    api="gigachat",
                 )
                 # add Chinese desc
                 paper["data_zh"] = api.get_structured(
@@ -308,7 +310,8 @@ for paper in tqdm(feed["papers"]):
                     system_prompt=system_prompt_zh,
                     cls=api.Article,
                     temperature=0,
-                    model="gpt-4o-mini",
+                    model=api.GIGACHAT_MODEL,
+                    api="gigachat",
                 )
 
                 # TODO: add fallback
@@ -363,7 +366,7 @@ feed["categories"] = helper.counted_cats(feed["papers"])
 #         first_abstract = feed["papers"][0]["abstract"]
 #         zh_prompt = f"Write simple and brief explanation (4-5 sentences) of an article in Chinese. Use short sentences. Text:\n\n{first_abstract}"
 #         zh_text = api.get_text(
-#             zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.5
+#             zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.5
 #         )
 #         feed["zh"] = {"text": zh_text}
 #         feed["zh"]["title"] = feed["papers"][0]["title"]
@@ -372,19 +375,19 @@ feed["categories"] = helper.counted_cats(feed["papers"])
 #             f"Write pinyin transcription for text. Text:\n\n{feed['zh']['text']}"
 #         )
 #         zh_text = api.get_text(
-#             zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.0
+#             zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.0
 #         )
 #         feed["zh"]["pinyin"] = zh_text
 
 #         zh_prompt = f"Write vocab of difficult words for this text as an array of objects with fields 'word', 'pinyin', 'trans'. Return as python list without formatting. Return list and nothing else. Text:\n\n{feed['zh']['text']}"
 #         zh_text = api.get_text(
-#             zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.0
+#             zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.0
 #         )
 #         feed["zh"]["vocab"] = zh_text
 
 #         zh_prompt = f"Translate this text in English. Text:\n\n{feed['zh']['text']}"
 #         zh_text = api.get_text(
-#             zh_prompt, api="mistral", model="mistral-large-latest", temperature=0.5
+#             zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.5
 #         )
 #         feed["zh"]["trans"] = zh_text
 #         feed["zh"]["update_ts"] = formatted_time_utc
