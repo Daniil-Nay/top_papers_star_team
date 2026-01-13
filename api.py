@@ -11,17 +11,20 @@ import numpy as np
 import requests
 from PIL import Image
 from pydantic import BaseModel
+from misc.config import load_config
 
 import constants as con
 from helper import log
 
-GIGACHAT_BASIC_AUTH = os.getenv("GIGACHAT_BASIC_AUTH")
-GIGACHAT_SCOPE = os.getenv("GIGACHAT_SCOPE")
-GIGACHAT_TOKEN_URL = os.getenv("GIGACHAT_TOKEN_URL")
-GIGACHAT_API_BASE = os.getenv( "GIGACHAT_API_BASE")
-GIGACHAT_MODEL = os.getenv("GIGACHAT_MODEL")
-GIGACHAT_EMBEDDING_MODEL = os.getenv("GIGACHAT_EMBEDDING_MODEL")
-GIGACHAT_VERIFY = os.getenv("GIGACHAT_VERIFY", "false").lower() == "true"
+
+cfg = load_config()
+GIGACHAT_BASIC_AUTH = cfg.basic_auth
+GIGACHAT_SCOPE = cfg.scope
+GIGACHAT_TOKEN_URL = cfg.token_url
+GIGACHAT_API_BASE = cfg.api_base
+GIGACHAT_MODEL = cfg.model
+GIGACHAT_EMBEDDING_MODEL = cfg.embedding_model
+GIGACHAT_VERIFY = cfg.verify
 
 _gigachat_token = None
 _gigachat_token_expiry = None
@@ -47,6 +50,8 @@ def get_gigachat_token():
     global _gigachat_token, _gigachat_token_expiry
 
     now = datetime.now(timezone.utc)
+    if not GIGACHAT_BASIC_AUTH or GIGACHAT_BASIC_AUTH == "MISSING_BASIC_AUTH":
+        raise RuntimeError("GIGACHAT_BASIC_AUTH missing")
     if (
         _gigachat_token
         and _gigachat_token_expiry

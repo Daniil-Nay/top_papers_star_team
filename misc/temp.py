@@ -255,43 +255,8 @@ def renew_zh(dt_str):
     return False
 
 
-try:
-    if "zh" not in _prev_papers or renew_zh(_prev_papers["zh"]["update_ts"]):
-        log("Trying to get texts in Chinese.")
-        first_abstract = feed["papers"][0]["abstract"]
-        zh_prompt = f"Write simple and brief explanation (4-5 sentences) of an article in Chinese. Use short sentences. Text:\n\n{first_abstract}"
-        zh_text = api.get_text(
-            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.5
-        )
-        feed["zh"] = {"text": zh_text}
-        feed["zh"]["title"] = feed["papers"][0]["title"]
-
-        zh_prompt = (
-            f"Write pinyin transcription for text. Text:\n\n{feed['zh']['text']}"
-        )
-        zh_text = api.get_text(
-            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.0
-        )
-        feed["zh"]["pinyin"] = zh_text
-
-        zh_prompt = f"Write vocab of difficult words for this text as an array of objects with fields 'word', 'pinyin', 'trans'. Return as python list without formatting. Return list and nothing else. Text:\n\n{feed['zh']['text']}"
-        zh_text = api.get_text(
-            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.0
-        )
-        feed["zh"]["vocab"] = zh_text
-
-        zh_prompt = f"Translate this text in English. Text:\n\n{feed['zh']['text']}"
-        zh_text = api.get_text(
-            zh_prompt, api="gigachat", model=api.GIGACHAT_MODEL, temperature=0.5
-        )
-        feed["zh"]["trans"] = zh_text
-        feed["zh"]["update_ts"] = formatted_time_utc
-    else:
-        log("Loading Chinese text from previous data.")
-        feed["zh"] = _prev_papers["zh"]
-
-except Exception as e:
-    log(f"Failed to get Chinese text: {e}")
+log("Skip Chinese generation.")
+feed["zh"] = {"text": "", "title": "", "pinyin": "", "vocab": [], "trans": "", "update_ts": formatted_time_utc}
 
 log("Renaming data file.")
 helper.try_rename_file(
@@ -1327,21 +1292,23 @@ html_index = make_html(feed)
 # log("Renaming previous page.")
 # helper.try_rename_file(con.PAGE_FILE, con.DATA_DIR, helper.add_date_to_name(name=".html", date=feed_date))
 
-log("[Experimental] Generating Chinese page for reading.")
-html_zh = make_html_zh(feed)
-log("Renaming previous Chinese page.")
-helper.try_rename_file(
-    "zh.html", con.DATA_DIR, helper.add_date_to_name("_zh_reading_task.html")
-)
+if feed.get("zh") and feed["zh"].get("text"):
+    log("[Experimental] Generating Chinese page for reading.")
+    html_zh = make_html_zh(feed)
+    log("Renaming previous Chinese page.")
+    helper.try_rename_file(
+        "zh.html", con.DATA_DIR, helper.add_date_to_name("_zh_reading_task.html")
+    )
 
-# debug
+    log("Writing Chinese reading task.")
+    with open("zh.html", "w", encoding="utf-8") as f:
+        f.write(html_zh)
+else:
+    log("Skip Chinese reading page generation (no zh content).")
+
 log("Writing result.")
 with open("temp.html", "w", encoding="utf-8") as f:
     f.write(html_index)
-
-log("Writing Chinese reading task.")
-with open("zh.html", "w", encoding="utf-8") as f:
-    f.write(html_zh)
 
 log("Renaming log file.")
 helper.try_rename_file(

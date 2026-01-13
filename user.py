@@ -249,9 +249,6 @@ for paper in tqdm(feed["papers"]):
         system_prompt_en = "You are explaining concepts in simple words."
         prompt_en = f"Read an abstract of the ML paper and return a JSON with fields: 'desc': explanation of the paper (4 sentences), use correct machine learning terms. 'title': a slogan of a main idea of the article. Return only JSON and nothing else.\n\n{abs}"
 
-        system_prompt_zh = "You are explaining concepts in simple words in Chinese."
-        prompt_zh = f"Read an abstract of the ML paper and return a JSON with fields: 'desc': explanation of the paper in Chinese (4 sentences), use correct machine learning terms. 'title': a slogan of a main idea of the article in Chinese. Return only JSON and nothing else.\n\n{abs}"
-
         try:
             paper["data"] = api.get_json(
                 prompt=prompt,
@@ -280,15 +277,6 @@ for paper in tqdm(feed["papers"]):
                 paper["data_en"] = api.get_structured(
                     prompt=prompt_en,
                     system_prompt=system_prompt_en,
-                    cls=api.Article,
-                    temperature=0,
-                    model=api.GIGACHAT_MODEL,
-                    api="gigachat",
-                )
-                # add Chinese desc
-                paper["data_zh"] = api.get_structured(
-                    prompt=prompt_zh,
-                    system_prompt=system_prompt_zh,
                     cls=api.Article,
                     temperature=0,
                     model=api.GIGACHAT_MODEL,
