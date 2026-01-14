@@ -309,7 +309,6 @@ DATASET: Papers that introduce new datasets or make significant modifications to
 DATA: Papers focusing on data processing, cleaning, collection, or curation methodologies
 BENCHMARK: Papers proposing or analyzing model evaluation frameworks and benchmarks
 AGENTS: Papers exploring autonomous agents, web agents, or agent-based architectures
-CV: Papers developing computer vision methods or visual processing systems
 RL: Papers investigating reinforcement learning theory or applications
 RLHF: Papers specifically about human feedback in RL (PPO, DPO, etc.)
 RAG: Papers advancing retrieval-augmented generation techniques
@@ -317,7 +316,6 @@ PLP: Papers about Programming Language Processing models or programming benchmar
 INFERENCE: Papers optimizing model deployment (quantization, pruning, etc.)
 3D: Papers on 3D content generation, processing, or understanding
 AUDIO: Papers advancing speech/audio processing or generation
-VIDEO: Papers on video analysis, generation, or understanding
 MULTIMODAL: Papers combining multiple input/output modalities
 MATH: Papers focused on mathematical theory and algorithms
 MULTILINGUAL: Papers addressing multiple languages or cross-lingual capabilities, including all non English models
@@ -325,7 +323,23 @@ ARCHITECTURE: Papers proposing novel neural architectures or components
 HEALTHCARE: Papers applying ML to medical/healthcare domains
 TRAINING: Papers improving model training or fine-tuning methods
 ROBOTICS: Papers on robotic systems and embodied AI
-SMALL_MODELS: Papers that describe models considering small, below 1 billion parameters or similar 
+SMALL_MODELS: Papers that describe models considering small, below 1 billion parameters or similar
+MEMORY: Works on internal/external memory for LLMs
+AGENT_MEMORY: Memory and long-term context in agents
+SESSION_MEMORY: Dialogue/session memory across turns
+RETRIEVAL: Retrieval models and retrievers (distinct from full RAG)
+RETRIEVAL_EVAL: Benchmarks/metrics for retrieval robustness
+PROMPTING: Prompt engineering, CoT/ToT, self-consistency
+PROMPT_CACHING: KV/response caching for long sessions
+CONTEXT_WINDOW: Techniques to extend/pack context
+COMPRESSION: Context compression/summarization/chunking for memory
+MEMORIZATION: On-the-fly learning/continual memorization
+CONTINUAL_LEARNING: Continual learning without forgetting
+KNOWLEDGE_GRAPHS: Knowledge storage via graphs
+TOOL_USE: Using external tools as memory/extension
+OPEN_SOURCE: Papers that contribute to open-source projects
+SCIENCE: Papers on scientific applications of ML
+LOW_RESOURCE: Papers mentioning low-resource settings or languages
 
 Return only a Python flat list of topics that match the given text.
 
@@ -357,6 +371,19 @@ LEAKAGE: Papers about data leakage, including issues of unintended data exposure
 OPEN_SOURCE: Papers that contribute to open-source projects by releasing models, datasets, or frameworks to the public
 SCIENCE: Papers on scientific applications of LM including understanding of science articles and research automatization
 LOW_RESOURCE: Papers that mention low-resource languages
+MEMORY: Works on internal/external memory for LLMs
+AGENT_MEMORY: Memory and long-term context in agents
+SESSION_MEMORY: Dialogue/session memory across turns
+RETRIEVAL: Retrieval models and retrievers (distinct from full RAG)
+RETRIEVAL_EVAL: Benchmarks/metrics for retrieval robustness
+PROMPTING: Prompt engineering, CoT/ToT, self-consistency
+PROMPT_CACHING: KV/response caching for long sessions
+CONTEXT_WINDOW: Techniques to extend/pack context
+COMPRESSION: Context compression/summarization/chunking for memory
+MEMORIZATION: On-the-fly learning/continual memorization
+CONTINUAL_LEARNING: Continual learning without forgetting
+KNOWLEDGE_GRAPHS: Knowledge storage via graphs
+TOOL_USE: Using external tools as memory/extension
 
 Return only a Python flat list of topics that match the given text.
 
