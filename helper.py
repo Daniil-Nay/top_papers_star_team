@@ -1738,10 +1738,10 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
         function updateSortingOptions() {{
             const sortingLabels = {{
                 ru: {{
-                    default: "????????",
-                    pub_date: "???? ??????????",
-                    issue_id: "?????????? ?? HF",
-                    github: "??????? GitHub"
+                    default: "рейтингу",
+                    pub_date: "дате публикации",
+                    issue_id: "добавлению на HF",
+                    github: "звёздам GitHub"
                 }},
                 en: {{
                     default: "rating",
@@ -1750,10 +1750,10 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
                     github: "GitHub stars"
                 }},
                 zh: {{
-                    default: "??",
-                    pub_date: "????",
-                    issue_id: "HF ????",
-                    github: "GitHub ??"
+                    default: "评分",
+                    pub_date: "发布日期",
+                    issue_id: "HF 收录日期",
+                    github: "GitHub 星标"
                 }}
             }};
 
