@@ -4,9 +4,9 @@
         "en": "January 19",
         "zh": "1月19日"
     },
-    "time_utc": "2026-01-19 14:39",
+    "time_utc": "2026-01-19 15:00",
     "weekday": 0,
-    "issue_id": 552,
+    "issue_id": 553,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -570,6 +570,18 @@
             "hash": "87ddd4cbadd8d1f3",
             "github_url": "",
             "github_stars": 0,
+            "authors": [
+                "János Kramár",
+                "Joshua Engels",
+                "Zheng Wang",
+                "Bilal Chughtai",
+                "Rohin Shah",
+                "Neel Nanda",
+                "Arthur Conmy"
+            ],
+            "affiliations": [
+                "Google DeepMind"
+            ],
             "pdf_title_img": "assets/pdf/title_img/2601.11516.jpg",
             "data": {
                 "categories": [
