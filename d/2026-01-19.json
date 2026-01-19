@@ -4,9 +4,9 @@
         "en": "January 19",
         "zh": "1月19日"
     },
-    "time_utc": "2026-01-19 15:56",
+    "time_utc": "2026-01-19 16:34",
     "weekday": 0,
-    "issue_id": 555,
+    "issue_id": 556,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -417,7 +417,7 @@
             "title": "FrankenMotion: Part-level Human Motion Generation and Composition",
             "url": "https://huggingface.co/papers/2601.10909",
             "abstract": "A diffusion-based framework generates human motion from text prompts with fine-grained part-level control using a newly constructed dataset with atomic, temporally-aware annotations.  \t\t\t\t\tAI-generated summary \t\t\t\t Human motion generation from text prompts has made remarkable progress in recent years. However, existing methods primarily rely on either sequence-level or action-level descriptions due to the absence of fine-grained, part-level motion annotations. This limits their controllability over individual body parts. In this work, we construct a high-quality motion dataset with atomic, temporally-aware part-level text annotations, leveraging the reasoning capabilities of large language models (LLMs). Unlike prior datasets that either provide synchronized part captions with fixed time segments or rely solely on global sequence labels, our dataset captures asynchronous and semantically distinct part movements at fine temporal resolution. Based on this dataset, we introduce a diffusion-based part-aware motion generation framework, namely FrankenMotion, where each body part is guided by its own temporally-structured textual prompt. This is, to our knowledge, the first work to provide atomic, temporally-aware part-level motion annotations and have a model that allows motion generation with both spatial (body part) and temporal (atomic action) control. Experiments demonstrate that FrankenMotion outperforms all previous baseline models adapted and retrained for our setting, and our model can compose motions unseen during training. Our code and dataset will be publicly available upon publication.",
-            "score": 7,
+            "score": 8,
             "issue_id": 552,
             "pub_date": "2026-01-15",
             "pub_date_card": {
@@ -461,7 +461,7 @@
             "title": "Entropy Sentinel: Continuous LLM Accuracy Monitoring from Decoding Entropy Traces in STEM",
             "url": "https://huggingface.co/papers/2601.09001",
             "abstract": "Output-entropy profiles computed from final-layer next-token probabilities serve as a scalable signal for monitoring LLM performance and prioritizing data acquisition under domain shifts.  \t\t\t\t\tAI-generated summary \t\t\t\t Deploying LLMs raises two coupled challenges: (1) monitoring - estimating where a model underperforms as traffic and domains drift - and (2) improvement - prioritizing data acquisition to close the largest performance gaps. We test whether an inference-time signal can estimate slice-level accuracy under domain shift. For each response, we compute an output-entropy profile from final-layer next-token probabilities (from top-k logprobs) and summarize it with eleven statistics. A lightweight classifier predicts instance correctness, and averaging predicted probabilities yields a domain-level accuracy estimate. We evaluate on ten STEM reasoning benchmarks with exhaustive train/test compositions (k in {1,2,3,4}; all \"10 choose k\" combinations), across nine LLMs from six families (3B-20B). Estimates often track held-out benchmark accuracy, and several models show near-monotonic ordering of domains. Output-entropy profiles are thus an accessible signal for scalable monitoring and for targeting data acquisition.",
-            "score": 6,
+            "score": 7,
             "issue_id": 552,
             "pub_date": "2026-01-13",
             "pub_date_card": {

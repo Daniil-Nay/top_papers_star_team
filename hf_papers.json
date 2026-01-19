@@ -4,9 +4,9 @@
         "en": "January 19",
         "zh": "1月19日"
     },
-    "time_utc": "2026-01-19 16:34",
+    "time_utc": "2026-01-19 17:00",
     "weekday": 0,
-    "issue_id": 556,
+    "issue_id": 557,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -748,6 +748,56 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.07812",
+            "title": "More Images, More Problems? A Controlled Analysis of VLM Failure Modes",
+            "url": "https://huggingface.co/papers/2601.07812",
+            "abstract": "Large Vision Language Models exhibit significant limitations in multi-image understanding and reasoning, which are revealed through a new benchmark and addressed via procedural data generation and attention masking techniques.  \t\t\t\t\tAI-generated summary \t\t\t\t Large Vision Language Models (LVLMs) have demonstrated remarkable capabilities, yet their proficiency in understanding and reasoning over multiple images remains largely unexplored. While existing benchmarks have initiated the evaluation of multi-image models, a comprehensive analysis of their core weaknesses and their causes is still lacking. In this work, we introduce MIMIC (Multi-Image Model Insights and Challenges), a new benchmark designed to rigorously evaluate the multi-image capabilities of LVLMs. Using MIMIC, we conduct a series of diagnostic experiments that reveal pervasive issues: LVLMs often fail to aggregate information across images and struggle to track or attend to multiple concepts simultaneously. To address these failures, we propose two novel complementary remedies. On the data side, we present a procedural data-generation strategy that composes single-image annotations into rich, targeted multi-image training examples. On the optimization side, we analyze layer-wise attention patterns and derive an attention-masking scheme tailored for multi-image inputs. Experiments substantially improved cross-image aggregation, while also enhancing performance on existing multi-image benchmarks, outperforming prior state of the art across tasks. Data and code will be made available at https://github.com/anurag-198/MIMIC.",
+            "score": 2,
+            "issue_id": 552,
+            "pub_date": "2026-01-12",
+            "pub_date_card": {
+                "ru": "12 января",
+                "en": "January 12",
+                "zh": "1月12日"
+            },
+            "hash": "1087868e6e3d0c16",
+            "github_url": "https://github.com/anurag-198/MIMIC",
+            "github_stars": 0,
+            "authors": [
+                "Anurag Das",
+                "Adrian Bulat",
+                "Alberto Baldrati",
+                "Ioannis Maniadis Metaxas",
+                "Bernt Schiele",
+                "Georgios Tzimiropoulos",
+                "Brais Martinez"
+            ],
+            "affiliations": [
+                "MPI for Informatics, Saarland Informatics Campus",
+                "Queen Mary University of London, UK",
+                "Samsung AI, Cambridge",
+                "Technical University of Ias, i, Romania"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.07812.jpg",
+            "data": {
+                "categories": [
+                    "#reasoning",
+                    "#interpretability",
+                    "#data",
+                    "#benchmark"
+                ],
+                "emoji": "📊",
+                "ru": {
+                    "title": "Выявление и преодоление ограничений мультиизобразительных способностей больших моделей зрения и языка",
+                    "desc": "В данной работе исследуются ограничения больших моделей взаимодействия зрения и языка (LVLM) при обработке нескольких изображений и проведении логического рассуждения. Для этого был создан новый бенчмарк под названием MIMIC, который выявляет основные проблемы таких моделей и предлагает два решения: процедурная генерация данных для создания сложных мульти-изображений и маскировка внимания на уровне слоев нейронной сети. Эксперименты показали значительное улучшение в объединении информации из разных изображений и повышении общей производительности моделей."
+                },
+                "en": {
+                    "title": "Improving Multi-Image Understanding and Reasoning with Procedural Data Generation and Attention Masking",
+                    "desc": "This paper highlights the limitations of Large Vision Language Models (LVLMs) in multi-image understanding and reasoning. It introduces a new benchmark called MIMIC to assess these limitations and reveals that LVLMs struggle to aggregate information across images and track multiple concepts simultaneously. The authors propose two solutions: procedural data generation and attention masking techniques to enhance cross-image aggregation and improve overall performance."
+                }
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.11354",
             "title": "AstroReason-Bench: Evaluating Unified Agentic Planning across Heterogeneous Space Planning Problems",
             "url": "https://huggingface.co/papers/2601.11354",
@@ -878,56 +928,6 @@
                 "en": {
                     "title": "Decoupling Physical Reasoning from Visual Synthesis in Video Generation",
                     "desc": "This paper introduces a three-stage pipeline called PhyRPR:Phy Reason-Phy Plan-Phy Refine, which decouples physical reasoning and visual synthesis in video generation. It enhances physical plausibility and motion controllability by separating reasoning, planning, and refinement stages. The PhyReason stage uses a multimodal model for physical state reasoning and an image generator for keyframe synthesis. The PhyPlan stage generates a controllable coarse motion scaffold, and the PhyRefine stage integrates this scaffold into diffusion sampling to refine appearance while maintaining planned dynamics."
-                }
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.07812",
-            "title": "More Images, More Problems? A Controlled Analysis of VLM Failure Modes",
-            "url": "https://huggingface.co/papers/2601.07812",
-            "abstract": "Large Vision Language Models exhibit significant limitations in multi-image understanding and reasoning, which are revealed through a new benchmark and addressed via procedural data generation and attention masking techniques.  \t\t\t\t\tAI-generated summary \t\t\t\t Large Vision Language Models (LVLMs) have demonstrated remarkable capabilities, yet their proficiency in understanding and reasoning over multiple images remains largely unexplored. While existing benchmarks have initiated the evaluation of multi-image models, a comprehensive analysis of their core weaknesses and their causes is still lacking. In this work, we introduce MIMIC (Multi-Image Model Insights and Challenges), a new benchmark designed to rigorously evaluate the multi-image capabilities of LVLMs. Using MIMIC, we conduct a series of diagnostic experiments that reveal pervasive issues: LVLMs often fail to aggregate information across images and struggle to track or attend to multiple concepts simultaneously. To address these failures, we propose two novel complementary remedies. On the data side, we present a procedural data-generation strategy that composes single-image annotations into rich, targeted multi-image training examples. On the optimization side, we analyze layer-wise attention patterns and derive an attention-masking scheme tailored for multi-image inputs. Experiments substantially improved cross-image aggregation, while also enhancing performance on existing multi-image benchmarks, outperforming prior state of the art across tasks. Data and code will be made available at https://github.com/anurag-198/MIMIC.",
-            "score": 1,
-            "issue_id": 552,
-            "pub_date": "2026-01-12",
-            "pub_date_card": {
-                "ru": "12 января",
-                "en": "January 12",
-                "zh": "1月12日"
-            },
-            "hash": "1087868e6e3d0c16",
-            "github_url": "https://github.com/anurag-198/MIMIC",
-            "github_stars": 0,
-            "authors": [
-                "Anurag Das",
-                "Adrian Bulat",
-                "Alberto Baldrati",
-                "Ioannis Maniadis Metaxas",
-                "Bernt Schiele",
-                "Georgios Tzimiropoulos",
-                "Brais Martinez"
-            ],
-            "affiliations": [
-                "MPI for Informatics, Saarland Informatics Campus",
-                "Queen Mary University of London, UK",
-                "Samsung AI, Cambridge",
-                "Technical University of Ias, i, Romania"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.07812.jpg",
-            "data": {
-                "categories": [
-                    "#reasoning",
-                    "#interpretability",
-                    "#data",
-                    "#benchmark"
-                ],
-                "emoji": "📊",
-                "ru": {
-                    "title": "Выявление и преодоление ограничений мультиизобразительных способностей больших моделей зрения и языка",
-                    "desc": "В данной работе исследуются ограничения больших моделей взаимодействия зрения и языка (LVLM) при обработке нескольких изображений и проведении логического рассуждения. Для этого был создан новый бенчмарк под названием MIMIC, который выявляет основные проблемы таких моделей и предлагает два решения: процедурная генерация данных для создания сложных мульти-изображений и маскировка внимания на уровне слоев нейронной сети. Эксперименты показали значительное улучшение в объединении информации из разных изображений и повышении общей производительности моделей."
-                },
-                "en": {
-                    "title": "Improving Multi-Image Understanding and Reasoning with Procedural Data Generation and Attention Masking",
-                    "desc": "This paper highlights the limitations of Large Vision Language Models (LVLMs) in multi-image understanding and reasoning. It introduces a new benchmark called MIMIC to assess these limitations and reveals that LVLMs struggle to aggregate information across images and track multiple concepts simultaneously. The authors propose two solutions: procedural data generation and attention masking techniques to enhance cross-image aggregation and improve overall performance."
                 }
             }
         }
