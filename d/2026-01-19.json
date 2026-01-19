@@ -4,9 +4,9 @@
         "en": "January 19",
         "zh": "1月19日"
     },
-    "time_utc": "2026-01-19 20:36",
+    "time_utc": "2026-01-19 20:53",
     "weekday": 0,
-    "issue_id": 566,
+    "issue_id": 567,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -504,7 +504,7 @@
             "title": "ShapeR: Robust Conditional 3D Shape Generation from Casual Captures",
             "url": "https://huggingface.co/papers/2601.11514",
             "abstract": "ShapeR generates high-fidelity 3D shapes from casual image sequences using visual-inertial SLAM, 3D detection, and vision-language models with rectified flow transformer conditioning.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent advances in 3D shape generation have achieved impressive results, but most existing methods rely on clean, unoccluded, and well-segmented inputs. Such conditions are rarely met in real-world scenarios. We present ShapeR, a novel approach for conditional 3D object shape generation from casually captured sequences. Given an image sequence, we leverage off-the-shelf visual-inertial SLAM, 3D detection algorithms, and vision-language models to extract, for each object, a set of sparse SLAM points, posed multi-view images, and machine-generated captions. A rectified flow transformer trained to effectively condition on these modalities then generates high-fidelity metric 3D shapes. To ensure robustness to the challenges of casually captured data, we employ a range of techniques including on-the-fly compositional augmentations, a curriculum training scheme spanning object- and scene-level datasets, and strategies to handle background clutter. Additionally, we introduce a new evaluation benchmark comprising 178 in-the-wild objects across 7 real-world scenes with geometry annotations. Experiments show that ShapeR significantly outperforms existing approaches in this challenging setting, achieving an improvement of 2.7x in Chamfer distance compared to state of the art.",
-            "score": 5,
+            "score": 6,
             "issue_id": 552,
             "pub_date": "2026-01-16",
             "pub_date_card": {
@@ -701,7 +701,7 @@
             "title": "PhysRVG: Physics-Aware Unified Reinforcement Learning for Video Generative Models",
             "url": "https://huggingface.co/papers/2601.11087",
             "abstract": "A physics-aware reinforcement learning paradigm is introduced for video generation that enforces physical collision rules directly in high-dimensional spaces, ensuring strict application of physics knowledge rather than treating it as conditional constraints.  \t\t\t\t\tAI-generated summary \t\t\t\t Physical principles are fundamental to realistic visual simulation, but remain a significant oversight in transformer-based video generation. This gap highlights a critical limitation in rendering rigid body motion, a core tenet of classical mechanics. While computer graphics and physics-based simulators can easily model such collisions using Newton formulas, modern pretrain-finetune paradigms discard the concept of object rigidity during pixel-level global denoising. Even perfectly correct mathematical constraints are treated as suboptimal solutions (i.e., conditions) during model optimization in post-training, fundamentally limiting the physical realism of generated videos. Motivated by these considerations, we introduce, for the first time, a physics-aware reinforcement learning paradigm for video generation models that enforces physical collision rules directly in high-dimensional spaces, ensuring the physics knowledge is strictly applied rather than treated as conditions. Subsequently, we extend this paradigm to a unified framework, termed Mimicry-Discovery Cycle (MDcycle), which allows substantial fine-tuning while fully preserving the model's ability to leverage physics-grounded feedback. To validate our approach, we construct new benchmark PhysRVGBench and perform extensive qualitative and quantitative experiments to thoroughly assess its effectiveness.",
-            "score": 2,
+            "score": 3,
             "issue_id": 552,
             "pub_date": "2026-01-16",
             "pub_date_card": {
@@ -995,55 +995,11 @@
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.09255",
-            "title": "PhyRPR: Training-Free Physics-Constrained Video Generation",
-            "url": "https://huggingface.co/papers/2601.09255",
-            "abstract": "A three-stage pipeline decouples physical reasoning from visual synthesis in video generation, improving physical plausibility and motion controllability through distinct phases of reasoning, planning, and refinement.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent diffusion-based video generation models can synthesize visually plausible videos, yet they often struggle to satisfy physical constraints. A key reason is that most existing approaches remain single-stage: they entangle high-level physical understanding with low-level visual synthesis, making it hard to generate content that require explicit physical reasoning. To address this limitation, we propose a training-free three-stage pipeline,PhyRPR:Phy\\uline{Reason}--Phy\\uline{Plan}--Phy\\uline{Refine}, which decouples physical understanding from visual synthesis. Specifically, PhyReason uses a large multimodal model for physical state reasoning and an image generator for keyframe synthesis; PhyPlan deterministically synthesizes a controllable coarse motion scaffold; and PhyRefine injects this scaffold into diffusion sampling via a latent fusion strategy to refine appearance while preserving the planned dynamics. This staged design enables explicit physical control during generation. Extensive experiments under physics constraints show that our method consistently improves physical plausibility and motion controllability.",
-            "score": 1,
-            "issue_id": 552,
-            "pub_date": "2026-01-14",
-            "pub_date_card": {
-                "ru": "14 января",
-                "en": "January 14",
-                "zh": "1月14日"
-            },
-            "hash": "4bc3324d676d118d",
-            "github_url": "",
-            "github_stars": 0,
-            "authors": [
-                "Yibo Zhao",
-                "Hengjia Li",
-                "Xiaofei He",
-                "Boxi Wu"
-            ],
-            "affiliations": [
-                "State Key Lab of CAD&CG, Zhejiang University"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.09255.jpg",
-            "data": {
-                "categories": [
-                    "#diffusion",
-                    "#physical_reasoning",
-                    "#multimodal",
-                    "#3d"
-                ],
-                "emoji": "🔄",
-                "ru": {
-                    "title": "Трехэтапный подход PhyRPR для повышения физической правдоподобности и контроля движений в видео",
-                    "desc": "В данной работе предложена трехэтапная архитектура PhyRPR для генерации видео, которая разделяет процессы физического рассуждения и визуального синтеза. На первом этапе PhyReason выполняется физическое рассуждение с использованием многомодальной модели, а на втором этапе PhyPlan синтезируется грубый план движения. Завершающий этап PhyRefine улучшает визуальное представление, сохраняя при этом запланированные физические свойства движений. Такой подход позволяет значительно повысить физическую правдоподобность и управляемость движений в генерируемых видео."
-                },
-                "en": {
-                    "title": "Decoupling Physical Reasoning from Visual Synthesis in Video Generation",
-                    "desc": "This paper introduces a three-stage pipeline called PhyRPR:Phy Reason-Phy Plan-Phy Refine, which decouples physical reasoning and visual synthesis in video generation. It enhances physical plausibility and motion controllability by separating reasoning, planning, and refinement stages. The PhyReason stage uses a multimodal model for physical state reasoning and an image generator for keyframe synthesis. The PhyPlan stage generates a controllable coarse motion scaffold, and the PhyRefine stage integrates this scaffold into diffusion sampling to refine appearance while maintaining planned dynamics."
-                }
-            }
-        },
-        {
             "id": "https://huggingface.co/papers/2601.10781",
             "title": "Future Optical Flow Prediction Improves Robot Control & Video Generation",
             "url": "https://huggingface.co/papers/2601.10781",
             "abstract": "A novel language-conditioned optical flow forecasting model combines Vision-Language Model and Diffusion architecture to predict future motion from noisy web-scale video data, demonstrating versatility in robotic manipulation and video generation tasks.  \t\t\t\t\tAI-generated summary \t\t\t\t Future motion representations, such as optical flow, offer immense value for control and generative tasks. However, forecasting generalizable spatially dense motion representations remains a key challenge, and learning such forecasting from noisy, real-world data remains relatively unexplored. We introduce FOFPred, a novel language-conditioned optical flow forecasting model featuring a unified Vision-Language Model (VLM) and Diffusion architecture. This unique combination enables strong multimodal reasoning with pixel-level generative fidelity for future motion prediction. Our model is trained on web-scale human activity data-a highly scalable but unstructured source. To extract meaningful signals from this noisy video-caption data, we employ crucial data preprocessing techniques and our unified architecture with strong image pretraining. The resulting trained model is then extended to tackle two distinct downstream tasks in control and generation. Evaluations across robotic manipulation and video generation under language-driven settings establish the cross-domain versatility of FOFPred, confirming the value of a unified VLM-Diffusion architecture and scalable learning from diverse web data for future optical flow prediction.",
-            "score": 0,
+            "score": 1,
             "issue_id": 559,
             "pub_date": "2026-01-15",
             "pub_date_card": {
@@ -1087,6 +1043,50 @@
                 "en": {
                     "title": "Unified Vision-Language Model and Diffusion Architecture for Optical Flow Forecasting",
                     "desc": "FOFPred is a novel language-conditioned optical flow forecasting model combining a Vision-Language Model and a Diffusion architecture. It predicts future motion from noisy web-scale video data, showcasing its utility in robotic manipulation and video generation tasks. By leveraging a unified Vision-Language Model and Diffusion architecture, it achieves strong multimodal reasoning and high pixel-level generative fidelity. Trained on large-scale human activity data, it demonstrates versatile applications across control and generation tasks."
+                }
+            }
+        },
+        {
+            "id": "https://huggingface.co/papers/2601.09255",
+            "title": "PhyRPR: Training-Free Physics-Constrained Video Generation",
+            "url": "https://huggingface.co/papers/2601.09255",
+            "abstract": "A three-stage pipeline decouples physical reasoning from visual synthesis in video generation, improving physical plausibility and motion controllability through distinct phases of reasoning, planning, and refinement.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent diffusion-based video generation models can synthesize visually plausible videos, yet they often struggle to satisfy physical constraints. A key reason is that most existing approaches remain single-stage: they entangle high-level physical understanding with low-level visual synthesis, making it hard to generate content that require explicit physical reasoning. To address this limitation, we propose a training-free three-stage pipeline,PhyRPR:Phy\\uline{Reason}--Phy\\uline{Plan}--Phy\\uline{Refine}, which decouples physical understanding from visual synthesis. Specifically, PhyReason uses a large multimodal model for physical state reasoning and an image generator for keyframe synthesis; PhyPlan deterministically synthesizes a controllable coarse motion scaffold; and PhyRefine injects this scaffold into diffusion sampling via a latent fusion strategy to refine appearance while preserving the planned dynamics. This staged design enables explicit physical control during generation. Extensive experiments under physics constraints show that our method consistently improves physical plausibility and motion controllability.",
+            "score": 1,
+            "issue_id": 552,
+            "pub_date": "2026-01-14",
+            "pub_date_card": {
+                "ru": "14 января",
+                "en": "January 14",
+                "zh": "1月14日"
+            },
+            "hash": "4bc3324d676d118d",
+            "github_url": "",
+            "github_stars": 0,
+            "authors": [
+                "Yibo Zhao",
+                "Hengjia Li",
+                "Xiaofei He",
+                "Boxi Wu"
+            ],
+            "affiliations": [
+                "State Key Lab of CAD&CG, Zhejiang University"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.09255.jpg",
+            "data": {
+                "categories": [
+                    "#diffusion",
+                    "#physical_reasoning",
+                    "#multimodal",
+                    "#3d"
+                ],
+                "emoji": "🔄",
+                "ru": {
+                    "title": "Трехэтапный подход PhyRPR для повышения физической правдоподобности и контроля движений в видео",
+                    "desc": "В данной работе предложена трехэтапная архитектура PhyRPR для генерации видео, которая разделяет процессы физического рассуждения и визуального синтеза. На первом этапе PhyReason выполняется физическое рассуждение с использованием многомодальной модели, а на втором этапе PhyPlan синтезируется грубый план движения. Завершающий этап PhyRefine улучшает визуальное представление, сохраняя при этом запланированные физические свойства движений. Такой подход позволяет значительно повысить физическую правдоподобность и управляемость движений в генерируемых видео."
+                },
+                "en": {
+                    "title": "Decoupling Physical Reasoning from Visual Synthesis in Video Generation",
+                    "desc": "This paper introduces a three-stage pipeline called PhyRPR:Phy Reason-Phy Plan-Phy Refine, which decouples physical reasoning and visual synthesis in video generation. It enhances physical plausibility and motion controllability by separating reasoning, planning, and refinement stages. The PhyReason stage uses a multimodal model for physical state reasoning and an image generator for keyframe synthesis. The PhyPlan stage generates a controllable coarse motion scaffold, and the PhyRefine stage integrates this scaffold into diffusion sampling to refine appearance while maintaining planned dynamics."
                 }
             }
         }
@@ -1175,8 +1175,8 @@
         "#language_of_thought": 1,
         "#language_modeling": 1,
         "#output_diversity": 1,
-        "#physical_reasoning": 1,
         "#optical_flow_forecasting": 1,
-        "#vision_language_model": 1
+        "#vision_language_model": 1,
+        "#physical_reasoning": 1
     }
 }
