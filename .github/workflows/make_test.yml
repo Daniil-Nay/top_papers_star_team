@@ -1,50 +1,63 @@
-name: Test workflow
-
+name: test workflow  (-> ci-test)
 on:
   workflow_dispatch:
-  # schedule:
-  #   - cron: "0 * * * *"
 
 permissions:
   contents: write
 
+concurrency:
+  group: ci-test-publisher
+  cancel-in-progress: false
+
 jobs:
-  run-python-script:
+  test-and-publish:
     runs-on: ubuntu-latest
 
+    env:
+      GIGACHAT_BASIC_AUTH: ${{ secrets.GIGACHAT_BASIC_AUTH }}
+      GIGACHAT_SCOPE: ${{ secrets.GIGACHAT_SCOPE }}
+      GIGACHAT_TOKEN_URL: ${{ secrets.GIGACHAT_TOKEN_URL }}
+      GIGACHAT_API_BASE: ${{ secrets.GIGACHAT_API_BASE }}
+      GIGACHAT_MODEL: ${{ secrets.GIGACHAT_MODEL }}
+      GIGACHAT_EMBEDDING_MODEL: ${{ secrets.GIGACHAT_EMBEDDING_MODEL }}
+      GIGACHAT_VERIFY: ${{ secrets.GIGACHAT_VERIFY }}
+
     steps:
-    - name: Checkout repository content
-      uses: actions/checkout@v2
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9'
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
 
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install -r requirements.txt
-    
-    - name: Run Python script
-      run: python misc/test.py
-      env:
-        TEST_SECRET: ${{ secrets.TEST_SECRET }}
-        MISTRAL_KEY: ${{ secrets.MISTRAL_KEY }}
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
 
-    - name: Test commit
-      run: |
-        echo "Log from workflow" >> misc/test2.txt
-        git config --global user.name "GitHub Actions"
-        git config --global user.email "actions@github.com"
-        git add .
-        git commit -m "Automated commit made by GitHub Actions on $(date +"%d %B")"
-        
-    - name: Pull latest changes from remote
-      run: git pull origin main
+      - name: Run smoke test (Gigachat)
+        run: python -m misc.test
 
-    - name: Push changes back to GitHub
-      run: git push
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit changes (if any)
+        run: |
+          git config user.name "GitHub Actions"
+          git config user.email "actions@github.com"
 
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+            exit 0
+          fi
+
+          git commit -m "CI test output: $(date -u +'%Y-%m-%dT%H:%M:%SZ')"
+
+      - name: Push to ci-test branch
+        run: |
+          git checkout -B ci-test
+
+          git push -f origin ci-test
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
