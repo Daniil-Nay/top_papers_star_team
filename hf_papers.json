@@ -4,9 +4,9 @@
         "en": "January 19",
         "zh": "1月19日"
     },
-    "time_utc": "2026-01-19 18:23",
+    "time_utc": "2026-01-19 18:54",
     "weekday": 0,
-    "issue_id": 560,
+    "issue_id": 561,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -500,6 +500,56 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.11514",
+            "title": "ShapeR: Robust Conditional 3D Shape Generation from Casual Captures",
+            "url": "https://huggingface.co/papers/2601.11514",
+            "abstract": "ShapeR generates high-fidelity 3D shapes from casual image sequences using visual-inertial SLAM, 3D detection, and vision-language models with rectified flow transformer conditioning.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent advances in 3D shape generation have achieved impressive results, but most existing methods rely on clean, unoccluded, and well-segmented inputs. Such conditions are rarely met in real-world scenarios. We present ShapeR, a novel approach for conditional 3D object shape generation from casually captured sequences. Given an image sequence, we leverage off-the-shelf visual-inertial SLAM, 3D detection algorithms, and vision-language models to extract, for each object, a set of sparse SLAM points, posed multi-view images, and machine-generated captions. A rectified flow transformer trained to effectively condition on these modalities then generates high-fidelity metric 3D shapes. To ensure robustness to the challenges of casually captured data, we employ a range of techniques including on-the-fly compositional augmentations, a curriculum training scheme spanning object- and scene-level datasets, and strategies to handle background clutter. Additionally, we introduce a new evaluation benchmark comprising 178 in-the-wild objects across 7 real-world scenes with geometry annotations. Experiments show that ShapeR significantly outperforms existing approaches in this challenging setting, achieving an improvement of 2.7x in Chamfer distance compared to state of the art.",
+            "score": 4,
+            "issue_id": 552,
+            "pub_date": "2026-01-16",
+            "pub_date_card": {
+                "ru": "16 января",
+                "en": "January 16",
+                "zh": "1月16日"
+            },
+            "hash": "e76e2e46a2ba726d",
+            "github_url": "https://github.com/facebookresearch/ShapeR",
+            "github_stars": 115,
+            "authors": [
+                "Yawar Siddiqui",
+                "Duncan Frost",
+                "Samir Aroudj",
+                "Armen Avetisyan",
+                "Henry Howard-Jenkins",
+                "Daniel DeTone",
+                "Pierre Moulon",
+                "Qirui Wu",
+                "Zhengqin Li",
+                "Julian Straub",
+                "Richard Newcombe",
+                "Jakob Engel"
+            ],
+            "affiliations": [
+                "Meta Reality Labs Research",
+                "Simon Fraser University"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.11514.jpg",
+            "data": {
+                "categories": [
+                    "#3d"
+                ],
+                "emoji": "📦",
+                "ru": {
+                    "title": "ShapeR: Генерация высокоточных 3D форм на основе неформальных последовательностей изображений",
+                    "desc": "ShapeR — это метод генерации 3D-моделей объектов высокой точности из обычных видеоизображений с использованием визуально-инерциального SLAM, детекции 3D-объектов и моделей зрения и языка с условием трансформера потока, исправленного для дополнительных данных. Метод включает техники усиления данных в реальном времени, поэтапную схему обучения и стратегии борьбы с фоном, что позволяет значительно улучшить результаты по сравнению с существующими подходами."
+                },
+                "en": {
+                    "title": "High-Fidelity 3D Shape Generation from Casual Image Sequences Using Multimodal Conditioning",
+                    "desc": "ShapeR uses visual-inertial SLAM, 3D detection, and vision-language models with a rectified flow transformer to generate high-fidelity 3D shapes from casual image sequences. It employs on-the-fly augmentations, curriculum training, and handling of background clutter to improve performance. The method achieves significant improvements over previous approaches in real-world settings."
+                }
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.10825",
             "title": "Reasoning Models Generate Societies of Thought",
             "url": "https://huggingface.co/papers/2601.10825",
@@ -594,56 +644,6 @@
                 "en": {
                     "title": "Hierarchical Implicit Intent Alignment for Personalized GUI Agents",
                     "desc": "The PersonalAlign framework focuses on aligning GUI agents with user's implicit intents using hierarchical memory organization and long-term record reasoning. It enhances both execution and proactive performance by leveraging persistent user contexts. The AndroidIntent benchmark evaluates agents' abilities to resolve vague instructions and provide proactive suggestions based on long-term user records. The Hierarchical Intent Memory Agent (HIM-Agent) maintains personalized memories and organizes user preferences and routines hierarchically for better personalization. Experimental results demonstrate significant improvements in execution and proactive performance compared to other agents."
-                }
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.11514",
-            "title": "ShapeR: Robust Conditional 3D Shape Generation from Casual Captures",
-            "url": "https://huggingface.co/papers/2601.11514",
-            "abstract": "ShapeR generates high-fidelity 3D shapes from casual image sequences using visual-inertial SLAM, 3D detection, and vision-language models with rectified flow transformer conditioning.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent advances in 3D shape generation have achieved impressive results, but most existing methods rely on clean, unoccluded, and well-segmented inputs. Such conditions are rarely met in real-world scenarios. We present ShapeR, a novel approach for conditional 3D object shape generation from casually captured sequences. Given an image sequence, we leverage off-the-shelf visual-inertial SLAM, 3D detection algorithms, and vision-language models to extract, for each object, a set of sparse SLAM points, posed multi-view images, and machine-generated captions. A rectified flow transformer trained to effectively condition on these modalities then generates high-fidelity metric 3D shapes. To ensure robustness to the challenges of casually captured data, we employ a range of techniques including on-the-fly compositional augmentations, a curriculum training scheme spanning object- and scene-level datasets, and strategies to handle background clutter. Additionally, we introduce a new evaluation benchmark comprising 178 in-the-wild objects across 7 real-world scenes with geometry annotations. Experiments show that ShapeR significantly outperforms existing approaches in this challenging setting, achieving an improvement of 2.7x in Chamfer distance compared to state of the art.",
-            "score": 3,
-            "issue_id": 552,
-            "pub_date": "2026-01-16",
-            "pub_date_card": {
-                "ru": "16 января",
-                "en": "January 16",
-                "zh": "1月16日"
-            },
-            "hash": "e76e2e46a2ba726d",
-            "github_url": "https://github.com/facebookresearch/ShapeR",
-            "github_stars": 115,
-            "authors": [
-                "Yawar Siddiqui",
-                "Duncan Frost",
-                "Samir Aroudj",
-                "Armen Avetisyan",
-                "Henry Howard-Jenkins",
-                "Daniel DeTone",
-                "Pierre Moulon",
-                "Qirui Wu",
-                "Zhengqin Li",
-                "Julian Straub",
-                "Richard Newcombe",
-                "Jakob Engel"
-            ],
-            "affiliations": [
-                "Meta Reality Labs Research",
-                "Simon Fraser University"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.11514.jpg",
-            "data": {
-                "categories": [
-                    "#3d"
-                ],
-                "emoji": "📦",
-                "ru": {
-                    "title": "ShapeR: Генерация высокоточных 3D форм на основе неформальных последовательностей изображений",
-                    "desc": "ShapeR — это метод генерации 3D-моделей объектов высокой точности из обычных видеоизображений с использованием визуально-инерциального SLAM, детекции 3D-объектов и моделей зрения и языка с условием трансформера потока, исправленного для дополнительных данных. Метод включает техники усиления данных в реальном времени, поэтапную схему обучения и стратегии борьбы с фоном, что позволяет значительно улучшить результаты по сравнению с существующими подходами."
-                },
-                "en": {
-                    "title": "High-Fidelity 3D Shape Generation from Casual Image Sequences Using Multimodal Conditioning",
-                    "desc": "ShapeR uses visual-inertial SLAM, 3D detection, and vision-language models with a rectified flow transformer to generate high-fidelity 3D shapes from casual image sequences. It employs on-the-fly augmentations, curriculum training, and handling of background clutter to improve performance. The method achieves significant improvements over previous approaches in real-world settings."
                 }
             }
         },
@@ -960,7 +960,22 @@
             "hash": "89cd9e27c2aea55e",
             "github_url": "",
             "github_stars": 0,
-            "pdf_title_img": "img/title_stub.png",
+            "authors": [
+                "Yosub Shin",
+                "Michael Buriek",
+                "Boris Sobolev",
+                "Pavel Bushuyeu",
+                "Vikas Kumar",
+                "Haoyang Xu",
+                "Samuel Watson",
+                "Igor Molybog"
+            ],
+            "affiliations": [
+                "Cisco, USA",
+                "PwC, USA",
+                "University of Hawaii at Manoa"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.10922.jpg",
             "data": {
                 "categories": [
                     "#reasoning",
