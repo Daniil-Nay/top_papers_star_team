@@ -4,9 +4,9 @@
         "en": "January 19",
         "zh": "1月19日"
     },
-    "time_utc": "2026-01-19 22:00",
+    "time_utc": "2026-01-19 22:33",
     "weekday": 0,
-    "issue_id": 571,
+    "issue_id": 572,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -14,7 +14,7 @@
             "title": "Your Group-Relative Advantage Is Biased",
             "url": "https://huggingface.co/papers/2601.08521",
             "abstract": "Group-based reinforcement learning from verifier rewards suffers from biased advantage estimation that underestimates hard prompts and overestimates easy prompts, which is addressed through a history-aware adaptive difficulty weighting method.  \t\t\t\t\tAI-generated summary \t\t\t\t Reinforcement Learning from Verifier Rewards (RLVR) has emerged as a widely used approach for post-training large language models on reasoning tasks, with group-based methods such as GRPO and its variants gaining broad adoption. These methods rely on group-relative advantage estimation to avoid learned critics, yet its theoretical properties remain poorly understood.   In this work, we uncover a fundamental issue of group-based RL: the group-relative advantage estimator is inherently biased relative to the true (expected) advantage. We provide the first theoretical analysis showing that it systematically underestimates advantages for hard prompts and overestimates them for easy prompts, leading to imbalanced exploration and exploitation. To address this issue, we propose History-Aware Adaptive Difficulty Weighting (HA-DW), an adaptive reweighting scheme that adjusts advantage estimates based on an evolving difficulty anchor and training dynamics. Both theoretical analysis and experiments on five mathematical reasoning benchmarks demonstrate that HA-DW consistently improves performance when integrated into GRPO and its variants. Our results suggest that correcting biased advantage estimation is critical for robust and efficient RLVR training.",
-            "score": 94,
+            "score": 95,
             "issue_id": 552,
             "pub_date": "2026-01-13",
             "pub_date_card": {
@@ -504,7 +504,7 @@
             "title": "ShapeR: Robust Conditional 3D Shape Generation from Casual Captures",
             "url": "https://huggingface.co/papers/2601.11514",
             "abstract": "ShapeR generates high-fidelity 3D shapes from casual image sequences using visual-inertial SLAM, 3D detection, and vision-language models with rectified flow transformer conditioning.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent advances in 3D shape generation have achieved impressive results, but most existing methods rely on clean, unoccluded, and well-segmented inputs. Such conditions are rarely met in real-world scenarios. We present ShapeR, a novel approach for conditional 3D object shape generation from casually captured sequences. Given an image sequence, we leverage off-the-shelf visual-inertial SLAM, 3D detection algorithms, and vision-language models to extract, for each object, a set of sparse SLAM points, posed multi-view images, and machine-generated captions. A rectified flow transformer trained to effectively condition on these modalities then generates high-fidelity metric 3D shapes. To ensure robustness to the challenges of casually captured data, we employ a range of techniques including on-the-fly compositional augmentations, a curriculum training scheme spanning object- and scene-level datasets, and strategies to handle background clutter. Additionally, we introduce a new evaluation benchmark comprising 178 in-the-wild objects across 7 real-world scenes with geometry annotations. Experiments show that ShapeR significantly outperforms existing approaches in this challenging setting, achieving an improvement of 2.7x in Chamfer distance compared to state of the art.",
-            "score": 6,
+            "score": 7,
             "issue_id": 552,
             "pub_date": "2026-01-16",
             "pub_date_card": {
