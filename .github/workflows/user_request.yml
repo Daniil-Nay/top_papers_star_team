@@ -12,12 +12,12 @@ jobs:
 
     steps:
     - name: Checkout repository content
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
-    - name: Set up Python 3.9
-      uses: actions/setup-python@v2
+    - name: Set up Python
+      uses: actions/setup-python@v4
       with:
-        python-version: '3.9'
+        python-version: "3.11"
 
     - name: Install dependencies
       run: |
@@ -27,10 +27,17 @@ jobs:
     - name: Run Python script
       run: python user.py
       env:
-        CLAUDE_KEY: ${{ secrets.CLAUDE_KEY }}
-        MISTRAL_KEY: ${{ secrets.MISTRAL_KEY }}
-        OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
-        FAL_KEY: ${{ secrets.FAL_KEY }}
+        # CLAUDE_KEY: ${{ secrets.CLAUDE_KEY }}
+        # MISTRAL_KEY: ${{ secrets.MISTRAL_KEY }}
+        # OPENAI_KEY: ${{ secrets.OPENAI_KEY }}
+        # FAL_KEY: ${{ secrets.FAL_KEY }}
+        GIGACHAT_BASIC_AUTH: ${{ secrets.GIGACHAT_BASIC_AUTH }}
+        GIGACHAT_SCOPE: ${{ secrets.GIGACHAT_SCOPE }}
+        GIGACHAT_TOKEN_URL: ${{ secrets.GIGACHAT_TOKEN_URL }}
+        GIGACHAT_API_BASE: ${{ secrets.GIGACHAT_API_BASE }}
+        GIGACHAT_MODEL: ${{ secrets.GIGACHAT_MODEL }}
+        GIGACHAT_EMBEDDING_MODEL: ${{ secrets.GIGACHAT_EMBEDDING_MODEL }}
+        GIGACHAT_VERIFY: ${{ secrets.GIGACHAT_VERIFY }}
 
     - name: Test commit
       run: |
@@ -46,4 +53,3 @@ jobs:
       run: git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
