@@ -36,6 +36,9 @@ for article in tqdm(articles):
     url = f"https://huggingface.co{link}"
     prev_data, ok = helper.try_get_prev_paper({"id": url, "url": url}, _prev_papers)
     issue_id = _issue_id + 1
+    github_url = ""
+    github_stars = None
+    page_data = None
     try:
         if ok:
             log(f"Get page data from previous paper. URL: {url}")
@@ -44,6 +47,11 @@ for article in tqdm(articles):
             pub_date = (
                 prev_data["pub_date"] if "pub_date" in prev_data else "1963-01-17"
             )
+            github_url = prev_data.get("github_url") or ""
+            github_stars = prev_data.get("github_stars")
+            if (not github_url) or (github_stars is None):
+                log(f"Refreshing page data for GitHub info. URL: {url}")
+                page_data = helper.extract_page_data(url)
         else:
             log(f"Extract page data from URL. URL: {url}")
             page_data = helper.extract_page_data(url)
@@ -53,6 +61,12 @@ for article in tqdm(articles):
     except Exception as e:
         log(f"Failed to extract page data for {url}: {e}")
         abstract = ""
+        pub_date = "1963-01-17"
+
+    if page_data:
+        github_url = github_url or page_data.get("github_url") or ""
+        if github_stars is None and page_data.get("github_stars") is not None:
+            github_stars = page_data["github_stars"]
 
     published_date = datetime.strptime(pub_date, "%Y-%m-%d")
     papers.append(
@@ -70,12 +84,21 @@ for article in tqdm(articles):
                 "zh": helper.format_date_zh(published_date),
             },
             "hash": helper.get_hash(url),
+            "github_url": github_url,
+            "github_stars": github_stars if github_stars is not None else 0,
         }
     )
 
 if len(papers) == 0:
     log("No papers found. Exiting.")
     exit()
+
+log("Updating GitHub stars.")
+for paper in papers:
+    if paper.get("github_url") and (paper.get("github_stars") is None or paper.get("github_stars") == 0):
+        stars = helper.fetch_github_stars(paper["github_url"])
+        if stars is not None:
+            paper["github_stars"] = stars
 
 log("Obtaining deleted papers (sometimes HF Daily Papers move some articles from today to past days).")
 today_paper_ids = [x["id"] for x in papers]
@@ -506,6 +529,12 @@ for doc in prev_papers:
             #fix affiliations
             if "affiliations" not in paper or not paper["affiliations"]:
                 paper["affiliations"] = []
+
+            #fix github metadata
+            if "github_stars" not in paper or paper["github_stars"] is None:
+                paper["github_stars"] = 0
+            if "github_url" not in paper or not paper["github_url"]:
+                paper["github_url"] = ""
 
 
 from calendar import monthrange

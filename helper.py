@@ -6,6 +6,7 @@ from concurrent.futures import ThreadPoolExecutor, TimeoutError
 from copy import copy
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
+from urllib.parse import urlparse
 
 import requests
 from babel.dates import format_date
@@ -117,6 +118,73 @@ def try_parse_pub_date(soup):
     return None
 
 
+def normalize_github_repo(url):
+    if not url:
+        return None, None, None
+    url = url.strip()
+    if url.startswith("//"):
+        url = f"https:{url}"
+    if url.startswith("github.com"):
+        url = f"https://{url}"
+
+    parsed = urlparse(url)
+    if "github.com" not in parsed.netloc:
+        return None, None, None
+
+    parts = [p for p in parsed.path.split("/") if p]
+    if len(parts) < 2:
+        return None, None, None
+
+    owner, repo = parts[0], parts[1]
+    if repo.endswith(".git"):
+        repo = repo[:-4]
+
+    clean_url = f"https://github.com/{owner}/{repo}"
+    return clean_url, owner, repo
+
+
+def fetch_github_stars(repo_url):
+    clean_url, owner, repo = normalize_github_repo(repo_url)
+    if not clean_url:
+        return None
+
+    api_url = f"https://api.github.com/repos/{owner}/{repo}"
+    headers = {"Accept": "application/vnd.github+json"}
+    token = os.getenv("GITHUB_TOKEN") or os.getenv("GH_TOKEN")
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+
+    try:
+        response = requests.get(api_url, headers=headers, timeout=10)
+        if response.status_code == 200:
+            return response.json().get("stargazers_count")
+        else:
+            log(f"GitHub API response {response.status_code} for {api_url}")
+    except Exception as e:
+        log(f"Failed to fetch GitHub stars for {clean_url}: {e}")
+
+    return None
+
+
+def find_github_repo(soup):
+    github_url = None
+    for link in soup.find_all("a", href=True):
+        href = link["href"]
+        if href and "github.com" in href:
+            github_url = href
+            break
+
+    if not github_url:
+        return None, None
+
+    github_url, *_ = normalize_github_repo(github_url)
+    if not github_url:
+        return None, None
+
+    github_stars = fetch_github_stars(github_url)
+    return github_url, github_stars
+
+
 def extract_page_data(url):
     page = requests.get(url)
     soup = BeautifulSoup(page.content, "html.parser")
@@ -129,11 +197,14 @@ def extract_page_data(url):
     main_divs = main.find_all("div")
     pub_date_str = try_parse_pub_date(main_divs)
     pub_date, pub_date_ru = parse_and_format_date(pub_date_str)
+    github_url, github_stars = find_github_repo(soup)
 
     res = {
         "abstract": abstract.strip(),
         "pub_date": pub_date,
         "pub_date_ru": pub_date_ru,
+        "github_url": github_url,
+        "github_stars": github_stars,
     }
 
     return res
@@ -675,6 +746,29 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
         .links {
             margin-top: 1.5em;
             margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            align-items: center;
+        }
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 8px;
+            border-radius: 12px;
+            background: #f5f5f5;
+            font-size: 0.95em;
+        }
+        .dark-theme .github-link {
+            background: #555;
+        }
+        .github-stars {
+            font-weight: 600;
+            color: var(--text-color);
+        }
+        .dark-theme .github-stars {
+            color: #fff;
         }
         .affiliations {
             margin-bottom: 50px;
@@ -1240,6 +1334,7 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
                 <label class="sort-label">🔀 <span id="sort-label-text">Сортировка по</span></label>
                 <select id="sort-dropdown" class="sort-dropdown">
                     <option value="default">рейтингу</option>
+                    <option value="github">GitHub stars</option>
                     <option value="pub_date">дате публикации</option>
                     <option value="issue_id">добавлению на HF</option>
                 </select>
@@ -1543,6 +1638,12 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
                 let title = item["data"][currentLang]["title"];
 
                 const cats = item["data"]["categories"].slice(0, 5).join(" ");
+                const githubStars = Number(item["github_stars"]);
+                let githubBlock = "";
+                if (item["github_url"]) {{
+                    const starsText = Number.isFinite(githubStars) ? githubStars : 0;
+                    githubBlock = `<span class="github-link"><span class="github-stars">⭐ ${{starsText}}</span><a href="${{item['github_url']}}" target="_blank">GitHub</a></span>`;
+                }}
                 
                 let affiliations = ""
                 if ('affiliations' in item) {{
@@ -1579,6 +1680,7 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
 
                             <div class="links">
                                 <a href="${{item['url']}}" target="_blank">${{paperLabel[currentLang]}}</a>
+                                ${{githubBlock}}
                             </div>
 
                             <div class="affiliations">${{affiliations}}</div>
@@ -1597,6 +1699,8 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
                 sortedArticles.sort((a, b) => b.issue_id - a.issue_id);
             }} else if (sortBy === 'pub_date') {{
                 sortedArticles.sort((a, b) => b.pub_date.localeCompare(a.pub_date));
+            }} else if (sortBy === 'github') {{
+                sortedArticles.sort((a, b) => (Number(b.github_stars) || 0) - (Number(a.github_stars) || 0));
             }} else {{
                 sortedArticles.sort((a, b) => b.score - a.score);
             }}
@@ -1634,19 +1738,22 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
         function updateSortingOptions() {{
             const sortingLabels = {{
                 ru: {{
-                    default: "рейтингу",
-                    pub_date: "дате публикации",
-                    issue_id: "добавлению на HF"
+                    default: "????????",
+                    pub_date: "???? ??????????",
+                    issue_id: "?????????? ?? HF",
+                    github: "??????? GitHub"
                 }},
                 en: {{
                     default: "rating",
                     pub_date: "publication date",
-                    issue_id: "HF addition date"
+                    issue_id: "HF addition date",
+                    github: "GitHub stars"
                 }},
                 zh: {{
-                    default: "评分",
-                    pub_date: "发布日期",
-                    issue_id: "HF上传日期"
+                    default: "??",
+                    pub_date: "????",
+                    issue_id: "HF ????",
+                    github: "GitHub ??"
                 }}
             }};
 
@@ -1655,10 +1762,10 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
 
             for (let i = 0; i < options.length; i++) {{
                 const optionValue = options[i].value;
-                console.log(sortingLabels)
                 options[i].text = sortingLabels[currentLang][optionValue];
             }}
         }}
+
         function updateLocalization() {{
             const titleDate = document.getElementById('title-date');
             const prevDate = document.getElementById('prev-date');
