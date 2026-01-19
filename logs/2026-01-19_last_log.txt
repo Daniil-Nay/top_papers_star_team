@@ -1,209 +1,209 @@
-[19.01.2026 22:51] Read previous papers.
-[19.01.2026 22:51] Generating top page (month).
-[19.01.2026 22:51] Writing top page (month).
 [19.01.2026 23:12] Read previous papers.
-[19.01.2026 23:12] Get feed.
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.08521
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.08521
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11496
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11496
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10355
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.10355
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.08430
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11000
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11000
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11404
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11404
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11037
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10909
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09001
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.09001
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09195
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10781
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11514
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10825
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.10825
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11087
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11087
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09636
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.09636
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11516
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11516
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11044
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.07812
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11354
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11227
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10922
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.10922
-[19.01.2026 23:12] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09255
-[19.01.2026 23:12] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.09255
-[19.01.2026 23:12] Updating GitHub stars.
-[19.01.2026 23:12] Obtaining deleted papers (sometimes HF Daily Papers move some articles from today to past days).
-[19.01.2026 23:12] No deleted papers detected.
-[19.01.2026 23:12] Downloading and parsing papers (pdf, html). Total: 22.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.08521.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.08521.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.08521.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11496.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11496.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11496.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.10355.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.10355.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.10355.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.08430.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.08430.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.08430.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11000.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11000.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11000.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11404.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11404.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11404.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11037.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11037.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11037.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.10909.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.10909.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.10909.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.09001.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.09001.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.09001.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.09195.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.09195.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.09195.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.10781.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.10781.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.10781.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11514.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11514.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11514.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.10825.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.10825.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.10825.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11087.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11087.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11087.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.09636.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.09636.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.09636.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11516.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11516.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11516.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11044.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11044.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11044.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.07812.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.07812.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.07812.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11354.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11354.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11354.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.11227.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.11227.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.11227.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.10922.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.10922.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.10922.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Downloading and parsing paper https://huggingface.co/papers/2601.09255.
-[19.01.2026 23:12] Extra JSON file exists (./assets/json/2601.09255.json), skip PDF parsing.
-[19.01.2026 23:12] Paper image links file exists (./assets/img_data/2601.09255.json), skip HTML parsing.
-[19.01.2026 23:12] Success.
-[19.01.2026 23:12] Enriching papers with extra data.
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 0. Group-based reinforcement learning from verifier rewards suffers from biased advantage estimation that underestimates hard prompts and overestimates easy prompts, which is addressed through a history-aware adaptive difficulty weighting method.  					AI-generated summary 				 Reinforcement Learning f...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 1. The integration of AI agents into economic markets fundamentally alters the landscape of strategic interaction. We investigate the economic implications of expanding the set of available technologies in three canonical game-theoretic settings: bargaining (resource division), negotiation (asymmetric ...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 2. A text-based data synthesis approach generates multi-turn tool-use trajectories for large language models, achieving improved performance and reduced computational costs through a specialized trajectory synthesizer.  					AI-generated summary 				 Enabling Large Language Models (LLMs) to effectively...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 3. RLVR has advanced reasoning capabilities but struggles with open-ended generation due to lack of ground truth; this work proposes an automated rubric generation framework and dataset to improve performance in health reasoning benchmarks.  					AI-generated summary 				 Reinforcement Learning with Ve...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 4. Personalized large language models can generate false information aligned with user history instead of factual truth, but a new method called FPPS helps maintain both factual accuracy and personalized responses while preserving existing personalization effects.  					AI-generated summary 				 Person...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 5. Vision-Language-Action models are enhanced by incorporating action-space reasoning through a structured sequence of coarse action intents, improving manipulation task performance in both simulation and real-world environments.  					AI-generated summary 				 Vision-Language-Action (VLA) models have ...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 6. Reinforcement learning framework for agentic search that improves reliability by teaching agents to recognize reasoning limits and respond appropriately when evidence is insufficient.  					AI-generated summary 				 RL-based agentic search enables LLMs to solve complex questions via dynamic planning...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 7. A diffusion-based framework generates human motion from text prompts with fine-grained part-level control using a newly constructed dataset with atomic, temporally-aware annotations.  					AI-generated summary 				 Human motion generation from text prompts has made remarkable progress in recent year...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 8. Output-entropy profiles computed from final-layer next-token probabilities serve as a scalable signal for monitoring LLM performance and prioritizing data acquisition under domain shifts.  					AI-generated summary 				 Deploying LLMs raises two coupled challenges: (1) monitoring - estimating where ...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 9. Supervised fine-tuning with multiple references addresses overfitting to non-core expressions by masking low-probability tokens based on their semantic importance.  					AI-generated summary 				 Supervised fine-tuning (SFT) is a fundamental post-training strategy to align Large Language Models (LLM...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 10. A novel language-conditioned optical flow forecasting model combines Vision-Language Model and Diffusion architecture to predict future motion from noisy web-scale video data, demonstrating versatility in robotic manipulation and video generation tasks.  					AI-generated summary 				 Future motion ...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 11. ShapeR generates high-fidelity 3D shapes from casual image sequences using visual-inertial SLAM, 3D detection, and vision-language models with rectified flow transformer conditioning.  					AI-generated summary 				 Recent advances in 3D shape generation have achieved impressive results, but most ex...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 12. Reasoning models demonstrate enhanced performance through multi-agent-like interactions that create diverse cognitive perspectives and improve problem-solving through structured social organization.  					AI-generated summary 				 Large language models have achieved remarkable capabilities across do...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 13. A physics-aware reinforcement learning paradigm is introduced for video generation that enforces physical collision rules directly in high-dimensional spaces, ensuring strict application of physics knowledge rather than treating it as conditional constraints.  					AI-generated summary 				 Physical...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 14. PersonalAlign framework addresses GUI agent alignment with implicit user intents through hierarchical memory organization and long-term record reasoning, improving both execution and proactive performance.  					AI-generated summary 				 While GUI agents have shown strong performance under explicit ...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 15. Activation probes for language model misuse mitigation face challenges with long-context generalization, requiring new architectures and diverse training for robust performance across production shifts.  					AI-generated summary 				 Frontier language model capabilities are improving rapidly. We th...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 16. AgencyBench presents a comprehensive benchmark for evaluating autonomous agents across real-world scenarios, enabling automated evaluation through user simulation and sandbox environments while revealing performance gaps between closed-source and open-source models.  					AI-generated summary 				 L...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 17. Large Vision Language Models exhibit significant limitations in multi-image understanding and reasoning, which are revealed through a new benchmark and addressed via procedural data generation and attention masking techniques.  					AI-generated summary 				 Large Vision Language Models (LVLMs) have...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 18. Recent advances in agentic Large Language Models (LLMs) have positioned them as generalist planners capable of reasoning and acting across diverse tasks. However, existing agent benchmarks largely focus on symbolic or weakly grounded environments, leaving their performance in physics-constrained rea...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 19. Controlling the language of thought in large language models increases output diversity by leveraging distinct thinking spaces across different languages, with mixed-language sampling providing superior results.  					AI-generated summary 				 Output diversity is crucial for Large Language Models as...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 20. Data curation for multimodal reasoning shows that difficulty-based example selection on aligned datasets drives performance gains, while increasing dataset size mainly reduces variance and synthetic augmentation heuristics often degrade performance.  					AI-generated summary 				 We study data cura...
-[19.01.2026 23:12] ********************************************************************************
-[19.01.2026 23:12] Abstract 21. A three-stage pipeline decouples physical reasoning from visual synthesis in video generation, improving physical plausibility and motion controllability through distinct phases of reasoning, planning, and refinement.  					AI-generated summary 				 Recent diffusion-based video generation models can...
-[19.01.2026 23:12] Read previous papers.
-[19.01.2026 23:12] Generating reviews via LLM API.
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#rl", "#optimization", "#reasoning", "#reinforcement_learning"], "emoji": "⚙️", "ru": {"title": "Исправление смещений оценки преимуществ в обучении подкреплению с помощью верификаторов вознаграждений через адаптивное взвешивание сложности", "desc": "В данной работе рассматривается п
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#ethics", "#games"], "emoji": "🤖", "ru": {"title": "Влияние ИИ-агентов на экономику и стратегическое взаимодействие", "desc": "В статье исследуется влияние внедрения искусственных интеллектуальных агентов в экономические рынки на стратегическое взаимодействие участников. Рассматрива
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#agent_memory", "#memory", "#context_window", "#tool_use", "#multiturn", "#tools", "#dataset", "#training"], "emoji": "📚", "ru": {"title": "Синтез многотurnовых траекторий инструмента для больших языковых моделей на основе текстовых данных", "desc": "В данной работе представлен подх
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#healthcare", "#benchmark", "#transfer_learning", "#retrieval", "#reasoning", "#dataset"], "emoji": "📚", "ru": {"title": "Автоматизация создания оценочных шкал для повышения эффективности систем искусственного интеллекта в медицинских задачах", "desc": "В данной работе рассматривает
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#hallucinations", "#benchmark", "#personalization", "#inference", "#data"], "emoji": "📚", "ru": {"title": "FPPS: Сохранение Фактической Точности при Персонализации Большими Языковыми Моделями", "desc": "Данная работа исследует проблему искажения фактов в персонализированных больших 
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#action", "#multimodal", "#reasoning", "#language", "#action_space_reasoning", "#vision"], "emoji": "🤖", "ru": {"title": "Повышение эффективности моделей VLA за счет рассуждений в пространстве действий", "desc": "В данной работе предлагается улучшенная модель Vision-Language-Action 
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#reliability", "#rl", "#reasoning", "#boundary_aware_policy_optimization", "#agi"], "emoji": "🤔", "ru": {"title": "Повышение надежности агентских систем через осознание границ рассуждений", "desc": "В данной работе предложен подход на основе подкрепления для агентского поиска, котор
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#data", "#dataset"], "emoji": "👩‍🦶", "ru": {"title": "Франкенменеджмент движений: контроль тела и времени", "desc": "В данной работе предложен диффузионный фреймворк для генерации движений человека на основе текстовых подсказок с высокой степенью детализации и контролем отдельных ча
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#training", "#interpretability", "#optimization", "#inference"], "emoji": "📊", "ru": {"title": "Мониторинг и улучшение языковых моделей с помощью профилей энтропии вывода", "desc": "В данной работе исследуется использование профилей энтропии вывода на основе вероятностей следующего 
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#training", "#optimization", "#reasoning"], "emoji": "📚", "ru": {"title": "Контролируемое дообучение с несколькими ссылками для предотвращения поверхностной переобученности", "desc": "Данная работа исследует проблему избыточной подгонки моделей машинного обучения к второстепенным вы
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#optical_flow_forecasting", "#vision_language_model", "#diffusion", "#robotics", "#multimodal"], "emoji": "📈", "ru": {"title": "Прогнозирование оптического потока с помощью объединенной Vision-Language Model и Diffusion", "desc": "В данной работе представлена модель FOFPred для прог
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#3d"], "emoji": "📦", "ru": {"title": "ShapeR: Генерация высокоточных 3D форм на основе неформальных последовательностей изображений", "desc": "ShapeR — это метод генерации 3D-моделей объектов высокой точности из обычных видеоизображений с использованием визуально-инерциального SLAM,
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#reasoning", "#agents", "#social_interaction", "#interpretability", "#cognitive_modeling"], "emoji": "🤖", "ru": {"title": "Социальная организация мышления как ключ к эффективной обработке информации", "desc": "В данной работе показано, что модели машинного обучения демонстрируют улу
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#rl", "#video_generation", "#physics"], "emoji": "🔄", "ru": {"title": "Физически осведомленное обучение с подкреплением для реалистичной генерации видео", "desc": "В статье представлена новая парадигма машинного обучения с подкреплением, ориентированная на физику, для генерации виде
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#agent_memory", "#hallucinations", "#retrieval", "#context_window", "#reasoning", "#session_memory", "#agi", "#agents"], "emoji": "📱", "ru": {"title": "Личный баланс: выравнивание намерений пользователей через персональную память ИИ-агента", "desc": "Framework PersonalAlign решает з
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#agent_memory", "#context_window", "#security", "#long_context", "#prompting", "#data"], "emoji": "🔮", "ru": {"title": "Улучшение защиты языковых моделей через активационные пробы", "desc": "В данной работе рассматриваются проблемы обобщения активационных пробелов в языковых моделях
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#agents", "#agent_memory", "#agi", "#tool_use", "#benchmark"], "emoji": "🚀", "ru": {"title": "AgencyBench: Комплексная платформа для оценки автономных агентов", "desc": "AgencyBench представляет собой комплексную платформу для оценки автономных агентов в реальных сценариях, позволяю
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#reasoning", "#interpretability", "#data", "#benchmark"], "emoji": "📊", "ru": {"title": "Выявление и преодоление ограничений мультиизобразительных способностей больших моделей зрения и языка", "desc": "В данной работе исследуются ограничения больших моделей взаимодействия зрения и я
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#agent_memory", "#agents", "#reasoning", "#benchmark"], "emoji": "🚀", "ru": {"title": "AstroReason-Bench: испытание агентных LLM в задачах космического планирования", "desc": "Статья посвящена созданию нового комплекса испытаний — AstroReason-Bench, предназначенного для оценки возмо
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#language_of_thought", "#language_modeling", "#output_diversity", "#interpretability", "#multilingual"], "emoji": "🌍", "ru": {"title": "Управление языком мышления в больших языковых моделях для увеличения разнообразия", "desc": "В данной работе исследуется влияние использования разл
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#reasoning", "#multimodal", "#data", "#interpretability"], "emoji": "📚", "ru": {"title": "Оптимизация данных для эффективной многовекторной рассудительной обработки", "desc": "В данной работе исследуется процесс курирования данных для многомодальной рассудительной обработки. Было об
-[19.01.2026 23:12] Using data from previous issue: {"categories": ["#diffusion", "#physical_reasoning", "#multimodal", "#3d"], "emoji": "🔄", "ru": {"title": "Трехэтапный подход PhyRPR для повышения физической правдоподобности и контроля движений в видео", "desc": "В данной работе предложена трехэтапная архитектура PhyRPR для генерации видео, которая
-[19.01.2026 23:12] Renaming data file.
-[19.01.2026 23:12] Renaming previous data. hf_papers.json to ./d/2026-01-19.json
-[19.01.2026 23:12] Saving new data file.
-[19.01.2026 23:12] Generating page.
-[19.01.2026 23:12] Renaming previous page.
-[19.01.2026 23:12] Renaming previous data. index.html to ./d/2026-01-19.html
-[19.01.2026 23:12] Writing result.
-[19.01.2026 23:12] Renaming log file.
-[19.01.2026 23:12] Renaming previous data. log.txt to ./logs/2026-01-19_last_log.txt
+[19.01.2026 23:12] Generating top page (month).
+[19.01.2026 23:12] Writing top page (month).
+[19.01.2026 23:34] Read previous papers.
+[19.01.2026 23:34] Get feed.
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.08521
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.08521
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11496
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11496
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10355
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.10355
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.08430
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11000
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11000
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11404
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11404
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11037
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10909
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09001
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.09001
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09195
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10781
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11514
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10825
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.10825
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11087
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11087
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09636
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.09636
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11516
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.11516
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11044
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.07812
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11354
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.11227
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.10922
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.10922
+[19.01.2026 23:34] Get page data from previous paper. URL: https://huggingface.co/papers/2601.09255
+[19.01.2026 23:34] Refreshing page data for GitHub info. URL: https://huggingface.co/papers/2601.09255
+[19.01.2026 23:34] Updating GitHub stars.
+[19.01.2026 23:34] Obtaining deleted papers (sometimes HF Daily Papers move some articles from today to past days).
+[19.01.2026 23:34] No deleted papers detected.
+[19.01.2026 23:34] Downloading and parsing papers (pdf, html). Total: 22.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.08521.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.08521.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.08521.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11496.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11496.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11496.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.10355.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.10355.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.10355.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.08430.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.08430.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.08430.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11000.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11000.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11000.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11404.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11404.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11404.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11037.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11037.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11037.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.10909.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.10909.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.10909.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.09001.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.09001.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.09001.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.09195.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.09195.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.09195.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.10781.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.10781.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.10781.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11514.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11514.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11514.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.10825.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.10825.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.10825.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11087.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11087.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11087.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.09636.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.09636.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.09636.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11516.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11516.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11516.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11044.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11044.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11044.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.07812.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.07812.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.07812.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11354.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11354.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11354.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.11227.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.11227.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.11227.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.10922.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.10922.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.10922.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Downloading and parsing paper https://huggingface.co/papers/2601.09255.
+[19.01.2026 23:34] Extra JSON file exists (./assets/json/2601.09255.json), skip PDF parsing.
+[19.01.2026 23:34] Paper image links file exists (./assets/img_data/2601.09255.json), skip HTML parsing.
+[19.01.2026 23:34] Success.
+[19.01.2026 23:34] Enriching papers with extra data.
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 0. Group-based reinforcement learning from verifier rewards suffers from biased advantage estimation that underestimates hard prompts and overestimates easy prompts, which is addressed through a history-aware adaptive difficulty weighting method.  					AI-generated summary 				 Reinforcement Learning f...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 1. The integration of AI agents into economic markets fundamentally alters the landscape of strategic interaction. We investigate the economic implications of expanding the set of available technologies in three canonical game-theoretic settings: bargaining (resource division), negotiation (asymmetric ...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 2. A text-based data synthesis approach generates multi-turn tool-use trajectories for large language models, achieving improved performance and reduced computational costs through a specialized trajectory synthesizer.  					AI-generated summary 				 Enabling Large Language Models (LLMs) to effectively...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 3. RLVR has advanced reasoning capabilities but struggles with open-ended generation due to lack of ground truth; this work proposes an automated rubric generation framework and dataset to improve performance in health reasoning benchmarks.  					AI-generated summary 				 Reinforcement Learning with Ve...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 4. Personalized large language models can generate false information aligned with user history instead of factual truth, but a new method called FPPS helps maintain both factual accuracy and personalized responses while preserving existing personalization effects.  					AI-generated summary 				 Person...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 5. Vision-Language-Action models are enhanced by incorporating action-space reasoning through a structured sequence of coarse action intents, improving manipulation task performance in both simulation and real-world environments.  					AI-generated summary 				 Vision-Language-Action (VLA) models have ...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 6. Reinforcement learning framework for agentic search that improves reliability by teaching agents to recognize reasoning limits and respond appropriately when evidence is insufficient.  					AI-generated summary 				 RL-based agentic search enables LLMs to solve complex questions via dynamic planning...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 7. A diffusion-based framework generates human motion from text prompts with fine-grained part-level control using a newly constructed dataset with atomic, temporally-aware annotations.  					AI-generated summary 				 Human motion generation from text prompts has made remarkable progress in recent year...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 8. Output-entropy profiles computed from final-layer next-token probabilities serve as a scalable signal for monitoring LLM performance and prioritizing data acquisition under domain shifts.  					AI-generated summary 				 Deploying LLMs raises two coupled challenges: (1) monitoring - estimating where ...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 9. Supervised fine-tuning with multiple references addresses overfitting to non-core expressions by masking low-probability tokens based on their semantic importance.  					AI-generated summary 				 Supervised fine-tuning (SFT) is a fundamental post-training strategy to align Large Language Models (LLM...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 10. A novel language-conditioned optical flow forecasting model combines Vision-Language Model and Diffusion architecture to predict future motion from noisy web-scale video data, demonstrating versatility in robotic manipulation and video generation tasks.  					AI-generated summary 				 Future motion ...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 11. ShapeR generates high-fidelity 3D shapes from casual image sequences using visual-inertial SLAM, 3D detection, and vision-language models with rectified flow transformer conditioning.  					AI-generated summary 				 Recent advances in 3D shape generation have achieved impressive results, but most ex...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 12. Reasoning models demonstrate enhanced performance through multi-agent-like interactions that create diverse cognitive perspectives and improve problem-solving through structured social organization.  					AI-generated summary 				 Large language models have achieved remarkable capabilities across do...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 13. A physics-aware reinforcement learning paradigm is introduced for video generation that enforces physical collision rules directly in high-dimensional spaces, ensuring strict application of physics knowledge rather than treating it as conditional constraints.  					AI-generated summary 				 Physical...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 14. PersonalAlign framework addresses GUI agent alignment with implicit user intents through hierarchical memory organization and long-term record reasoning, improving both execution and proactive performance.  					AI-generated summary 				 While GUI agents have shown strong performance under explicit ...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 15. Activation probes for language model misuse mitigation face challenges with long-context generalization, requiring new architectures and diverse training for robust performance across production shifts.  					AI-generated summary 				 Frontier language model capabilities are improving rapidly. We th...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 16. AgencyBench presents a comprehensive benchmark for evaluating autonomous agents across real-world scenarios, enabling automated evaluation through user simulation and sandbox environments while revealing performance gaps between closed-source and open-source models.  					AI-generated summary 				 L...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 17. Large Vision Language Models exhibit significant limitations in multi-image understanding and reasoning, which are revealed through a new benchmark and addressed via procedural data generation and attention masking techniques.  					AI-generated summary 				 Large Vision Language Models (LVLMs) have...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 18. Recent advances in agentic Large Language Models (LLMs) have positioned them as generalist planners capable of reasoning and acting across diverse tasks. However, existing agent benchmarks largely focus on symbolic or weakly grounded environments, leaving their performance in physics-constrained rea...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 19. Controlling the language of thought in large language models increases output diversity by leveraging distinct thinking spaces across different languages, with mixed-language sampling providing superior results.  					AI-generated summary 				 Output diversity is crucial for Large Language Models as...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 20. Data curation for multimodal reasoning shows that difficulty-based example selection on aligned datasets drives performance gains, while increasing dataset size mainly reduces variance and synthetic augmentation heuristics often degrade performance.  					AI-generated summary 				 We study data cura...
+[19.01.2026 23:34] ********************************************************************************
+[19.01.2026 23:34] Abstract 21. A three-stage pipeline decouples physical reasoning from visual synthesis in video generation, improving physical plausibility and motion controllability through distinct phases of reasoning, planning, and refinement.  					AI-generated summary 				 Recent diffusion-based video generation models can...
+[19.01.2026 23:34] Read previous papers.
+[19.01.2026 23:34] Generating reviews via LLM API.
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#rl", "#optimization", "#reasoning", "#reinforcement_learning"], "emoji": "⚙️", "ru": {"title": "Исправление смещений оценки преимуществ в обучении подкреплению с помощью верификаторов вознаграждений через адаптивное взвешивание сложности", "desc": "В данной работе рассматривается п
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#ethics", "#games"], "emoji": "🤖", "ru": {"title": "Влияние ИИ-агентов на экономику и стратегическое взаимодействие", "desc": "В статье исследуется влияние внедрения искусственных интеллектуальных агентов в экономические рынки на стратегическое взаимодействие участников. Рассматрива
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#agent_memory", "#memory", "#context_window", "#tool_use", "#multiturn", "#tools", "#dataset", "#training"], "emoji": "📚", "ru": {"title": "Синтез многотurnовых траекторий инструмента для больших языковых моделей на основе текстовых данных", "desc": "В данной работе представлен подх
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#healthcare", "#benchmark", "#transfer_learning", "#retrieval", "#reasoning", "#dataset"], "emoji": "📚", "ru": {"title": "Автоматизация создания оценочных шкал для повышения эффективности систем искусственного интеллекта в медицинских задачах", "desc": "В данной работе рассматривает
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#hallucinations", "#benchmark", "#personalization", "#inference", "#data"], "emoji": "📚", "ru": {"title": "FPPS: Сохранение Фактической Точности при Персонализации Большими Языковыми Моделями", "desc": "Данная работа исследует проблему искажения фактов в персонализированных больших 
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#action", "#multimodal", "#reasoning", "#language", "#action_space_reasoning", "#vision"], "emoji": "🤖", "ru": {"title": "Повышение эффективности моделей VLA за счет рассуждений в пространстве действий", "desc": "В данной работе предлагается улучшенная модель Vision-Language-Action 
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#reliability", "#rl", "#reasoning", "#boundary_aware_policy_optimization", "#agi"], "emoji": "🤔", "ru": {"title": "Повышение надежности агентских систем через осознание границ рассуждений", "desc": "В данной работе предложен подход на основе подкрепления для агентского поиска, котор
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#data", "#dataset"], "emoji": "👩‍🦶", "ru": {"title": "Франкенменеджмент движений: контроль тела и времени", "desc": "В данной работе предложен диффузионный фреймворк для генерации движений человека на основе текстовых подсказок с высокой степенью детализации и контролем отдельных ча
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#training", "#interpretability", "#optimization", "#inference"], "emoji": "📊", "ru": {"title": "Мониторинг и улучшение языковых моделей с помощью профилей энтропии вывода", "desc": "В данной работе исследуется использование профилей энтропии вывода на основе вероятностей следующего 
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#training", "#optimization", "#reasoning"], "emoji": "📚", "ru": {"title": "Контролируемое дообучение с несколькими ссылками для предотвращения поверхностной переобученности", "desc": "Данная работа исследует проблему избыточной подгонки моделей машинного обучения к второстепенным вы
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#optical_flow_forecasting", "#vision_language_model", "#diffusion", "#robotics", "#multimodal"], "emoji": "📈", "ru": {"title": "Прогнозирование оптического потока с помощью объединенной Vision-Language Model и Diffusion", "desc": "В данной работе представлена модель FOFPred для прог
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#3d"], "emoji": "📦", "ru": {"title": "ShapeR: Генерация высокоточных 3D форм на основе неформальных последовательностей изображений", "desc": "ShapeR — это метод генерации 3D-моделей объектов высокой точности из обычных видеоизображений с использованием визуально-инерциального SLAM,
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#reasoning", "#agents", "#social_interaction", "#interpretability", "#cognitive_modeling"], "emoji": "🤖", "ru": {"title": "Социальная организация мышления как ключ к эффективной обработке информации", "desc": "В данной работе показано, что модели машинного обучения демонстрируют улу
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#rl", "#video_generation", "#physics"], "emoji": "🔄", "ru": {"title": "Физически осведомленное обучение с подкреплением для реалистичной генерации видео", "desc": "В статье представлена новая парадигма машинного обучения с подкреплением, ориентированная на физику, для генерации виде
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#agent_memory", "#hallucinations", "#retrieval", "#context_window", "#reasoning", "#session_memory", "#agi", "#agents"], "emoji": "📱", "ru": {"title": "Личный баланс: выравнивание намерений пользователей через персональную память ИИ-агента", "desc": "Framework PersonalAlign решает з
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#agent_memory", "#context_window", "#security", "#long_context", "#prompting", "#data"], "emoji": "🔮", "ru": {"title": "Улучшение защиты языковых моделей через активационные пробы", "desc": "В данной работе рассматриваются проблемы обобщения активационных пробелов в языковых моделях
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#agents", "#agent_memory", "#agi", "#tool_use", "#benchmark"], "emoji": "🚀", "ru": {"title": "AgencyBench: Комплексная платформа для оценки автономных агентов", "desc": "AgencyBench представляет собой комплексную платформу для оценки автономных агентов в реальных сценариях, позволяю
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#reasoning", "#interpretability", "#data", "#benchmark"], "emoji": "📊", "ru": {"title": "Выявление и преодоление ограничений мультиизобразительных способностей больших моделей зрения и языка", "desc": "В данной работе исследуются ограничения больших моделей взаимодействия зрения и я
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#agent_memory", "#agents", "#reasoning", "#benchmark"], "emoji": "🚀", "ru": {"title": "AstroReason-Bench: испытание агентных LLM в задачах космического планирования", "desc": "Статья посвящена созданию нового комплекса испытаний — AstroReason-Bench, предназначенного для оценки возмо
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#language_of_thought", "#language_modeling", "#output_diversity", "#interpretability", "#multilingual"], "emoji": "🌍", "ru": {"title": "Управление языком мышления в больших языковых моделях для увеличения разнообразия", "desc": "В данной работе исследуется влияние использования разл
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#reasoning", "#multimodal", "#data", "#interpretability"], "emoji": "📚", "ru": {"title": "Оптимизация данных для эффективной многовекторной рассудительной обработки", "desc": "В данной работе исследуется процесс курирования данных для многомодальной рассудительной обработки. Было об
+[19.01.2026 23:34] Using data from previous issue: {"categories": ["#diffusion", "#physical_reasoning", "#multimodal", "#3d"], "emoji": "🔄", "ru": {"title": "Трехэтапный подход PhyRPR для повышения физической правдоподобности и контроля движений в видео", "desc": "В данной работе предложена трехэтапная архитектура PhyRPR для генерации видео, которая
+[19.01.2026 23:34] Renaming data file.
+[19.01.2026 23:34] Renaming previous data. hf_papers.json to ./d/2026-01-19.json
+[19.01.2026 23:34] Saving new data file.
+[19.01.2026 23:34] Generating page.
+[19.01.2026 23:34] Renaming previous page.
+[19.01.2026 23:34] Renaming previous data. index.html to ./d/2026-01-19.html
+[19.01.2026 23:34] Writing result.
+[19.01.2026 23:34] Renaming log file.
+[19.01.2026 23:34] Renaming previous data. log.txt to ./logs/2026-01-19_last_log.txt
