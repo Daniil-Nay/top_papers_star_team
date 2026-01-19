@@ -4,9 +4,9 @@
         "en": "January 19",
         "zh": "1月19日"
     },
-    "time_utc": "2026-01-19 21:14",
+    "time_utc": "2026-01-19 21:35",
     "weekday": 0,
-    "issue_id": 568,
+    "issue_id": 569,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -550,6 +550,58 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.10781",
+            "title": "Future Optical Flow Prediction Improves Robot Control & Video Generation",
+            "url": "https://huggingface.co/papers/2601.10781",
+            "abstract": "A novel language-conditioned optical flow forecasting model combines Vision-Language Model and Diffusion architecture to predict future motion from noisy web-scale video data, demonstrating versatility in robotic manipulation and video generation tasks.  \t\t\t\t\tAI-generated summary \t\t\t\t Future motion representations, such as optical flow, offer immense value for control and generative tasks. However, forecasting generalizable spatially dense motion representations remains a key challenge, and learning such forecasting from noisy, real-world data remains relatively unexplored. We introduce FOFPred, a novel language-conditioned optical flow forecasting model featuring a unified Vision-Language Model (VLM) and Diffusion architecture. This unique combination enables strong multimodal reasoning with pixel-level generative fidelity for future motion prediction. Our model is trained on web-scale human activity data-a highly scalable but unstructured source. To extract meaningful signals from this noisy video-caption data, we employ crucial data preprocessing techniques and our unified architecture with strong image pretraining. The resulting trained model is then extended to tackle two distinct downstream tasks in control and generation. Evaluations across robotic manipulation and video generation under language-driven settings establish the cross-domain versatility of FOFPred, confirming the value of a unified VLM-Diffusion architecture and scalable learning from diverse web data for future optical flow prediction.",
+            "score": 6,
+            "issue_id": 559,
+            "pub_date": "2026-01-15",
+            "pub_date_card": {
+                "ru": "15 января",
+                "en": "January 15",
+                "zh": "1月15日"
+            },
+            "hash": "100f67342322af94",
+            "github_url": "https://github.com/SalesforceAIResearch/FOFPred",
+            "github_stars": 2,
+            "authors": [
+                "Kanchana Ranasinghe",
+                "Honglu Zhou",
+                "Yu Fang",
+                "Luyu Yang",
+                "Le Xue",
+                "Ran Xu",
+                "Caiming Xiong",
+                "Silvio Savarese",
+                "Michael S Ryoo",
+                "Juan Carlos Niebles"
+            ],
+            "affiliations": [
+                "Salesforce AI Research",
+                "Stony Brook University"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.10781.jpg",
+            "data": {
+                "categories": [
+                    "#optical_flow_forecasting",
+                    "#vision_language_model",
+                    "#diffusion",
+                    "#robotics",
+                    "#multimodal"
+                ],
+                "emoji": "📈",
+                "ru": {
+                    "title": "Прогнозирование оптического потока с помощью объединенной Vision-Language Model и Diffusion",
+                    "desc": "В данной работе представлена модель FOFPred для прогнозирования оптического потока на основе объединения Vision-Language Model и архитектуры диффузии. Модель обучена на больших объемах разнородных видеоданных из интернета с целью предсказания будущих движений объектов в видео. Использование унифицированной архитектуры позволяет добиться высокой точности и генерации детальных изображений движения на пиксельном уровне. Результаты показывают эффективность модели в задачах робототехники и создания видео."
+                },
+                "en": {
+                    "title": "Unified Vision-Language Model and Diffusion Architecture for Optical Flow Forecasting",
+                    "desc": "FOFPred is a novel language-conditioned optical flow forecasting model combining a Vision-Language Model and a Diffusion architecture. It predicts future motion from noisy web-scale video data, showcasing its utility in robotic manipulation and video generation tasks. By leveraging a unified Vision-Language Model and Diffusion architecture, it achieves strong multimodal reasoning and high pixel-level generative fidelity. Trained on large-scale human activity data, it demonstrates versatile applications across control and generation tasks."
+                }
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.10825",
             "title": "Reasoning Models Generate Societies of Thought",
             "url": "https://huggingface.co/papers/2601.10825",
@@ -744,58 +796,6 @@
                 "en": {
                     "title": "Mitigating Language Model Misuse via Robust Activation Probes",
                     "desc": "This paper explores the challenges of long-context generalization in activation probes for language models used in misuse mitigation. It proposes new architectures and diverse training methods to enhance robustness across different production environments. The study evaluates these probes in cyber-offensive scenarios and finds that combining specific architectures with prompt-based classifiers yields optimal performance. This work informs the deployment of misuse mitigation techniques in advanced language models like Gemini."
-                }
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.10781",
-            "title": "Future Optical Flow Prediction Improves Robot Control & Video Generation",
-            "url": "https://huggingface.co/papers/2601.10781",
-            "abstract": "A novel language-conditioned optical flow forecasting model combines Vision-Language Model and Diffusion architecture to predict future motion from noisy web-scale video data, demonstrating versatility in robotic manipulation and video generation tasks.  \t\t\t\t\tAI-generated summary \t\t\t\t Future motion representations, such as optical flow, offer immense value for control and generative tasks. However, forecasting generalizable spatially dense motion representations remains a key challenge, and learning such forecasting from noisy, real-world data remains relatively unexplored. We introduce FOFPred, a novel language-conditioned optical flow forecasting model featuring a unified Vision-Language Model (VLM) and Diffusion architecture. This unique combination enables strong multimodal reasoning with pixel-level generative fidelity for future motion prediction. Our model is trained on web-scale human activity data-a highly scalable but unstructured source. To extract meaningful signals from this noisy video-caption data, we employ crucial data preprocessing techniques and our unified architecture with strong image pretraining. The resulting trained model is then extended to tackle two distinct downstream tasks in control and generation. Evaluations across robotic manipulation and video generation under language-driven settings establish the cross-domain versatility of FOFPred, confirming the value of a unified VLM-Diffusion architecture and scalable learning from diverse web data for future optical flow prediction.",
-            "score": 3,
-            "issue_id": 559,
-            "pub_date": "2026-01-15",
-            "pub_date_card": {
-                "ru": "15 января",
-                "en": "January 15",
-                "zh": "1月15日"
-            },
-            "hash": "100f67342322af94",
-            "github_url": "https://github.com/SalesforceAIResearch/FOFPred",
-            "github_stars": 2,
-            "authors": [
-                "Kanchana Ranasinghe",
-                "Honglu Zhou",
-                "Yu Fang",
-                "Luyu Yang",
-                "Le Xue",
-                "Ran Xu",
-                "Caiming Xiong",
-                "Silvio Savarese",
-                "Michael S Ryoo",
-                "Juan Carlos Niebles"
-            ],
-            "affiliations": [
-                "Salesforce AI Research",
-                "Stony Brook University"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.10781.jpg",
-            "data": {
-                "categories": [
-                    "#optical_flow_forecasting",
-                    "#vision_language_model",
-                    "#diffusion",
-                    "#robotics",
-                    "#multimodal"
-                ],
-                "emoji": "📈",
-                "ru": {
-                    "title": "Прогнозирование оптического потока с помощью объединенной Vision-Language Model и Diffusion",
-                    "desc": "В данной работе представлена модель FOFPred для прогнозирования оптического потока на основе объединения Vision-Language Model и архитектуры диффузии. Модель обучена на больших объемах разнородных видеоданных из интернета с целью предсказания будущих движений объектов в видео. Использование унифицированной архитектуры позволяет добиться высокой точности и генерации детальных изображений движения на пиксельном уровне. Результаты показывают эффективность модели в задачах робототехники и создания видео."
-                },
-                "en": {
-                    "title": "Unified Vision-Language Model and Diffusion Architecture for Optical Flow Forecasting",
-                    "desc": "FOFPred is a novel language-conditioned optical flow forecasting model combining a Vision-Language Model and a Diffusion architecture. It predicts future motion from noisy web-scale video data, showcasing its utility in robotic manipulation and video generation tasks. By leveraging a unified Vision-Language Model and Diffusion architecture, it achieves strong multimodal reasoning and high pixel-level generative fidelity. Trained on large-scale human activity data, it demonstrates versatile applications across control and generation tasks."
                 }
             }
         },
@@ -1168,12 +1168,12 @@
         "#vision": 1,
         "#reliability": 1,
         "#boundary_aware_policy_optimization": 1,
+        "#optical_flow_forecasting": 1,
+        "#vision_language_model": 1,
         "#social_interaction": 1,
         "#cognitive_modeling": 1,
         "#video_generation": 1,
         "#physics": 1,
-        "#optical_flow_forecasting": 1,
-        "#vision_language_model": 1,
         "#language_of_thought": 1,
         "#language_modeling": 1,
         "#output_diversity": 1,
