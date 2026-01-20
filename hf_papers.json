@@ -4,65 +4,17 @@
         "en": "January 20",
         "zh": "1月20日"
     },
-    "time_utc": "2026-01-20 09:28",
+    "time_utc": "2026-01-20 10:21",
     "weekday": 1,
-    "issue_id": 585,
+    "issue_id": 586,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
-        {
-            "id": "https://huggingface.co/papers/2601.08808",
-            "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
-            "url": "https://huggingface.co/papers/2601.08808",
-            "abstract": "Multiplex Thinking introduces a stochastic soft reasoning mechanism that samples multiple candidate tokens at each step to optimize reasoning trajectories with reinforcement learning while maintaining shorter sequences than traditional chain-of-thought methods.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models often solve complex reasoning tasks more effectively with Chain-of-Thought (CoT), but at the cost of long, low-bandwidth token sequences. Humans, by contrast, often reason softly by maintaining a distribution over plausible next steps. Motivated by this, we propose Multiplex Thinking, a stochastic soft reasoning mechanism that, at each thinking step, samples K candidate tokens and aggregates their embeddings into a single continuous multiplex token. This preserves the vocabulary embedding prior and the sampling dynamics of standard discrete generation, while inducing a tractable probability distribution over multiplex rollouts. Consequently, multiplex trajectories can be directly optimized with on-policy reinforcement learning (RL). Importantly, Multiplex Thinking is self-adaptive: when the model is confident, the multiplex token is nearly discrete and behaves like standard CoT; when it is uncertain, it compactly represents multiple plausible next steps without increasing sequence length. Across challenging math reasoning benchmarks, Multiplex Thinking consistently outperforms strong discrete CoT and RL baselines from Pass@1 through Pass@1024, while producing shorter sequences. The code and checkpoints are available at https://github.com/GMLR-Penn/Multiplex-Thinking.",
-            "score": 16,
-            "issue_id": 579,
-            "pub_date": "2026-01-13",
-            "pub_date_card": {
-                "ru": "13 января",
-                "en": "January 13",
-                "zh": "1月13日"
-            },
-            "hash": "0a64241c20f7b28c",
-            "github_url": "https://github.com/GMLR-Penn/Multiplex-Thinking",
-            "github_stars": 45,
-            "authors": [
-                "Yao Tang",
-                "Li Dong",
-                "Yaru Hao",
-                "Qingxiu Dong",
-                "Furu Wei",
-                "Jiatao Gu"
-            ],
-            "affiliations": [
-                "Microsoft Research",
-                "University of Pennsylvania"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.08808.jpg",
-            "data": {
-                "categories": [
-                    "#context_window",
-                    "#optimization",
-                    "#retrieval",
-                    "#reasoning",
-                    "#rl"
-                ],
-                "emoji": "🧠",
-                "ru": {
-                    "title": "Multiplex Thinking: Мягкие Рассуждения для Улучшения Эффективности Моделей ИИ",
-                    "desc": "Статья описывает механизм Multiplex Thinking, который представляет собой стохастическую мягкую технику рассуждений для моделей машинного обучения на основе больших языковых моделей. Этот подход позволяет одновременно генерировать несколько кандидатов ответов в каждом шаге рассуждения и затем объединяет их в единый токен, что сохраняет преимущества стандартного метода цепочки размышлений при сокращении длины последовательности. В результате модель может более эффективно решать сложные задачи математического рассуждения с использованием методов подкрепления обучения на траекториях рассуждений."
-                },
-                "en": {
-                    "title": "Soft Reasoning via Stochastic Sampling for Efficient Math Reasoning Tasks",
-                    "desc": "Multiplex Thinking employs a stochastic soft reasoning mechanism where it samples multiple candidate tokens at each step using reinforcement learning to optimize reasoning trajectories. It maintains shorter sequences compared to traditional Chain-of-Thought methods by aggregating embeddings into a single multiplex token. This approach allows for a tractable probability distribution over multiplex rollouts, enabling efficient optimization. The method is adaptive, becoming nearly discrete when confident and representing multiple plausible next steps when uncertain."
-                }
-            }
-        },
         {
             "id": "https://huggingface.co/papers/2601.11077",
             "title": "ABC-Bench: Benchmarking Agentic Backend Coding in Real-World Development",
             "url": "https://huggingface.co/papers/2601.11077",
             "abstract": "ABC-Bench evaluates LLM agents on realistic backend coding tasks requiring full development lifecycle management from repository exploration to containerized service deployment and API testing.  \t\t\t\t\tAI-generated summary \t\t\t\t The evolution of Large Language Models (LLMs) into autonomous agents has expanded the scope of AI coding from localized code generation to complex, repository-level, and execution-driven problem solving. However, current benchmarks predominantly evaluate code logic in static contexts, neglecting the dynamic, full-process requirements of real-world engineering, particularly in backend development which demands rigorous environment configuration and service deployment. To address this gap, we introduce ABC-Bench, a benchmark explicitly designed to evaluate agentic backend coding within a realistic, executable workflow. Using a scalable automated pipeline, we curated 224 practical tasks spanning 8 languages and 19 frameworks from open-source repositories. Distinct from previous evaluations, ABC-Bench require the agents to manage the entire development lifecycle from repository exploration to instantiating containerized services and pass the external end-to-end API tests. Our extensive evaluation reveals that even state-of-the-art models struggle to deliver reliable performance on these holistic tasks, highlighting a substantial disparity between current model capabilities and the demands of practical backend engineering. Our code is available at https://github.com/OpenMOSS/ABC-Bench.",
-            "score": 14,
+            "score": 29,
             "issue_id": 579,
             "pub_date": "2026-01-16",
             "pub_date_card": {
@@ -72,7 +24,7 @@
             },
             "hash": "97497f7535c4d03b",
             "github_url": "https://github.com/OpenMOSS/ABC-Bench",
-            "github_stars": 2,
+            "github_stars": 4,
             "authors": [
                 "Jie Yang",
                 "Honglin Guo",
@@ -112,6 +64,54 @@
                 "en": {
                     "title": "Evaluating Backend Coding Capabilities of LLM Agents via Realistic Development Lifecycle Management",
                     "desc": "ABC-Bench assesses Large Language Model (LLM) agents' abilities in managing the complete backend coding lifecycle, including repository exploration, containerized service deployment, and API testing. It introduces a new benchmark that goes beyond traditional code logic evaluations by focusing on dynamic, real-world engineering tasks. The benchmark includes 224 diverse tasks across multiple programming languages and frameworks sourced from open-source repositories. This highlights significant gaps in current LLM capabilities compared to practical backend engineering needs."
+                }
+            }
+        },
+        {
+            "id": "https://huggingface.co/papers/2601.08808",
+            "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
+            "url": "https://huggingface.co/papers/2601.08808",
+            "abstract": "Multiplex Thinking introduces a stochastic soft reasoning mechanism that samples multiple candidate tokens at each step to optimize reasoning trajectories with reinforcement learning while maintaining shorter sequences than traditional chain-of-thought methods.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models often solve complex reasoning tasks more effectively with Chain-of-Thought (CoT), but at the cost of long, low-bandwidth token sequences. Humans, by contrast, often reason softly by maintaining a distribution over plausible next steps. Motivated by this, we propose Multiplex Thinking, a stochastic soft reasoning mechanism that, at each thinking step, samples K candidate tokens and aggregates their embeddings into a single continuous multiplex token. This preserves the vocabulary embedding prior and the sampling dynamics of standard discrete generation, while inducing a tractable probability distribution over multiplex rollouts. Consequently, multiplex trajectories can be directly optimized with on-policy reinforcement learning (RL). Importantly, Multiplex Thinking is self-adaptive: when the model is confident, the multiplex token is nearly discrete and behaves like standard CoT; when it is uncertain, it compactly represents multiple plausible next steps without increasing sequence length. Across challenging math reasoning benchmarks, Multiplex Thinking consistently outperforms strong discrete CoT and RL baselines from Pass@1 through Pass@1024, while producing shorter sequences. The code and checkpoints are available at https://github.com/GMLR-Penn/Multiplex-Thinking.",
+            "score": 17,
+            "issue_id": 579,
+            "pub_date": "2026-01-13",
+            "pub_date_card": {
+                "ru": "13 января",
+                "en": "January 13",
+                "zh": "1月13日"
+            },
+            "hash": "0a64241c20f7b28c",
+            "github_url": "https://github.com/GMLR-Penn/Multiplex-Thinking",
+            "github_stars": 45,
+            "authors": [
+                "Yao Tang",
+                "Li Dong",
+                "Yaru Hao",
+                "Qingxiu Dong",
+                "Furu Wei",
+                "Jiatao Gu"
+            ],
+            "affiliations": [
+                "Microsoft Research",
+                "University of Pennsylvania"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.08808.jpg",
+            "data": {
+                "categories": [
+                    "#context_window",
+                    "#optimization",
+                    "#retrieval",
+                    "#reasoning",
+                    "#rl"
+                ],
+                "emoji": "🧠",
+                "ru": {
+                    "title": "Multiplex Thinking: Мягкие Рассуждения для Улучшения Эффективности Моделей ИИ",
+                    "desc": "Статья описывает механизм Multiplex Thinking, который представляет собой стохастическую мягкую технику рассуждений для моделей машинного обучения на основе больших языковых моделей. Этот подход позволяет одновременно генерировать несколько кандидатов ответов в каждом шаге рассуждения и затем объединяет их в единый токен, что сохраняет преимущества стандартного метода цепочки размышлений при сокращении длины последовательности. В результате модель может более эффективно решать сложные задачи математического рассуждения с использованием методов подкрепления обучения на траекториях рассуждений."
+                },
+                "en": {
+                    "title": "Soft Reasoning via Stochastic Sampling for Efficient Math Reasoning Tasks",
+                    "desc": "Multiplex Thinking employs a stochastic soft reasoning mechanism where it samples multiple candidate tokens at each step using reinforcement learning to optimize reasoning trajectories. It maintains shorter sequences compared to traditional Chain-of-Thought methods by aggregating embeddings into a single multiplex token. This approach allows for a tractable probability distribution over multiplex rollouts, enabling efficient optimization. The method is adaptive, becoming nearly discrete when confident and representing multiple plausible next steps when uncertain."
                 }
             }
         },
@@ -186,12 +186,33 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.11061",
+            "title": "Spurious Rewards Paradox: Mechanistically Understanding How RLVR Activates Memorization Shortcuts in LLMs",
+            "url": "https://huggingface.co/papers/2601.11061",
+            "abstract": "Spurious rewards in reinforcement learning with verifiable rewards trigger a memorization shortcut in LLMs, identified through neural circuit analysis and causal steering techniques.  \t\t\t\t\tAI-generated summary \t\t\t\t Reinforcement Learning with Verifiable Rewards (RLVR) is highly effective for enhancing LLM reasoning, yet recent evidence shows models like Qwen 2.5 achieve significant gains even with spurious or incorrect rewards. We investigate this phenomenon and identify a \"Perplexity Paradox\": spurious RLVR triggers a divergence where answer-token perplexity drops while prompt-side coherence degrades, suggesting the model is bypassing reasoning in favor of memorization. Using Path Patching, Logit Lens, JSD analysis, and Neural Differential Equations, we uncover a hidden Anchor-Adapter circuit that facilitates this shortcut. We localize a Functional Anchor in the middle layers (L18-20) that triggers the retrieval of memorized solutions, followed by Structural Adapters in later layers (L21+) that transform representations to accommodate the shortcut signal. Finally, we demonstrate that scaling specific MLP keys within this circuit allows for bidirectional causal steering-artificially amplifying or suppressing contamination-driven performance. Our results provide a mechanistic roadmap for identifying and mitigating data contamination in RLVR-tuned models. Code is available at https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts.",
+            "score": 2,
+            "issue_id": 586,
+            "pub_date": "2026-01-16",
+            "pub_date_card": {
+                "ru": "16 января",
+                "en": "January 16",
+                "zh": "1月16日"
+            },
+            "hash": "1e155023f04ffd59",
+            "github_url": "https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts",
+            "github_stars": 4,
+            "pdf_title_img": "assets/pdf/title_img/2601.11061.jpg",
+            "data": {
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.10108",
             "title": "SIN-Bench: Tracing Native Evidence Chains in Long-Context Multimodal Scientific Interleaved Literature",
             "url": "https://huggingface.co/papers/2601.10108",
             "abstract": "Researchers introduce the Fish-in-the-Ocean paradigm and SIN-Bench dataset to evaluate multimodal language models' ability to reason over scientific documents with evidence chains, revealing a gap between answer accuracy and traceable support.  \t\t\t\t\tAI-generated summary \t\t\t\t Evaluating whether multimodal large language models truly understand long-form scientific papers remains challenging: answer-only metrics and synthetic \"Needle-In-A-Haystack\" tests often reward answer matching without requiring a causal, evidence-linked reasoning trace in the document. We propose the \"Fish-in-the-Ocean\" (FITO) paradigm, which requires models to construct explicit cross-modal evidence chains within native scientific documents. To operationalize FITO, we build SIN-Data, a scientific interleaved corpus that preserves the native interleaving of text and figures. On top of it, we construct SIN-Bench with four progressive tasks covering evidence discovery (SIN-Find), hypothesis verification (SIN-Verify), grounded QA (SIN-QA), and evidence-anchored synthesis (SIN-Summary). We further introduce \"No Evidence, No Score\", scoring predictions when grounded to verifiable anchors and diagnosing evidence quality via matching, relevance, and logic. Experiments on eight MLLMs show that grounding is the primary bottleneck: Gemini-3-pro achieves the best average overall score (0.573), while GPT-5 attains the highest SIN-QA answer accuracy (0.767) but underperforms on evidence-aligned overall scores, exposing a gap between correctness and traceable support.",
             "score": 2,
-            "issue_id": 585,
+            "issue_id": 586,
             "pub_date": "2026-01-15",
             "pub_date_card": {
                 "ru": "15 января",
