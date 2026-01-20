@@ -95,7 +95,7 @@ if len(papers) == 0:
 
 log("Updating GitHub stars.")
 for paper in papers:
-    if paper.get("github_url") and (paper.get("github_stars") is None or paper.get("github_stars") == 0):
+    if paper.get("github_url"):
         stars = helper.fetch_github_stars(paper["github_url"])
         if stars is not None:
             paper["github_stars"] = stars
