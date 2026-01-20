@@ -4,9 +4,9 @@
         "en": "January 20",
         "zh": "1月20日"
     },
-    "time_utc": "2026-01-20 00:01",
+    "time_utc": "2026-01-20 02:27",
     "weekday": 1,
-    "issue_id": 577,
+    "issue_id": 578,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -14,7 +14,7 @@
             "title": "Your Group-Relative Advantage Is Biased",
             "url": "https://huggingface.co/papers/2601.08521",
             "abstract": "Group-based reinforcement learning from verifier rewards suffers from biased advantage estimation that underestimates hard prompts and overestimates easy prompts, which is addressed through a history-aware adaptive difficulty weighting method.  \t\t\t\t\tAI-generated summary \t\t\t\t Reinforcement Learning from Verifier Rewards (RLVR) has emerged as a widely used approach for post-training large language models on reasoning tasks, with group-based methods such as GRPO and its variants gaining broad adoption. These methods rely on group-relative advantage estimation to avoid learned critics, yet its theoretical properties remain poorly understood.   In this work, we uncover a fundamental issue of group-based RL: the group-relative advantage estimator is inherently biased relative to the true (expected) advantage. We provide the first theoretical analysis showing that it systematically underestimates advantages for hard prompts and overestimates them for easy prompts, leading to imbalanced exploration and exploitation. To address this issue, we propose History-Aware Adaptive Difficulty Weighting (HA-DW), an adaptive reweighting scheme that adjusts advantage estimates based on an evolving difficulty anchor and training dynamics. Both theoretical analysis and experiments on five mathematical reasoning benchmarks demonstrate that HA-DW consistently improves performance when integrated into GRPO and its variants. Our results suggest that correcting biased advantage estimation is critical for robust and efficient RLVR training.",
-            "score": 95,
+            "score": 96,
             "issue_id": 552,
             "pub_date": "2026-01-13",
             "pub_date_card": {
@@ -111,7 +111,7 @@
             "title": "Unlocking Implicit Experience: Synthesizing Tool-Use Trajectories from Text",
             "url": "https://huggingface.co/papers/2601.10355",
             "abstract": "A text-based data synthesis approach generates multi-turn tool-use trajectories for large language models, achieving improved performance and reduced computational costs through a specialized trajectory synthesizer.  \t\t\t\t\tAI-generated summary \t\t\t\t Enabling Large Language Models (LLMs) to effectively utilize tools in multi-turn interactions is essential for building capable autonomous agents. However, acquiring diverse and realistic multi-turn tool-use data remains a significant challenge. In this work, we propose a novel text-based paradigm. We observe that textual corpora naturally contain rich, multi-step problem-solving experiences, which can serve as an untapped, scalable, and authentic data source for multi-turn tool-use tasks. Based on this insight, we introduce GEM, a data synthesis pipeline that enables the generation and extraction of multi-turn tool-use trajectories from text corpora through a four-stage process: relevance filtering, workflow & tool extraction, trajectory grounding, and complexity refinement. To reduce the computational cost, we further train a specialized Trajectory Synthesizer via supervised fine-tuning. This model distills the complex generation pipeline into an efficient, end-to-end trajectory generator. Experiments demonstrate that our GEM-32B achieve a 16.5% improvement on the BFCL V3 Multi-turn benchmark. Our models partially surpass the performance of models trained on τ - bench (Airline and Retail) in-domain data, highlighting the superior generalization capability derived from our text-based synthesis paradigm. Notably, our Trajectory Synthesizer matches the quality of the full pipeline while significantly reducing inference latency and costs.",
-            "score": 30,
+            "score": 31,
             "issue_id": 552,
             "pub_date": "2026-01-15",
             "pub_date_card": {
@@ -454,57 +454,11 @@
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.09195",
-            "title": "ProFit: Leveraging High-Value Signals in SFT via Probability-Guided Token Selection",
-            "url": "https://huggingface.co/papers/2601.09195",
-            "abstract": "Supervised fine-tuning with multiple references addresses overfitting to non-core expressions by masking low-probability tokens based on their semantic importance.  \t\t\t\t\tAI-generated summary \t\t\t\t Supervised fine-tuning (SFT) is a fundamental post-training strategy to align Large Language Models (LLMs) with human intent. However, traditional SFT often ignores the one-to-many nature of language by forcing alignment with a single reference answer, leading to the model overfitting to non-core expressions. Although our empirical analysis suggests that introducing multiple reference answers can mitigate this issue, the prohibitive data and computational costs necessitate a strategic shift: prioritizing the mitigation of single-reference overfitting over the costly pursuit of answer diversity. To achieve this, we reveal the intrinsic connection between token probability and semantic importance: high-probability tokens carry the core logical framework, while low-probability tokens are mostly replaceable expressions. Based on this insight, we propose ProFit, which selectively masks low-probability tokens to prevent surface-level overfitting. Extensive experiments confirm that ProFit consistently outperforms traditional SFT baselines on general reasoning and mathematical benchmarks.",
-            "score": 9,
-            "issue_id": 552,
-            "pub_date": "2026-01-14",
-            "pub_date_card": {
-                "ru": "14 января",
-                "en": "January 14",
-                "zh": "1月14日"
-            },
-            "hash": "687e04f44bf56850",
-            "github_url": "https://github.com/Utaotao/ProFit",
-            "github_stars": 18,
-            "authors": [
-                "Tao Liu",
-                "Taiqiang Wu",
-                "Runming Yang",
-                "Shaoning Sun",
-                "Junjie Wang",
-                "Yujiu Yang"
-            ],
-            "affiliations": [
-                "The University of Hong Kong",
-                "Tsinghua University"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.09195.jpg",
-            "data": {
-                "categories": [
-                    "#training",
-                    "#optimization",
-                    "#reasoning"
-                ],
-                "emoji": "📚",
-                "ru": {
-                    "title": "Контролируемое дообучение с несколькими ссылками для предотвращения поверхностной переобученности",
-                    "desc": "Данная работа исследует проблему избыточной подгонки моделей машинного обучения к второстепенным выражениям при традиционном контролируемом дообучении (SFT). Предложенный метод ProFit решает эту задачу путем маскировки низко вероятностных токенов на основе их семантической значимости, что позволяет модели лучше сохранять ключевые логические структуры и улучшать ее общую производительность."
-                },
-                "en": {
-                    "title": "Article",
-                    "desc": ""
-                }
-            }
-        },
-        {
             "id": "https://huggingface.co/papers/2601.10781",
             "title": "Future Optical Flow Prediction Improves Robot Control & Video Generation",
             "url": "https://huggingface.co/papers/2601.10781",
             "abstract": "A novel language-conditioned optical flow forecasting model combines Vision-Language Model and Diffusion architecture to predict future motion from noisy web-scale video data, demonstrating versatility in robotic manipulation and video generation tasks.  \t\t\t\t\tAI-generated summary \t\t\t\t Future motion representations, such as optical flow, offer immense value for control and generative tasks. However, forecasting generalizable spatially dense motion representations remains a key challenge, and learning such forecasting from noisy, real-world data remains relatively unexplored. We introduce FOFPred, a novel language-conditioned optical flow forecasting model featuring a unified Vision-Language Model (VLM) and Diffusion architecture. This unique combination enables strong multimodal reasoning with pixel-level generative fidelity for future motion prediction. Our model is trained on web-scale human activity data-a highly scalable but unstructured source. To extract meaningful signals from this noisy video-caption data, we employ crucial data preprocessing techniques and our unified architecture with strong image pretraining. The resulting trained model is then extended to tackle two distinct downstream tasks in control and generation. Evaluations across robotic manipulation and video generation under language-driven settings establish the cross-domain versatility of FOFPred, confirming the value of a unified VLM-Diffusion architecture and scalable learning from diverse web data for future optical flow prediction.",
-            "score": 8,
+            "score": 9,
             "issue_id": 559,
             "pub_date": "2026-01-15",
             "pub_date_card": {
@@ -548,6 +502,52 @@
                 "en": {
                     "title": "Unified Vision-Language Model and Diffusion Architecture for Optical Flow Forecasting",
                     "desc": "FOFPred is a novel language-conditioned optical flow forecasting model combining a Vision-Language Model and a Diffusion architecture. It predicts future motion from noisy web-scale video data, showcasing its utility in robotic manipulation and video generation tasks. By leveraging a unified Vision-Language Model and Diffusion architecture, it achieves strong multimodal reasoning and high pixel-level generative fidelity. Trained on large-scale human activity data, it demonstrates versatile applications across control and generation tasks."
+                }
+            }
+        },
+        {
+            "id": "https://huggingface.co/papers/2601.09195",
+            "title": "ProFit: Leveraging High-Value Signals in SFT via Probability-Guided Token Selection",
+            "url": "https://huggingface.co/papers/2601.09195",
+            "abstract": "Supervised fine-tuning with multiple references addresses overfitting to non-core expressions by masking low-probability tokens based on their semantic importance.  \t\t\t\t\tAI-generated summary \t\t\t\t Supervised fine-tuning (SFT) is a fundamental post-training strategy to align Large Language Models (LLMs) with human intent. However, traditional SFT often ignores the one-to-many nature of language by forcing alignment with a single reference answer, leading to the model overfitting to non-core expressions. Although our empirical analysis suggests that introducing multiple reference answers can mitigate this issue, the prohibitive data and computational costs necessitate a strategic shift: prioritizing the mitigation of single-reference overfitting over the costly pursuit of answer diversity. To achieve this, we reveal the intrinsic connection between token probability and semantic importance: high-probability tokens carry the core logical framework, while low-probability tokens are mostly replaceable expressions. Based on this insight, we propose ProFit, which selectively masks low-probability tokens to prevent surface-level overfitting. Extensive experiments confirm that ProFit consistently outperforms traditional SFT baselines on general reasoning and mathematical benchmarks.",
+            "score": 9,
+            "issue_id": 552,
+            "pub_date": "2026-01-14",
+            "pub_date_card": {
+                "ru": "14 января",
+                "en": "January 14",
+                "zh": "1月14日"
+            },
+            "hash": "687e04f44bf56850",
+            "github_url": "https://github.com/Utaotao/ProFit",
+            "github_stars": 18,
+            "authors": [
+                "Tao Liu",
+                "Taiqiang Wu",
+                "Runming Yang",
+                "Shaoning Sun",
+                "Junjie Wang",
+                "Yujiu Yang"
+            ],
+            "affiliations": [
+                "The University of Hong Kong",
+                "Tsinghua University"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.09195.jpg",
+            "data": {
+                "categories": [
+                    "#training",
+                    "#optimization",
+                    "#reasoning"
+                ],
+                "emoji": "📚",
+                "ru": {
+                    "title": "Контролируемое дообучение с несколькими ссылками для предотвращения поверхностной переобученности",
+                    "desc": "Данная работа исследует проблему избыточной подгонки моделей машинного обучения к второстепенным выражениям при традиционном контролируемом дообучении (SFT). Предложенный метод ProFit решает эту задачу путем маскировки низко вероятностных токенов на основе их семантической значимости, что позволяет модели лучше сохранять ключевые логические структуры и улучшать ее общую производительность."
+                },
+                "en": {
+                    "title": "Article",
+                    "desc": ""
                 }
             }
         },
@@ -602,6 +602,57 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.11087",
+            "title": "PhysRVG: Physics-Aware Unified Reinforcement Learning for Video Generative Models",
+            "url": "https://huggingface.co/papers/2601.11087",
+            "abstract": "A physics-aware reinforcement learning paradigm is introduced for video generation that enforces physical collision rules directly in high-dimensional spaces, ensuring strict application of physics knowledge rather than treating it as conditional constraints.  \t\t\t\t\tAI-generated summary \t\t\t\t Physical principles are fundamental to realistic visual simulation, but remain a significant oversight in transformer-based video generation. This gap highlights a critical limitation in rendering rigid body motion, a core tenet of classical mechanics. While computer graphics and physics-based simulators can easily model such collisions using Newton formulas, modern pretrain-finetune paradigms discard the concept of object rigidity during pixel-level global denoising. Even perfectly correct mathematical constraints are treated as suboptimal solutions (i.e., conditions) during model optimization in post-training, fundamentally limiting the physical realism of generated videos. Motivated by these considerations, we introduce, for the first time, a physics-aware reinforcement learning paradigm for video generation models that enforces physical collision rules directly in high-dimensional spaces, ensuring the physics knowledge is strictly applied rather than treated as conditions. Subsequently, we extend this paradigm to a unified framework, termed Mimicry-Discovery Cycle (MDcycle), which allows substantial fine-tuning while fully preserving the model's ability to leverage physics-grounded feedback. To validate our approach, we construct new benchmark PhysRVGBench and perform extensive qualitative and quantitative experiments to thoroughly assess its effectiveness.",
+            "score": 5,
+            "issue_id": 552,
+            "pub_date": "2026-01-16",
+            "pub_date_card": {
+                "ru": "16 января",
+                "en": "January 16",
+                "zh": "1月16日"
+            },
+            "hash": "7de1634e59778ee2",
+            "github_url": "",
+            "github_stars": 0,
+            "authors": [
+                "Qiyuan Zhang",
+                "Biao Gong",
+                "Shuai Tan",
+                "Zheng Zhang",
+                "Yujun Shen",
+                "Xing Zhu",
+                "Yuyuan Li",
+                "Kelu Yao",
+                "Chunhua Shen",
+                "Changqing Zou"
+            ],
+            "affiliations": [
+                "Ant Group",
+                "Zhejiang Lab",
+                "Zhejiang University"
+            ],
+            "pdf_title_img": "assets/pdf/title_img/2601.11087.jpg",
+            "data": {
+                "categories": [
+                    "#rl",
+                    "#video_generation",
+                    "#physics"
+                ],
+                "emoji": "🔄",
+                "ru": {
+                    "title": "Физически осведомленное обучение с подкреплением для реалистичной генерации видео",
+                    "desc": "В статье представлена новая парадигма машинного обучения с подкреплением, ориентированная на физику, для генерации видео, которая напрямую применяет правила физических столкновений в многомерном пространстве. Это позволяет строго соблюдать физические знания вместо того, чтобы рассматривать их как условные ограничения. Предложенная архитектура включает в себя цикл подражания-обнаружения (MDcycle), который обеспечивает глубокое обучение моделей с сохранением способности использовать обратную связь, основанную на физической основе. Для проверки эффективности предложенного подхода был создан новый эталонный набор данных PhysRVGBench и проведены подробные качественные и количественные эксперименты."
+                },
+                "en": {
+                    "title": "",
+                    "desc": ""
+                }
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.10825",
             "title": "Reasoning Models Generate Societies of Thought",
             "url": "https://huggingface.co/papers/2601.10825",
@@ -651,62 +702,11 @@
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.11087",
-            "title": "PhysRVG: Physics-Aware Unified Reinforcement Learning for Video Generative Models",
-            "url": "https://huggingface.co/papers/2601.11087",
-            "abstract": "A physics-aware reinforcement learning paradigm is introduced for video generation that enforces physical collision rules directly in high-dimensional spaces, ensuring strict application of physics knowledge rather than treating it as conditional constraints.  \t\t\t\t\tAI-generated summary \t\t\t\t Physical principles are fundamental to realistic visual simulation, but remain a significant oversight in transformer-based video generation. This gap highlights a critical limitation in rendering rigid body motion, a core tenet of classical mechanics. While computer graphics and physics-based simulators can easily model such collisions using Newton formulas, modern pretrain-finetune paradigms discard the concept of object rigidity during pixel-level global denoising. Even perfectly correct mathematical constraints are treated as suboptimal solutions (i.e., conditions) during model optimization in post-training, fundamentally limiting the physical realism of generated videos. Motivated by these considerations, we introduce, for the first time, a physics-aware reinforcement learning paradigm for video generation models that enforces physical collision rules directly in high-dimensional spaces, ensuring the physics knowledge is strictly applied rather than treated as conditions. Subsequently, we extend this paradigm to a unified framework, termed Mimicry-Discovery Cycle (MDcycle), which allows substantial fine-tuning while fully preserving the model's ability to leverage physics-grounded feedback. To validate our approach, we construct new benchmark PhysRVGBench and perform extensive qualitative and quantitative experiments to thoroughly assess its effectiveness.",
-            "score": 4,
-            "issue_id": 552,
-            "pub_date": "2026-01-16",
-            "pub_date_card": {
-                "ru": "16 января",
-                "en": "January 16",
-                "zh": "1月16日"
-            },
-            "hash": "7de1634e59778ee2",
-            "github_url": "",
-            "github_stars": 0,
-            "authors": [
-                "Qiyuan Zhang",
-                "Biao Gong",
-                "Shuai Tan",
-                "Zheng Zhang",
-                "Yujun Shen",
-                "Xing Zhu",
-                "Yuyuan Li",
-                "Kelu Yao",
-                "Chunhua Shen",
-                "Changqing Zou"
-            ],
-            "affiliations": [
-                "Ant Group",
-                "Zhejiang Lab",
-                "Zhejiang University"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.11087.jpg",
-            "data": {
-                "categories": [
-                    "#rl",
-                    "#video_generation",
-                    "#physics"
-                ],
-                "emoji": "🔄",
-                "ru": {
-                    "title": "Физически осведомленное обучение с подкреплением для реалистичной генерации видео",
-                    "desc": "В статье представлена новая парадигма машинного обучения с подкреплением, ориентированная на физику, для генерации видео, которая напрямую применяет правила физических столкновений в многомерном пространстве. Это позволяет строго соблюдать физические знания вместо того, чтобы рассматривать их как условные ограничения. Предложенная архитектура включает в себя цикл подражания-обнаружения (MDcycle), который обеспечивает глубокое обучение моделей с сохранением способности использовать обратную связь, основанную на физической основе. Для проверки эффективности предложенного подхода был создан новый эталонный набор данных PhysRVGBench и проведены подробные качественные и количественные эксперименты."
-                },
-                "en": {
-                    "title": "",
-                    "desc": ""
-                }
-            }
-        },
-        {
             "id": "https://huggingface.co/papers/2601.09636",
             "title": "PersonalAlign: Hierarchical Implicit Intent Alignment for Personalized GUI Agent with Long-Term User-Centric Records",
             "url": "https://huggingface.co/papers/2601.09636",
             "abstract": "PersonalAlign framework addresses GUI agent alignment with implicit user intents through hierarchical memory organization and long-term record reasoning, improving both execution and proactive performance.  \t\t\t\t\tAI-generated summary \t\t\t\t While GUI agents have shown strong performance under explicit and completion instructions, real-world deployment requires aligning with users' more complex implicit intents. In this work, we highlight Hierarchical Implicit Intent Alignment for Personalized GUI Agent (PersonalAlign), a new agent task that requires agents to leverage long-term user records as persistent context to resolve omitted preferences in vague instructions and anticipate latent routines by user state for proactive assistance. To facilitate this study, we introduce AndroidIntent, a benchmark designed to evaluate agents' ability in resolving vague instructions and providing proactive suggestions through reasoning over long-term user records. We annotated 775 user-specific preferences and 215 routines from 20k long-term records across different users for evaluation. Furthermore, we introduce Hierarchical Intent Memory Agent (HIM-Agent), which maintains a continuously updating personal memory and hierarchically organizes user preferences and routines for personalization. Finally, we evaluate a range of GUI agents on AndroidIntent, including GPT-5, Qwen3-VL, and UI-TARS, further results show that HIM-Agent significantly improves both execution and proactive performance by 15.7% and 7.3%.",
-            "score": 4,
+            "score": 5,
             "issue_id": 552,
             "pub_date": "2026-01-14",
             "pub_date_card": {
@@ -1170,10 +1170,10 @@
         "#boundary_aware_policy_optimization": 1,
         "#optical_flow_forecasting": 1,
         "#vision_language_model": 1,
-        "#social_interaction": 1,
-        "#cognitive_modeling": 1,
         "#video_generation": 1,
         "#physics": 1,
+        "#social_interaction": 1,
+        "#cognitive_modeling": 1,
         "#language_of_thought": 1,
         "#language_modeling": 1,
         "#output_diversity": 1,
