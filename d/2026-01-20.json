@@ -1,12 +1,12 @@
 {
     "date": {
-        "ru": "20 января",
-        "en": "January 20",
-        "zh": "1月20日"
+        "ru": "19 января",
+        "en": "January 19",
+        "zh": "1月19日"
     },
-    "time_utc": "2026-01-20 00:01",
-    "weekday": 1,
-    "issue_id": 577,
+    "time_utc": "2026-01-19 23:50",
+    "weekday": 0,
+    "issue_id": 576,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -1091,18 +1091,18 @@
             }
         }
     ],
-    "link_prev": "2026-01-19.html",
-    "link_next": "2026-01-21.html",
+    "link_prev": "2026-01-16.html",
+    "link_next": "2026-01-20.html",
     "link_month": "2026-01.html",
     "short_date_prev": {
-        "ru": "19.01",
-        "en": "01/19",
-        "zh": "1月19日"
+        "ru": "16.01",
+        "en": "01/16",
+        "zh": "1月16日"
     },
     "short_date_next": {
-        "ru": "21.01",
-        "en": "01/21",
-        "zh": "1月21日"
+        "ru": "20.01",
+        "en": "01/20",
+        "zh": "1月20日"
     },
     "categories": {
         "#dataset": 3,
