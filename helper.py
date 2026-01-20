@@ -449,12 +449,13 @@ def make_html_zh(data):
 def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None):
     data["papers"] = [x for x in data["papers"] if "error" not in x["data"]]
 
+    root_prefix = "../" if format == "monthly" else ""
+
     if format == "monthly":
         link_folder = "m"
         primary_color = "#7a30efcf"
         bg_digit_color = "#7a30ef17"
-        # bg_dark = "#2f2240"
-        nav_month_item = f"""<span class="nav-item" id="nav-daily"><a href="https://hfday.ru">📈 <span id='top-day-label'>День</span></a></span>"""
+        nav_month_item = f"""<span class="nav-item" id="nav-daily"><a href="{root_prefix}index.html">📈 <span id='top-day-label'>День</span></a></span>"""
         daily_title = con.TITLE_LIGHT_MONTHLY
         nightly_title = con.TITLE_DARK_MONTHLY
     else:
@@ -462,16 +463,16 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
         primary_color = "cornflowerblue"
         bg_digit_color = "#0989ea22"
         # bg_dark = "#2f2240"
-        nav_month_item = f"""<span class="nav-item" id="nav-monthly"><a href="/m/{data['link_month']}">📈 <span id='top-month-label'>Месяц</span></a></span>"""
+        nav_month_item = f"""<span class="nav-item" id="nav-monthly"><a href="m/{data['link_month']}">📈 <span id='top-month-label'>Месяц</span></a></span>"""
         daily_title = con.TITLE_LIGHT
         nightly_title = con.TITLE_DARK
 
     article_classes = ""
     for paper in data["papers"]:
         if paper["score"] >= 10 and bg_images:
-            article_classes += f'body.light-theme>div>main>article.x{paper["hash"]} {{ background: url("https://hfday.ru/img/{paper["pub_date"].replace("-","")}/{paper["hash"]}.jpg") !important; background-size: cover !important; background-position: center !important; background-blend-mode: lighten !important; background-color: rgba(255,255,255,0.91) !important;}}\n'
+            article_classes += f'body.light-theme>div>main>article.x{paper["hash"]} {{ background: url("{root_prefix}img/{paper["pub_date"].replace("-","")}/{paper["hash"]}.jpg") !important; background-size: cover !important; background-position: center !important; background-blend-mode: lighten !important; background-color: rgba(255,255,255,0.91) !important;}}\n'
             article_classes += f'body.light-theme>div>main>article.x{paper["hash"]}:hover {{ background-color: rgba(255,255,255,0.95) !important;}}\n'
-            article_classes += f'body.dark-theme>div>main>article.x{paper["hash"]} {{ background: url("https://hfday.ru/img/{paper["pub_date"].replace("-","")}/{paper["hash"]}.jpg") !important; background-size: cover !important; background-position: center !important; background-blend-mode: hue !important; background-color: rgba(60,60,60,0.9) !important; }}\n'
+            article_classes += f'body.dark-theme>div>main>article.x{paper["hash"]} {{ background: url("{root_prefix}img/{paper["pub_date"].replace("-","")}/{paper["hash"]}.jpg") !important; background-size: cover !important; background-position: center !important; background-blend-mode: hue !important; background-color: rgba(60,60,60,0.9) !important; }}\n'
             article_classes += f'body.dark-theme>div>main>article.x{paper["hash"]}:hover {{ background-color: rgba(60,60,60,0.92) !important;}}\n'
 
     cats_html = sorted(
@@ -1304,7 +1305,7 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
 <body class="light-theme">
     <header>
         <div class="container">            
-            <a href="https://hfday.ru" class="a-clean"><h1 class="title-sign" id="doomgrad-icon">🔺</h1><h1 class="title-text" id="doomgrad">{daily_title}</h1></a>
+            <a href="{root_prefix}index.html" class="a-clean"><h1 class="title-sign" id="doomgrad-icon">🔺</h1><h1 class="title-text" id="doomgrad">{daily_title}</h1></a>
             <p><span id="title-date">{data['date']['ru']}</span> | <span id="title-articles-count">{format_subtitle(len(data['papers']))}</span></p>
         </div>
         <div class="theme-switch">
@@ -1650,9 +1651,9 @@ def make_html(data, bg_images=True, format="daily", is_full=False, img_data=None
                     affiliations = item["affiliations"].slice(0, 10).join(", ");
                 }}
 
-                let pdfImg = "https://hfday.ru/img/title_stub.png"
+                let pdfImg = "{root_prefix}img/title_stub.png"
                 if ('pdf_title_img' in item) {{
-                    pdfImg = 'https://hfday.ru/' + item['pdf_title_img']
+                    pdfImg = '{root_prefix}' + item['pdf_title_img']
                     
                 }}                
 

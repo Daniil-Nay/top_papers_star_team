@@ -3,10 +3,8 @@ name: Make Page
 on:
   workflow_dispatch:
   schedule:
-    # будни: каждый час
-    - cron: "*/5 * * * *"
-    # выходные: каждые 6 часов
-    - cron: "*/5 * * * *"
+    # теперь каждыйа час
+    - cron: "0 * * * *"
 
 permissions:
   contents: write
