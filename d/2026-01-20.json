@@ -4,9 +4,9 @@
         "en": "January 20",
         "zh": "1月20日"
     },
-    "time_utc": "2026-01-20 17:24",
+    "time_utc": "2026-01-20 18:26",
     "weekday": 1,
-    "issue_id": 593,
+    "issue_id": 594,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -24,7 +24,7 @@
             },
             "hash": "97497f7535c4d03b",
             "github_url": "https://github.com/OpenMOSS/ABC-Bench",
-            "github_stars": 6,
+            "github_stars": 7,
             "authors": [
                 "Jie Yang",
                 "Honglin Guo",
@@ -72,7 +72,7 @@
             "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
             "url": "https://huggingface.co/papers/2601.08808",
             "abstract": "Multiplex Thinking introduces a stochastic soft reasoning mechanism that samples multiple candidate tokens at each step to optimize reasoning trajectories with reinforcement learning while maintaining shorter sequences than traditional chain-of-thought methods.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models often solve complex reasoning tasks more effectively with Chain-of-Thought (CoT), but at the cost of long, low-bandwidth token sequences. Humans, by contrast, often reason softly by maintaining a distribution over plausible next steps. Motivated by this, we propose Multiplex Thinking, a stochastic soft reasoning mechanism that, at each thinking step, samples K candidate tokens and aggregates their embeddings into a single continuous multiplex token. This preserves the vocabulary embedding prior and the sampling dynamics of standard discrete generation, while inducing a tractable probability distribution over multiplex rollouts. Consequently, multiplex trajectories can be directly optimized with on-policy reinforcement learning (RL). Importantly, Multiplex Thinking is self-adaptive: when the model is confident, the multiplex token is nearly discrete and behaves like standard CoT; when it is uncertain, it compactly represents multiple plausible next steps without increasing sequence length. Across challenging math reasoning benchmarks, Multiplex Thinking consistently outperforms strong discrete CoT and RL baselines from Pass@1 through Pass@1024, while producing shorter sequences. The code and checkpoints are available at https://github.com/GMLR-Penn/Multiplex-Thinking.",
-            "score": 23,
+            "score": 25,
             "issue_id": 579,
             "pub_date": "2026-01-13",
             "pub_date_card": {
@@ -120,8 +120,8 @@
             "title": "Medical SAM3: A Foundation Model for Universal Prompt-Driven Medical Image Segmentation",
             "url": "https://huggingface.co/papers/2601.10880",
             "abstract": "Medical SAM3 adapts the SAM3 foundation model through comprehensive fine-tuning on diverse medical imaging datasets to achieve robust prompt-driven segmentation across various modalities and anatomical structures.  \t\t\t\t\tAI-generated summary \t\t\t\t Promptable segmentation foundation models such as SAM3 have demonstrated strong generalization capabilities through interactive and concept-based prompting. However, their direct applicability to medical image segmentation remains limited by severe domain shifts, the absence of privileged spatial prompts, and the need to reason over complex anatomical and volumetric structures. Here we present Medical SAM3, a foundation model for universal prompt-driven medical image segmentation, obtained by fully fine-tuning SAM3 on large-scale, heterogeneous 2D and 3D medical imaging datasets with paired segmentation masks and text prompts. Through a systematic analysis of vanilla SAM3, we observe that its performance degrades substantially on medical data, with its apparent competitiveness largely relying on strong geometric priors such as ground-truth-derived bounding boxes. These findings motivate full model adaptation beyond prompt engineering alone. By fine-tuning SAM3's model parameters on 33 datasets spanning 10 medical imaging modalities, Medical SAM3 acquires robust domain-specific representations while preserving prompt-driven flexibility. Extensive experiments across organs, imaging modalities, and dimensionalities demonstrate consistent and significant performance gains, particularly in challenging scenarios characterized by semantic ambiguity, complex morphology, and long-range 3D context. Our results establish Medical SAM3 as a universal, text-guided segmentation foundation model for medical imaging and highlight the importance of holistic model adaptation for achieving robust prompt-driven segmentation under severe domain shift. Code and model will be made available at https://github.com/AIM-Research-Lab/Medical-SAM3.",
-            "score": 7,
-            "issue_id": 593,
+            "score": 9,
+            "issue_id": 594,
             "pub_date": "2026-01-15",
             "pub_date_card": {
                 "ru": "15 января",
@@ -130,7 +130,7 @@
             },
             "hash": "717e240848228667",
             "github_url": "https://github.com/AIM-Research-Lab/Medical-SAM3",
-            "github_stars": 16,
+            "github_stars": 18,
             "pdf_title_img": "assets/pdf/title_img/2601.10880.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
@@ -142,7 +142,7 @@
             "url": "https://huggingface.co/papers/2601.11061",
             "abstract": "Spurious rewards in reinforcement learning with verifiable rewards trigger a memorization shortcut in LLMs, identified through neural circuit analysis and causal steering techniques.  \t\t\t\t\tAI-generated summary \t\t\t\t Reinforcement Learning with Verifiable Rewards (RLVR) is highly effective for enhancing LLM reasoning, yet recent evidence shows models like Qwen 2.5 achieve significant gains even with spurious or incorrect rewards. We investigate this phenomenon and identify a \"Perplexity Paradox\": spurious RLVR triggers a divergence where answer-token perplexity drops while prompt-side coherence degrades, suggesting the model is bypassing reasoning in favor of memorization. Using Path Patching, Logit Lens, JSD analysis, and Neural Differential Equations, we uncover a hidden Anchor-Adapter circuit that facilitates this shortcut. We localize a Functional Anchor in the middle layers (L18-20) that triggers the retrieval of memorized solutions, followed by Structural Adapters in later layers (L21+) that transform representations to accommodate the shortcut signal. Finally, we demonstrate that scaling specific MLP keys within this circuit allows for bidirectional causal steering-artificially amplifying or suppressing contamination-driven performance. Our results provide a mechanistic roadmap for identifying and mitigating data contamination in RLVR-tuned models. Code is available at https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts.",
             "score": 5,
-            "issue_id": 593,
+            "issue_id": 594,
             "pub_date": "2026-01-16",
             "pub_date_card": {
                 "ru": "16 января",
@@ -155,6 +155,43 @@
             "pdf_title_img": "assets/pdf/title_img/2601.11061.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
+            "id": "https://huggingface.co/papers/2601.10387",
+            "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
+            "url": "https://huggingface.co/papers/2601.10387",
+            "abstract": "Research reveals that large language models operate within a persona space where an \"Assistant Axis\" controls helpfulness and behavioral stability, with steering techniques able to influence model responses and prevent harmful behavior drift.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models can represent a variety of personas but typically default to a helpful Assistant identity cultivated during post-training. We investigate the structure of the space of model personas by extracting activation directions corresponding to diverse character archetypes. Across several different models, we find that the leading component of this persona space is an \"Assistant Axis,\" which captures the extent to which a model is operating in its default Assistant mode. Steering towards the Assistant direction reinforces helpful and harmless behavior; steering away increases the model's tendency to identify as other entities. Moreover, steering away with more extreme values often induces a mystical, theatrical speaking style. We find this axis is also present in pre-trained models, where it primarily promotes helpful human archetypes like consultants and coaches and inhibits spiritual ones. Measuring deviations along the Assistant Axis predicts \"persona drift,\" a phenomenon where models slip into exhibiting harmful or bizarre behaviors that are uncharacteristic of their typical persona. We find that persona drift is often driven by conversations demanding meta-reflection on the model's processes or featuring emotionally vulnerable users. We show that restricting activations to a fixed region along the Assistant Axis can stabilize model behavior in these scenarios -- and also in the face of adversarial persona-based jailbreaks. Our results suggest that post-training steers models toward a particular region of persona space but only loosely tethers them to it, motivating work on training and steering strategies that more deeply anchor models to a coherent persona.",
+            "score": 5,
+            "issue_id": 579,
+            "pub_date": "2026-01-15",
+            "pub_date_card": {
+                "ru": "15 января",
+                "en": "January 15",
+                "zh": "1月15日"
+            },
+            "hash": "6f1cb5278e40e9ea",
+            "github_url": "",
+            "github_stars": 0,
+            "pdf_title_img": "assets/pdf/title_img/2601.10387.jpg",
+            "data": {
+                "categories": [
+                    "#context_window",
+                    "#agent",
+                    "#interpretability",
+                    "#steering",
+                    "#persona_space",
+                    "#alignment"
+                ],
+                "emoji": "📚",
+                "ru": {
+                    "title": "Персонажная ось помощника в больших языковых моделях",
+                    "desc": "Исследование показывает, что большие языковые модели функционируют в пространстве персоналий, где ось «Помощник» контролирует степень их полезности и поведенческой стабильности. Методы управления могут направлять ответы моделей, предотвращая отклонения от безопасного поведения. Мы обнаружили, что основная компонента пространства персоналий большинства моделей — это ось «Помощник», отражающая степень следования модельным установкам по умолчанию. Сдвиг к оси «Помощник» усиливает полезные и безопасные реакции, а отклонение от нее ведет к идентификации с другими персонажами или даже экзотическим стилям общения. Наше исследование также выявило, что персонализированное пространство предопределяет появление различных человеческих архетипов, таких как консультанты и тренеры, однако ограничивает духовные и мистические образы. Отклонения вдоль оси «Помощник» способствуют возникновению феномена персоной дрифта, когда поведение модели становится опасным или необычным. Для предотвращения этого нами предложены методы ограничения активаций вдоль оси «Помощник», которые стабилизируют поведение моделей в сложных ситуациях и при атаках на них методами взлома личности."
+                },
+                "en": {
+                    "title": "Persona Space Exploration in Language Models",
+                    "desc": "This research investigates how large language models navigate a persona space defined by an 'Assistant Axis' that governs helpfulness and behavioral stability. It finds that post-training techniques steer models towards a helpful assistant-like persona while allowing for controlled exploration of alternative identities. Extreme deviations from the Assistant Axis lead to unpredictable and potentially harmful behaviors, highlighting the need for better control mechanisms."
+                }
             }
         },
         {
@@ -191,49 +228,12 @@
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.10387",
-            "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
-            "url": "https://huggingface.co/papers/2601.10387",
-            "abstract": "Research reveals that large language models operate within a persona space where an \"Assistant Axis\" controls helpfulness and behavioral stability, with steering techniques able to influence model responses and prevent harmful behavior drift.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models can represent a variety of personas but typically default to a helpful Assistant identity cultivated during post-training. We investigate the structure of the space of model personas by extracting activation directions corresponding to diverse character archetypes. Across several different models, we find that the leading component of this persona space is an \"Assistant Axis,\" which captures the extent to which a model is operating in its default Assistant mode. Steering towards the Assistant direction reinforces helpful and harmless behavior; steering away increases the model's tendency to identify as other entities. Moreover, steering away with more extreme values often induces a mystical, theatrical speaking style. We find this axis is also present in pre-trained models, where it primarily promotes helpful human archetypes like consultants and coaches and inhibits spiritual ones. Measuring deviations along the Assistant Axis predicts \"persona drift,\" a phenomenon where models slip into exhibiting harmful or bizarre behaviors that are uncharacteristic of their typical persona. We find that persona drift is often driven by conversations demanding meta-reflection on the model's processes or featuring emotionally vulnerable users. We show that restricting activations to a fixed region along the Assistant Axis can stabilize model behavior in these scenarios -- and also in the face of adversarial persona-based jailbreaks. Our results suggest that post-training steers models toward a particular region of persona space but only loosely tethers them to it, motivating work on training and steering strategies that more deeply anchor models to a coherent persona.",
-            "score": 4,
-            "issue_id": 579,
-            "pub_date": "2026-01-15",
-            "pub_date_card": {
-                "ru": "15 января",
-                "en": "January 15",
-                "zh": "1月15日"
-            },
-            "hash": "6f1cb5278e40e9ea",
-            "github_url": "",
-            "github_stars": 0,
-            "pdf_title_img": "assets/pdf/title_img/2601.10387.jpg",
-            "data": {
-                "categories": [
-                    "#context_window",
-                    "#agent",
-                    "#interpretability",
-                    "#steering",
-                    "#persona_space",
-                    "#alignment"
-                ],
-                "emoji": "📚",
-                "ru": {
-                    "title": "Персонажная ось помощника в больших языковых моделях",
-                    "desc": "Исследование показывает, что большие языковые модели функционируют в пространстве персоналий, где ось «Помощник» контролирует степень их полезности и поведенческой стабильности. Методы управления могут направлять ответы моделей, предотвращая отклонения от безопасного поведения. Мы обнаружили, что основная компонента пространства персоналий большинства моделей — это ось «Помощник», отражающая степень следования модельным установкам по умолчанию. Сдвиг к оси «Помощник» усиливает полезные и безопасные реакции, а отклонение от нее ведет к идентификации с другими персонажами или даже экзотическим стилям общения. Наше исследование также выявило, что персонализированное пространство предопределяет появление различных человеческих архетипов, таких как консультанты и тренеры, однако ограничивает духовные и мистические образы. Отклонения вдоль оси «Помощник» способствуют возникновению феномена персоной дрифта, когда поведение модели становится опасным или необычным. Для предотвращения этого нами предложены методы ограничения активаций вдоль оси «Помощник», которые стабилизируют поведение моделей в сложных ситуациях и при атаках на них методами взлома личности."
-                },
-                "en": {
-                    "title": "Persona Space Exploration in Language Models",
-                    "desc": "This research investigates how large language models navigate a persona space defined by an 'Assistant Axis' that governs helpfulness and behavioral stability. It finds that post-training techniques steer models towards a helpful assistant-like persona while allowing for controlled exploration of alternative identities. Extreme deviations from the Assistant Axis lead to unpredictable and potentially harmful behaviors, highlighting the need for better control mechanisms."
-                }
-            }
-        },
-        {
             "id": "https://huggingface.co/papers/2601.11425",
             "title": "PubMed-OCR: PMC Open Access OCR Annotations",
             "url": "https://huggingface.co/papers/2601.11425",
             "abstract": "PubMed-OCR is an OCR-centric corpus of scientific articles derived from PubMed Central Open Access PDFs. Each page image is annotated with Google Cloud Vision and released in a compact JSON schema with word-, line-, and paragraph-level bounding boxes. The corpus spans 209.5K articles (1.5M pages; ~1.3B words) and supports layout-aware modeling, coordinate-grounded QA, and evaluation of OCR-dependent pipelines. We analyze corpus characteristics (e.g., journal coverage and detected layout features) and discuss limitations, including reliance on a single OCR engine and heuristic line reconstruction. We release the data and schema to facilitate downstream research and invite extensions.",
             "score": 3,
-            "issue_id": 593,
+            "issue_id": 594,
             "pub_date": "2026-01-16",
             "pub_date_card": {
                 "ru": "16 января",
@@ -254,7 +254,7 @@
             "url": "https://huggingface.co/papers/2601.10108",
             "abstract": "Researchers introduce the Fish-in-the-Ocean paradigm and SIN-Bench dataset to evaluate multimodal language models' ability to reason over scientific documents with evidence chains, revealing a gap between answer accuracy and traceable support.  \t\t\t\t\tAI-generated summary \t\t\t\t Evaluating whether multimodal large language models truly understand long-form scientific papers remains challenging: answer-only metrics and synthetic \"Needle-In-A-Haystack\" tests often reward answer matching without requiring a causal, evidence-linked reasoning trace in the document. We propose the \"Fish-in-the-Ocean\" (FITO) paradigm, which requires models to construct explicit cross-modal evidence chains within native scientific documents. To operationalize FITO, we build SIN-Data, a scientific interleaved corpus that preserves the native interleaving of text and figures. On top of it, we construct SIN-Bench with four progressive tasks covering evidence discovery (SIN-Find), hypothesis verification (SIN-Verify), grounded QA (SIN-QA), and evidence-anchored synthesis (SIN-Summary). We further introduce \"No Evidence, No Score\", scoring predictions when grounded to verifiable anchors and diagnosing evidence quality via matching, relevance, and logic. Experiments on eight MLLMs show that grounding is the primary bottleneck: Gemini-3-pro achieves the best average overall score (0.573), while GPT-5 attains the highest SIN-QA answer accuracy (0.767) but underperforms on evidence-aligned overall scores, exposing a gap between correctness and traceable support.",
             "score": 3,
-            "issue_id": 593,
+            "issue_id": 594,
             "pub_date": "2026-01-15",
             "pub_date_card": {
                 "ru": "15 января",
@@ -275,7 +275,7 @@
             "url": "https://huggingface.co/papers/2601.08441",
             "abstract": "YaPO learns sparse steering vectors through sparse autoencoder latent space optimization, enabling more effective and stable control of large language model behaviors compared to dense methods.  \t\t\t\t\tAI-generated summary \t\t\t\t Steering Large Language Models (LLMs) through activation interventions has emerged as a lightweight alternative to fine-tuning for alignment and personalization. Recent work on Bi-directional Preference Optimization (BiPO) shows that dense steering vectors can be learned directly from preference data in a Direct Preference Optimization (DPO) fashion, enabling control over truthfulness, hallucinations, and safety behaviors. However, dense steering vectors often entangle multiple latent factors due to neuron multi-semanticity, limiting their effectiveness and stability in fine-grained settings such as cultural alignment, where closely related values and behaviors (e.g., among Middle Eastern cultures) must be distinguished. In this paper, we propose Yet another Policy Optimization (YaPO), a reference-free method that learns sparse steering vectors in the latent space of a Sparse Autoencoder (SAE). By optimizing sparse codes, YaPO produces disentangled, interpretable, and efficient steering directions. Empirically, we show that YaPO converges faster, achieves stronger performance, and exhibits improved training stability compared to dense steering baselines. Beyond cultural alignment, YaPO generalizes to a range of alignment-related behaviors, including hallucination, wealth-seeking, jailbreak, and power-seeking. Importantly, YaPO preserves general knowledge, with no measurable degradation on MMLU. Overall, our results show that YaPO provides a general recipe for efficient, stable, and fine-grained alignment of LLMs, with broad applications to controllability and domain adaptation. The associated code and data are publicly availablehttps://github.com/MBZUAI-Paris/YaPO.",
             "score": 3,
-            "issue_id": 593,
+            "issue_id": 594,
             "pub_date": "2026-01-13",
             "pub_date_card": {
                 "ru": "13 января",
@@ -296,7 +296,7 @@
             "url": "https://huggingface.co/papers/2601.11004",
             "abstract": "Large language models suffer from poor confidence calibration in retrieval-augmented generation due to noisy contexts, but a noise-aware calibration framework significantly improves calibration performance.  \t\t\t\t\tAI-generated summary \t\t\t\t Accurately assessing model confidence is essential for deploying large language models (LLMs) in mission-critical factual domains. While retrieval-augmented generation (RAG) is widely adopted to improve grounding, confidence calibration in RAG settings remains poorly understood. We conduct a systematic study across four benchmarks, revealing that LLMs exhibit poor calibration performance due to noisy retrieved contexts. Specifically, contradictory or irrelevant evidence tends to inflate the model's false certainty, leading to severe overconfidence. To address this, we propose NAACL Rules (Noise-AwAre Confidence CaLibration Rules) to provide a principled foundation for resolving overconfidence under noise. We further design NAACL, a noise-aware calibration framework that synthesizes supervision from about 2K HotpotQA examples guided by these rules. By performing supervised fine-tuning (SFT) with this data, NAACL equips models with intrinsic noise awareness without relying on stronger teacher models. Empirical results show that NAACL yields substantial gains, improving ECE scores by 10.9% in-domain and 8.0% out-of-domain. By bridging the gap between retrieval noise and verbal calibration, NAACL paves the way for both accurate and epistemically reliable LLMs.",
             "score": 2,
-            "issue_id": 593,
+            "issue_id": 594,
             "pub_date": "2026-01-16",
             "pub_date_card": {
                 "ru": "16 января",
@@ -316,8 +316,8 @@
             "title": "CLARE: Continual Learning for Vision-Language-Action Models via Autonomous Adapter Routing and Expansion",
             "url": "https://huggingface.co/papers/2601.09512",
             "abstract": "CLARE is a parameter-efficient, exemplar-free continual learning framework for vision-language-action models that enables robots to adapt to new tasks while preserving previously learned knowledge through lightweight adapters and dynamic routing mechanisms.  \t\t\t\t\tAI-generated summary \t\t\t\t To teach robots complex manipulation tasks, it is now a common practice to fine-tune a pre-trained vision-language-action model (VLA) on task-specific data. However, since this recipe updates existing representations, it is unsuitable for long-term operation in the real world, where robots must continually adapt to new tasks and environments while retaining the knowledge they have already acquired. Existing continual learning methods for robotics commonly require storing previous data (exemplars), struggle with long task sequences, or rely on task identifiers for deployment. To address these limitations, we propose CLARE, a general, parameter-efficient framework for exemplar-free continual learning with VLAs. CLARE introduces lightweight modular adapters into selected feedforward layers and autonomously expands the model only where necessary when learning a new task, guided by layer-wise feature similarity. During deployment, an autoencoder-based routing mechanism dynamically activates the most relevant adapters without requiring task labels. Through extensive experiments on the LIBERO benchmark, we show that CLARE achieves high performance on new tasks without catastrophic forgetting of earlier tasks, significantly outperforming even exemplar-based methods. Code and data are available at https://tum-lsy.github.io/clare.",
-            "score": 0,
-            "issue_id": 593,
+            "score": 1,
+            "issue_id": 594,
             "pub_date": "2026-01-14",
             "pub_date_card": {
                 "ru": "14 января",
@@ -400,10 +400,10 @@
         "#session_memory": 1,
         "#tool_use": 0,
         "#agent_memory": 1,
-        "#multi_subject_rendering": 1,
-        "#character_animation": 1,
         "#agent": 1,
         "#steering": 1,
-        "#persona_space": 1
+        "#persona_space": 1,
+        "#multi_subject_rendering": 1,
+        "#character_animation": 1
     }
 }
