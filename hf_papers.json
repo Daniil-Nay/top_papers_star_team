@@ -4,9 +4,9 @@
         "en": "January 20",
         "zh": "1月20日"
     },
-    "time_utc": "2026-01-20 04:49",
+    "time_utc": "2026-01-20 05:19",
     "weekday": 1,
-    "issue_id": 580,
+    "issue_id": 581,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -14,7 +14,7 @@
             "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
             "url": "https://huggingface.co/papers/2601.08808",
             "abstract": "Multiplex Thinking introduces a stochastic soft reasoning mechanism that samples multiple candidate tokens at each step to optimize reasoning trajectories with reinforcement learning while maintaining shorter sequences than traditional chain-of-thought methods.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models often solve complex reasoning tasks more effectively with Chain-of-Thought (CoT), but at the cost of long, low-bandwidth token sequences. Humans, by contrast, often reason softly by maintaining a distribution over plausible next steps. Motivated by this, we propose Multiplex Thinking, a stochastic soft reasoning mechanism that, at each thinking step, samples K candidate tokens and aggregates their embeddings into a single continuous multiplex token. This preserves the vocabulary embedding prior and the sampling dynamics of standard discrete generation, while inducing a tractable probability distribution over multiplex rollouts. Consequently, multiplex trajectories can be directly optimized with on-policy reinforcement learning (RL). Importantly, Multiplex Thinking is self-adaptive: when the model is confident, the multiplex token is nearly discrete and behaves like standard CoT; when it is uncertain, it compactly represents multiple plausible next steps without increasing sequence length. Across challenging math reasoning benchmarks, Multiplex Thinking consistently outperforms strong discrete CoT and RL baselines from Pass@1 through Pass@1024, while producing shorter sequences. The code and checkpoints are available at https://github.com/GMLR-Penn/Multiplex-Thinking.",
-            "score": 10,
+            "score": 11,
             "issue_id": 579,
             "pub_date": "2026-01-13",
             "pub_date_card": {
@@ -24,7 +24,7 @@
             },
             "hash": "0a64241c20f7b28c",
             "github_url": "https://github.com/GMLR-Penn/Multiplex-Thinking",
-            "github_stars": 39,
+            "github_stars": 40,
             "authors": [
                 "Yao Tang",
                 "Li Dong",
@@ -116,6 +116,39 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.11096",
+            "title": "CoDance: An Unbind-Rebind Paradigm for Robust Multi-Subject Animation",
+            "url": "https://huggingface.co/papers/2601.11096",
+            "abstract": "CoDance introduces an Unbind-Rebind framework for animating multiple subjects with flexible spatial configurations, using pose shift encoding and semantic/textual guidance for motion reassignment.  \t\t\t\t\tAI-generated summary \t\t\t\t Character image animation is gaining significant importance across various domains, driven by the demand for robust and flexible multi-subject rendering. While existing methods excel in single-person animation, they struggle to handle arbitrary subject counts, diverse character types, and spatial misalignment between the reference image and the driving poses. We attribute these limitations to an overly rigid spatial binding that forces strict pixel-wise alignment between the pose and reference, and an inability to consistently rebind motion to intended subjects. To address these challenges, we propose CoDance, a novel Unbind-Rebind framework that enables the animation of arbitrary subject counts, types, and spatial configurations conditioned on a single, potentially misaligned pose sequence. Specifically, the Unbind module employs a novel pose shift encoder to break the rigid spatial binding between the pose and the reference by introducing stochastic perturbations to both poses and their latent features, thereby compelling the model to learn a location-agnostic motion representation. To ensure precise control and subject association, we then devise a Rebind module, leveraging semantic guidance from text prompts and spatial guidance from subject masks to direct the learned motion to intended characters. Furthermore, to facilitate comprehensive evaluation, we introduce a new multi-subject CoDanceBench. Extensive experiments on CoDanceBench and existing datasets show that CoDance achieves SOTA performance, exhibiting remarkable generalization across diverse subjects and spatial layouts. The code and weights will be open-sourced.",
+            "score": 2,
+            "issue_id": 579,
+            "pub_date": "2026-01-16",
+            "pub_date_card": {
+                "ru": "16 января",
+                "en": "January 16",
+                "zh": "1月16日"
+            },
+            "hash": "8c557edef204bebb",
+            "github_url": "",
+            "github_stars": 0,
+            "pdf_title_img": "assets/pdf/title_img/2601.11096.jpg",
+            "data": {
+                "categories": [
+                    "#multi_subject_rendering",
+                    "#character_animation"
+                ],
+                "emoji": "🎨",
+                "ru": {
+                    "title": "КоДанс: Гибкая анимация множества персонажей",
+                    "desc": "CoDance представляет собой инновационный подход к анимации нескольких персонажей с использованием гибкой пространственной конфигурации и кодирования позы для переназначения движения на основе семантических и текстовых указаний. Предложенная архитектура включает модуль разупаковки, который устраняет жесткую привязку между позой и референсным изображением, позволяя модели обучаться универсальному представлению движений, не зависящему от местоположения. Модуль повторной упаковки направляет это движение на целевых персонажей с помощью подсказок текста и пространственных масок. В результате достигается высокая точность и адаптируемость при работе с различными типами персонажей и конфигурациями пространства."
+                },
+                "en": {
+                    "title": "CoDance: An Unbind-Rebind Framework for Multi-Subject Animation Using Pose Shift Encoding and Semantic Guidance",
+                    "desc": "CoDance introduces an innovative Unbind-Rebind framework designed to animate multiple subjects flexibly, addressing limitations in current methods due to rigid spatial bindings and lack of motion reassignment capabilities. It uses a pose shift encoder to break rigid spatial alignments and learns location-agnostic motion representations. A Rebind module utilizes semantic and spatial guidance to precisely associate motions with specific subjects, enabling robust multi-subject animations."
+                }
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.10387",
             "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
             "url": "https://huggingface.co/papers/2601.10387",
@@ -149,39 +182,6 @@
                 "en": {
                     "title": "Persona Space Exploration in Language Models",
                     "desc": "This research investigates how large language models navigate a persona space defined by an 'Assistant Axis' that governs helpfulness and behavioral stability. It finds that post-training techniques steer models towards a helpful assistant-like persona while allowing for controlled exploration of alternative identities. Extreme deviations from the Assistant Axis lead to unpredictable and potentially harmful behaviors, highlighting the need for better control mechanisms."
-                }
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.11096",
-            "title": "CoDance: An Unbind-Rebind Paradigm for Robust Multi-Subject Animation",
-            "url": "https://huggingface.co/papers/2601.11096",
-            "abstract": "CoDance introduces an Unbind-Rebind framework for animating multiple subjects with flexible spatial configurations, using pose shift encoding and semantic/textual guidance for motion reassignment.  \t\t\t\t\tAI-generated summary \t\t\t\t Character image animation is gaining significant importance across various domains, driven by the demand for robust and flexible multi-subject rendering. While existing methods excel in single-person animation, they struggle to handle arbitrary subject counts, diverse character types, and spatial misalignment between the reference image and the driving poses. We attribute these limitations to an overly rigid spatial binding that forces strict pixel-wise alignment between the pose and reference, and an inability to consistently rebind motion to intended subjects. To address these challenges, we propose CoDance, a novel Unbind-Rebind framework that enables the animation of arbitrary subject counts, types, and spatial configurations conditioned on a single, potentially misaligned pose sequence. Specifically, the Unbind module employs a novel pose shift encoder to break the rigid spatial binding between the pose and the reference by introducing stochastic perturbations to both poses and their latent features, thereby compelling the model to learn a location-agnostic motion representation. To ensure precise control and subject association, we then devise a Rebind module, leveraging semantic guidance from text prompts and spatial guidance from subject masks to direct the learned motion to intended characters. Furthermore, to facilitate comprehensive evaluation, we introduce a new multi-subject CoDanceBench. Extensive experiments on CoDanceBench and existing datasets show that CoDance achieves SOTA performance, exhibiting remarkable generalization across diverse subjects and spatial layouts. The code and weights will be open-sourced.",
-            "score": 1,
-            "issue_id": 579,
-            "pub_date": "2026-01-16",
-            "pub_date_card": {
-                "ru": "16 января",
-                "en": "January 16",
-                "zh": "1月16日"
-            },
-            "hash": "8c557edef204bebb",
-            "github_url": "",
-            "github_stars": 0,
-            "pdf_title_img": "assets/pdf/title_img/2601.11096.jpg",
-            "data": {
-                "categories": [
-                    "#multi_subject_rendering",
-                    "#character_animation"
-                ],
-                "emoji": "🎨",
-                "ru": {
-                    "title": "КоДанс: Гибкая анимация множества персонажей",
-                    "desc": "CoDance представляет собой инновационный подход к анимации нескольких персонажей с использованием гибкой пространственной конфигурации и кодирования позы для переназначения движения на основе семантических и текстовых указаний. Предложенная архитектура включает модуль разупаковки, который устраняет жесткую привязку между позой и референсным изображением, позволяя модели обучаться универсальному представлению движений, не зависящему от местоположения. Модуль повторной упаковки направляет это движение на целевых персонажей с помощью подсказок текста и пространственных масок. В результате достигается высокая точность и адаптируемость при работе с различными типами персонажей и конфигурациями пространства."
-                },
-                "en": {
-                    "title": "CoDance: An Unbind-Rebind Framework for Multi-Subject Animation Using Pose Shift Encoding and Semantic Guidance",
-                    "desc": "CoDance introduces an innovative Unbind-Rebind framework designed to animate multiple subjects flexibly, addressing limitations in current methods due to rigid spatial bindings and lack of motion reassignment capabilities. It uses a pose shift encoder to break rigid spatial alignments and learns location-agnostic motion representations. A Rebind module utilizes semantic and spatial guidance to precisely associate motions with specific subjects, enabling robust multi-subject animations."
                 }
             }
         }
@@ -253,10 +253,10 @@
         "#session_memory": 1,
         "#tool_use": 0,
         "#agent_memory": 1,
+        "#multi_subject_rendering": 1,
+        "#character_animation": 1,
         "#agent": 1,
         "#steering": 1,
-        "#persona_space": 1,
-        "#multi_subject_rendering": 1,
-        "#character_animation": 1
+        "#persona_space": 1
     }
 }
