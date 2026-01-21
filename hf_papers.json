@@ -4,9 +4,9 @@
         "en": "January 21",
         "zh": "1月21日"
     },
-    "time_utc": "2026-01-21 03:28",
+    "time_utc": "2026-01-21 04:39",
     "weekday": 2,
-    "issue_id": 600,
+    "issue_id": 601,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -14,8 +14,8 @@
             "title": "UniX: Unifying Autoregression and Diffusion for Chest X-Ray Understanding and Generation",
             "url": "https://huggingface.co/papers/2601.11522",
             "abstract": "UniX presents a unified medical foundation model that decouples visual understanding and generation tasks using distinct autoregressive and diffusion branches with cross-modal attention for enhanced performance.  \t\t\t\t\tAI-generated summary \t\t\t\t Despite recent progress, medical foundation models still struggle to unify visual understanding and generation, as these tasks have inherently conflicting goals: semantic abstraction versus pixel-level reconstruction. Existing approaches, typically based on parameter-shared autoregressive architectures, frequently lead to compromised performance in one or both tasks. To address this, we present UniX, a next-generation unified medical foundation model for chest X-ray understanding and generation. UniX decouples the two tasks into an autoregressive branch for understanding and a diffusion branch for high-fidelity generation. Crucially, a cross-modal self-attention mechanism is introduced to dynamically guide the generation process with understanding features. Coupled with a rigorous data cleaning pipeline and a multi-stage training strategy, this architecture enables synergistic collaboration between tasks while leveraging the strengths of diffusion models for superior generation. On two representative benchmarks, UniX achieves a 46.1% improvement in understanding performance (Micro-F1) and a 24.2% gain in generation quality (FD-RadDino), using only a quarter of the parameters of LLM-CXR. By achieving performance on par with task-specific models, our work establishes a scalable paradigm for synergistic medical image understanding and generation. Codes and models are available at https://github.com/ZrH42/UniX.",
-            "score": 12,
-            "issue_id": 600,
+            "score": 14,
+            "issue_id": 601,
             "pub_date": "2026-01-16",
             "pub_date_card": {
                 "ru": "16 января",
@@ -31,12 +31,33 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.13247",
+            "title": "Aligning Agentic World Models via Knowledgeable Experience Learning",
+            "url": "https://huggingface.co/papers/2601.13247",
+            "abstract": "WorldMind addresses the modal disconnect in LLMs by autonomously building a symbolic world knowledge repository that enhances physical feasibility and task optimality through experience-based learning.  \t\t\t\t\tAI-generated summary \t\t\t\t Current Large Language Models (LLMs) exhibit a critical modal disconnect: they possess vast semantic knowledge but lack the procedural grounding to respect the immutable laws of the physical world. Consequently, while these agents implicitly function as world models, their simulations often suffer from physical hallucinations-generating plans that are logically sound but physically unexecutable. Existing alignment strategies predominantly rely on resource-intensive training or fine-tuning, which attempt to compress dynamic environmental rules into static model parameters. However, such parametric encapsulation is inherently rigid, struggling to adapt to the open-ended variability of physical dynamics without continuous, costly retraining. To bridge this gap, we introduce WorldMind, a framework that autonomously constructs a symbolic World Knowledge Repository by synthesizing environmental feedback. Specifically, it unifies Process Experience to enforce physical feasibility via prediction errors and Goal Experience to guide task optimality through successful trajectories. Experiments on EB-ALFRED and EB-Habitat demonstrate that WorldMind achieves superior performance compared to baselines with remarkable cross-model and cross-environment transferability.",
+            "score": 8,
+            "issue_id": 601,
+            "pub_date": "2026-01-19",
+            "pub_date_card": {
+                "ru": "19 января",
+                "en": "January 19",
+                "zh": "1月19日"
+            },
+            "hash": "d94ae6ed0aceb888",
+            "github_url": "https://github.com/zjunlp/WorldMind",
+            "github_stars": 12,
+            "pdf_title_img": "assets/pdf/title_img/2601.13247.jpg",
+            "data": {
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.11969",
             "title": "MemoryRewardBench: Benchmarking Reward Models for Long-Term Memory Management in Large Language Models",
             "url": "https://huggingface.co/papers/2601.11969",
             "abstract": "A benchmark called MemoryRewardBench is introduced to systematically evaluate reward models' ability to assess long-term memory management in large language models across various context lengths and memory patterns.  \t\t\t\t\tAI-generated summary \t\t\t\t Existing works increasingly adopt memory-centric mechanisms to process long contexts in a segment manner, and effective memory management is one of the key capabilities that enables large language models to effectively propagate information across the entire sequence. Therefore, leveraging reward models (RMs) to automatically and reliably evaluate memory quality is critical. In this work, we introduce MemoryRewardBench, the first benchmark to systematically study the ability of RMs to evaluate long-term memory management processes. MemoryRewardBench covers both long-context comprehension and long-form generation tasks, featuring 10 distinct settings with different memory management patterns, with context length ranging from 8K to 128K tokens. Evaluations on 13 cutting-edge RMs indicate a diminishing performance gap between open-source and proprietary models, with newer-generation models consistently outperforming their predecessors regardless of parameter count. We further expose the capabilities and fundamental limitations of current RMs in evaluating LLM memory management across diverse settings.",
-            "score": 3,
-            "issue_id": 600,
+            "score": 7,
+            "issue_id": 601,
             "pub_date": "2026-01-17",
             "pub_date_card": {
                 "ru": "17 января",
@@ -48,7 +69,28 @@
             "github_stars": 1,
             "pdf_title_img": "assets/pdf/title_img/2601.11969.jpg",
             "data": {
-                "error": "HTTPSConnectionPool(host='ngw.devices.sberbank.ru', port=9443): Max retries exceeded with url: /api/v2/oauth (Caused by ConnectTimeoutError(<HTTPSConnection(host='ngw.devices.sberbank.ru', port=9443) at 0x7f9d093ec490>, 'Connection to ngw.devices.sberbank.ru timed out. (connect timeout=30)'))"
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
+            "id": "https://huggingface.co/papers/2601.12294",
+            "title": "ToolPRMBench: Evaluating and Advancing Process Reward Models for Tool-using Agents",
+            "url": "https://huggingface.co/papers/2601.12294",
+            "abstract": "ToolPRMBench is introduced as a large-scale benchmark for evaluating process reward models in tool-using agents, featuring step-level test cases and multi-LLM verification to ensure data quality.  \t\t\t\t\tAI-generated summary \t\t\t\t Reward-guided search methods have demonstrated strong potential in enhancing tool-using agents by effectively guiding sampling and exploration over complex action spaces. As a core design, those search methods utilize process reward models (PRMs) to provide step-level rewards, enabling more fine-grained monitoring. However, there is a lack of systematic and reliable evaluation benchmarks for PRMs in tool-using settings. In this paper, we introduce ToolPRMBench, a large-scale benchmark specifically designed to evaluate PRMs for tool-using agents. ToolPRMBench is built on top of several representative tool-using benchmarks and converts agent trajectories into step-level test cases. Each case contains the interaction history, a correct action, a plausible but incorrect alternative, and relevant tool metadata. We respectively utilize offline sampling to isolate local single-step errors and online sampling to capture realistic multi-step failures from full agent rollouts. A multi-LLM verification pipeline is proposed to reduce label noise and ensure data quality. We conduct extensive experiments across large language models, general PRMs, and tool-specialized PRMs on ToolPRMBench. The results reveal clear differences in PRM effectiveness and highlight the potential of specialized PRMs for tool-using. Code and data will be released at https://github.com/David-Li0406/ToolPRMBench.",
+            "score": 6,
+            "issue_id": 601,
+            "pub_date": "2026-01-18",
+            "pub_date_card": {
+                "ru": "18 января",
+                "en": "January 18",
+                "zh": "1月18日"
+            },
+            "hash": "4ace6c0ff6a7867b",
+            "github_url": "",
+            "github_stars": 0,
+            "pdf_title_img": "assets/pdf/title_img/2601.12294.jpg",
+            "data": {
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
             }
         },
         {
@@ -56,8 +98,8 @@
             "title": "Advances and Frontiers of LLM-based Issue Resolution in Software Engineering: A Comprehensive Survey",
             "url": "https://huggingface.co/papers/2601.11655",
             "abstract": "Large language models face significant challenges in software issue resolution, prompting the development of autonomous coding agents through various training-free and training-based methodologies.  \t\t\t\t\tAI-generated summary \t\t\t\t Issue resolution, a complex Software Engineering (SWE) task integral to real-world development, has emerged as a compelling challenge for artificial intelligence. The establishment of benchmarks like SWE-bench revealed this task as profoundly difficult for large language models, thereby significantly accelerating the evolution of autonomous coding agents. This paper presents a systematic survey of this emerging domain. We begin by examining data construction pipelines, covering automated collection and synthesis approaches. We then provide a comprehensive analysis of methodologies, spanning training-free frameworks with their modular components to training-based techniques, including supervised fine-tuning and reinforcement learning. Subsequently, we discuss critical analyses of data quality and agent behavior, alongside practical applications. Finally, we identify key challenges and outline promising directions for future research. An open-source repository is maintained at https://github.com/DeepSoftwareAnalytics/Awesome-Issue-Resolution to serve as a dynamic resource in this field.",
-            "score": 2,
-            "issue_id": 600,
+            "score": 5,
+            "issue_id": 601,
             "pub_date": "2026-01-15",
             "pub_date_card": {
                 "ru": "15 января",
@@ -66,8 +108,29 @@
             },
             "hash": "3bba28a3c4ff036b",
             "github_url": "https://github.com/DeepSoftwareAnalytics/Awesome-Issue-Resolution",
-            "github_stars": 7,
+            "github_stars": 8,
             "pdf_title_img": "assets/pdf/title_img/2601.11655.jpg",
+            "data": {
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
+            "id": "https://huggingface.co/papers/2601.13288",
+            "title": "A BERTology View of LLM Orchestrations: Token- and Layer-Selective Probes for Efficient Single-Pass Classification",
+            "url": "https://huggingface.co/papers/2601.13288",
+            "abstract": "Lightweight probes trained on hidden states of LLMs enable efficient classification tasks without additional computational overhead, improving safety and sentiment analysis performance.  \t\t\t\t\tAI-generated summary \t\t\t\t Production LLM systems often rely on separate models for safety and other classification-heavy steps, increasing latency, VRAM footprint, and operational complexity. We instead reuse computation already paid for by the serving LLM: we train lightweight probes on its hidden states and predict labels in the same forward pass used for generation. We frame classification as representation selection over the full token-layer hidden-state tensor, rather than committing to a fixed token or fixed layer (e.g., first-token logits or final-layer pooling). To implement this, we introduce a two-stage aggregator that (i) summarizes tokens within each layer and (ii) aggregates across layer summaries to form a single representation for classification. We instantiate this template with direct pooling, a 100K-parameter scoring-attention gate, and a downcast multi-head self-attention (MHA) probe with up to 35M trainable parameters. Across safety and sentiment benchmarks our probes improve over logit-only reuse (e.g., MULI) and are competitive with substantially larger task-specific baselines, while preserving near-serving latency and avoiding the VRAM and latency costs of a separate guard-model pipeline.",
+            "score": 1,
+            "issue_id": 601,
+            "pub_date": "2026-01-19",
+            "pub_date_card": {
+                "ru": "19 января",
+                "en": "January 19",
+                "zh": "1月19日"
+            },
+            "hash": "16b301dd1efbd006",
+            "github_url": "",
+            "github_stars": 0,
+            "pdf_title_img": "assets/pdf/title_img/2601.13288.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
             }

@@ -4,330 +4,70 @@
         "en": "January 21",
         "zh": "1月21日"
     },
-    "time_utc": "2026-01-21 01:10",
+    "time_utc": "2026-01-21 03:28",
     "weekday": 2,
-    "issue_id": 599,
+    "issue_id": 600,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
-            "id": "https://huggingface.co/papers/2601.11077",
-            "title": "ABC-Bench: Benchmarking Agentic Backend Coding in Real-World Development",
-            "url": "https://huggingface.co/papers/2601.11077",
-            "abstract": "ABC-Bench evaluates LLM agents on realistic backend coding tasks requiring full development lifecycle management from repository exploration to containerized service deployment and API testing.  \t\t\t\t\tAI-generated summary \t\t\t\t The evolution of Large Language Models (LLMs) into autonomous agents has expanded the scope of AI coding from localized code generation to complex, repository-level, and execution-driven problem solving. However, current benchmarks predominantly evaluate code logic in static contexts, neglecting the dynamic, full-process requirements of real-world engineering, particularly in backend development which demands rigorous environment configuration and service deployment. To address this gap, we introduce ABC-Bench, a benchmark explicitly designed to evaluate agentic backend coding within a realistic, executable workflow. Using a scalable automated pipeline, we curated 224 practical tasks spanning 8 languages and 19 frameworks from open-source repositories. Distinct from previous evaluations, ABC-Bench require the agents to manage the entire development lifecycle from repository exploration to instantiating containerized services and pass the external end-to-end API tests. Our extensive evaluation reveals that even state-of-the-art models struggle to deliver reliable performance on these holistic tasks, highlighting a substantial disparity between current model capabilities and the demands of practical backend engineering. Our code is available at https://github.com/OpenMOSS/ABC-Bench.",
-            "score": 49,
-            "issue_id": 579,
+            "id": "https://huggingface.co/papers/2601.11522",
+            "title": "UniX: Unifying Autoregression and Diffusion for Chest X-Ray Understanding and Generation",
+            "url": "https://huggingface.co/papers/2601.11522",
+            "abstract": "UniX presents a unified medical foundation model that decouples visual understanding and generation tasks using distinct autoregressive and diffusion branches with cross-modal attention for enhanced performance.  \t\t\t\t\tAI-generated summary \t\t\t\t Despite recent progress, medical foundation models still struggle to unify visual understanding and generation, as these tasks have inherently conflicting goals: semantic abstraction versus pixel-level reconstruction. Existing approaches, typically based on parameter-shared autoregressive architectures, frequently lead to compromised performance in one or both tasks. To address this, we present UniX, a next-generation unified medical foundation model for chest X-ray understanding and generation. UniX decouples the two tasks into an autoregressive branch for understanding and a diffusion branch for high-fidelity generation. Crucially, a cross-modal self-attention mechanism is introduced to dynamically guide the generation process with understanding features. Coupled with a rigorous data cleaning pipeline and a multi-stage training strategy, this architecture enables synergistic collaboration between tasks while leveraging the strengths of diffusion models for superior generation. On two representative benchmarks, UniX achieves a 46.1% improvement in understanding performance (Micro-F1) and a 24.2% gain in generation quality (FD-RadDino), using only a quarter of the parameters of LLM-CXR. By achieving performance on par with task-specific models, our work establishes a scalable paradigm for synergistic medical image understanding and generation. Codes and models are available at https://github.com/ZrH42/UniX.",
+            "score": 12,
+            "issue_id": 600,
             "pub_date": "2026-01-16",
             "pub_date_card": {
                 "ru": "16 января",
                 "en": "January 16",
                 "zh": "1月16日"
             },
-            "hash": "97497f7535c4d03b",
-            "github_url": "https://github.com/OpenMOSS/ABC-Bench",
-            "github_stars": 8,
-            "authors": [
-                "Jie Yang",
-                "Honglin Guo",
-                "Li Ji",
-                "Jiazheng Zhou",
-                "Rui Zheng",
-                "Zhikai Lei",
-                "Shuo Zhang",
-                "Zhiheng Xi",
-                "Shichun Liu",
-                "Yuxin Wang",
-                "Bo Wang",
-                "Yining Zheng",
-                "Tao Gui",
-                "Xipeng Qiu"
-            ],
-            "affiliations": [
-                "Fudan University",
-                "Shanghai Innovation Institute",
-                "Shanghai Qĳi Zhifeng Co., Ltd."
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.11077.jpg",
+            "hash": "2e8309152ea38796",
+            "github_url": "https://github.com/ZrH42/UniX",
+            "github_stars": 17,
+            "pdf_title_img": "assets/pdf/title_img/2601.11522.jpg",
             "data": {
-                "categories": [
-                    "#agent_memory",
-                    "#benchmark",
-                    "#data",
-                    "#session_memory",
-                    "#games",
-                    "#agents"
-                ],
-                "emoji": "💻",
-                "ru": {
-                    "title": "ABC-Бенч: Оценка агентских способностей LLМ-моделей в полной разработке ПО",
-                    "desc": "ABC-Бенч — это новый набор задач для оценки возможностей больших языковых моделей в области разработки программного обеспечения на реальном уровне сложности. Он включает полный цикл разработки от изучения репозитория до развертывания контейнеризованных сервисов и тестирования внешних API. В отличие от существующих тестов, которые оценивают только отдельные фрагменты кода, ABC-Бенч проверяет способность моделей эффективно управлять всем процессом разработки, что является важным шагом к их более широкому применению в профессиональной инженерии."
-                },
-                "en": {
-                    "title": "Evaluating Backend Coding Capabilities of LLM Agents via Realistic Development Lifecycle Management",
-                    "desc": "ABC-Bench assesses Large Language Model (LLM) agents' abilities in managing the complete backend coding lifecycle, including repository exploration, containerized service deployment, and API testing. It introduces a new benchmark that goes beyond traditional code logic evaluations by focusing on dynamic, real-world engineering tasks. The benchmark includes 224 diverse tasks across multiple programming languages and frameworks sourced from open-source repositories. This highlights significant gaps in current LLM capabilities compared to practical backend engineering needs."
-                }
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.08808",
-            "title": "Multiplex Thinking: Reasoning via Token-wise Branch-and-Merge",
-            "url": "https://huggingface.co/papers/2601.08808",
-            "abstract": "Multiplex Thinking introduces a stochastic soft reasoning mechanism that samples multiple candidate tokens at each step to optimize reasoning trajectories with reinforcement learning while maintaining shorter sequences than traditional chain-of-thought methods.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models often solve complex reasoning tasks more effectively with Chain-of-Thought (CoT), but at the cost of long, low-bandwidth token sequences. Humans, by contrast, often reason softly by maintaining a distribution over plausible next steps. Motivated by this, we propose Multiplex Thinking, a stochastic soft reasoning mechanism that, at each thinking step, samples K candidate tokens and aggregates their embeddings into a single continuous multiplex token. This preserves the vocabulary embedding prior and the sampling dynamics of standard discrete generation, while inducing a tractable probability distribution over multiplex rollouts. Consequently, multiplex trajectories can be directly optimized with on-policy reinforcement learning (RL). Importantly, Multiplex Thinking is self-adaptive: when the model is confident, the multiplex token is nearly discrete and behaves like standard CoT; when it is uncertain, it compactly represents multiple plausible next steps without increasing sequence length. Across challenging math reasoning benchmarks, Multiplex Thinking consistently outperforms strong discrete CoT and RL baselines from Pass@1 through Pass@1024, while producing shorter sequences. The code and checkpoints are available at https://github.com/GMLR-Penn/Multiplex-Thinking.",
-            "score": 26,
-            "issue_id": 579,
-            "pub_date": "2026-01-13",
+            "id": "https://huggingface.co/papers/2601.11969",
+            "title": "MemoryRewardBench: Benchmarking Reward Models for Long-Term Memory Management in Large Language Models",
+            "url": "https://huggingface.co/papers/2601.11969",
+            "abstract": "A benchmark called MemoryRewardBench is introduced to systematically evaluate reward models' ability to assess long-term memory management in large language models across various context lengths and memory patterns.  \t\t\t\t\tAI-generated summary \t\t\t\t Existing works increasingly adopt memory-centric mechanisms to process long contexts in a segment manner, and effective memory management is one of the key capabilities that enables large language models to effectively propagate information across the entire sequence. Therefore, leveraging reward models (RMs) to automatically and reliably evaluate memory quality is critical. In this work, we introduce MemoryRewardBench, the first benchmark to systematically study the ability of RMs to evaluate long-term memory management processes. MemoryRewardBench covers both long-context comprehension and long-form generation tasks, featuring 10 distinct settings with different memory management patterns, with context length ranging from 8K to 128K tokens. Evaluations on 13 cutting-edge RMs indicate a diminishing performance gap between open-source and proprietary models, with newer-generation models consistently outperforming their predecessors regardless of parameter count. We further expose the capabilities and fundamental limitations of current RMs in evaluating LLM memory management across diverse settings.",
+            "score": 3,
+            "issue_id": 600,
+            "pub_date": "2026-01-17",
             "pub_date_card": {
-                "ru": "13 января",
-                "en": "January 13",
-                "zh": "1月13日"
+                "ru": "17 января",
+                "en": "January 17",
+                "zh": "1月17日"
             },
-            "hash": "0a64241c20f7b28c",
-            "github_url": "https://github.com/GMLR-Penn/Multiplex-Thinking",
-            "github_stars": 48,
-            "authors": [
-                "Yao Tang",
-                "Li Dong",
-                "Yaru Hao",
-                "Qingxiu Dong",
-                "Furu Wei",
-                "Jiatao Gu"
-            ],
-            "affiliations": [
-                "Microsoft Research",
-                "University of Pennsylvania"
-            ],
-            "pdf_title_img": "assets/pdf/title_img/2601.08808.jpg",
+            "hash": "3d51cd5cc576b6cc",
+            "github_url": "https://github.com/LCM-Lab/MemRewardBench",
+            "github_stars": 1,
+            "pdf_title_img": "assets/pdf/title_img/2601.11969.jpg",
             "data": {
-                "categories": [
-                    "#context_window",
-                    "#optimization",
-                    "#retrieval",
-                    "#reasoning",
-                    "#rl"
-                ],
-                "emoji": "🧠",
-                "ru": {
-                    "title": "Multiplex Thinking: Мягкие Рассуждения для Улучшения Эффективности Моделей ИИ",
-                    "desc": "Статья описывает механизм Multiplex Thinking, который представляет собой стохастическую мягкую технику рассуждений для моделей машинного обучения на основе больших языковых моделей. Этот подход позволяет одновременно генерировать несколько кандидатов ответов в каждом шаге рассуждения и затем объединяет их в единый токен, что сохраняет преимущества стандартного метода цепочки размышлений при сокращении длины последовательности. В результате модель может более эффективно решать сложные задачи математического рассуждения с использованием методов подкрепления обучения на траекториях рассуждений."
-                },
-                "en": {
-                    "title": "Soft Reasoning via Stochastic Sampling for Efficient Math Reasoning Tasks",
-                    "desc": "Multiplex Thinking employs a stochastic soft reasoning mechanism where it samples multiple candidate tokens at each step using reinforcement learning to optimize reasoning trajectories. It maintains shorter sequences compared to traditional Chain-of-Thought methods by aggregating embeddings into a single multiplex token. This approach allows for a tractable probability distribution over multiplex rollouts, enabling efficient optimization. The method is adaptive, becoming nearly discrete when confident and representing multiple plausible next steps when uncertain."
-                }
+                "error": "HTTPSConnectionPool(host='ngw.devices.sberbank.ru', port=9443): Max retries exceeded with url: /api/v2/oauth (Caused by ConnectTimeoutError(<HTTPSConnection(host='ngw.devices.sberbank.ru', port=9443) at 0x7f9d093ec490>, 'Connection to ngw.devices.sberbank.ru timed out. (connect timeout=30)'))"
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.11004",
-            "title": "NAACL: Noise-AwAre Verbal Confidence Calibration for LLMs in RAG Systems",
-            "url": "https://huggingface.co/papers/2601.11004",
-            "abstract": "Large language models suffer from poor confidence calibration in retrieval-augmented generation due to noisy contexts, but a noise-aware calibration framework significantly improves calibration performance.  \t\t\t\t\tAI-generated summary \t\t\t\t Accurately assessing model confidence is essential for deploying large language models (LLMs) in mission-critical factual domains. While retrieval-augmented generation (RAG) is widely adopted to improve grounding, confidence calibration in RAG settings remains poorly understood. We conduct a systematic study across four benchmarks, revealing that LLMs exhibit poor calibration performance due to noisy retrieved contexts. Specifically, contradictory or irrelevant evidence tends to inflate the model's false certainty, leading to severe overconfidence. To address this, we propose NAACL Rules (Noise-AwAre Confidence CaLibration Rules) to provide a principled foundation for resolving overconfidence under noise. We further design NAACL, a noise-aware calibration framework that synthesizes supervision from about 2K HotpotQA examples guided by these rules. By performing supervised fine-tuning (SFT) with this data, NAACL equips models with intrinsic noise awareness without relying on stronger teacher models. Empirical results show that NAACL yields substantial gains, improving ECE scores by 10.9% in-domain and 8.0% out-of-domain. By bridging the gap between retrieval noise and verbal calibration, NAACL paves the way for both accurate and epistemically reliable LLMs.",
-            "score": 9,
-            "issue_id": 599,
-            "pub_date": "2026-01-16",
+            "id": "https://huggingface.co/papers/2601.11655",
+            "title": "Advances and Frontiers of LLM-based Issue Resolution in Software Engineering: A Comprehensive Survey",
+            "url": "https://huggingface.co/papers/2601.11655",
+            "abstract": "Large language models face significant challenges in software issue resolution, prompting the development of autonomous coding agents through various training-free and training-based methodologies.  \t\t\t\t\tAI-generated summary \t\t\t\t Issue resolution, a complex Software Engineering (SWE) task integral to real-world development, has emerged as a compelling challenge for artificial intelligence. The establishment of benchmarks like SWE-bench revealed this task as profoundly difficult for large language models, thereby significantly accelerating the evolution of autonomous coding agents. This paper presents a systematic survey of this emerging domain. We begin by examining data construction pipelines, covering automated collection and synthesis approaches. We then provide a comprehensive analysis of methodologies, spanning training-free frameworks with their modular components to training-based techniques, including supervised fine-tuning and reinforcement learning. Subsequently, we discuss critical analyses of data quality and agent behavior, alongside practical applications. Finally, we identify key challenges and outline promising directions for future research. An open-source repository is maintained at https://github.com/DeepSoftwareAnalytics/Awesome-Issue-Resolution to serve as a dynamic resource in this field.",
+            "score": 2,
+            "issue_id": 600,
+            "pub_date": "2026-01-15",
             "pub_date_card": {
-                "ru": "16 января",
-                "en": "January 16",
-                "zh": "1月16日"
+                "ru": "15 января",
+                "en": "January 15",
+                "zh": "1月15日"
             },
-            "hash": "a9abc70fc2d5ecbf",
-            "github_url": "https://github.com/HKUST-KnowComp/NAACL",
+            "hash": "3bba28a3c4ff036b",
+            "github_url": "https://github.com/DeepSoftwareAnalytics/Awesome-Issue-Resolution",
             "github_stars": 7,
-            "pdf_title_img": "assets/pdf/title_img/2601.11004.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.10880",
-            "title": "Medical SAM3: A Foundation Model for Universal Prompt-Driven Medical Image Segmentation",
-            "url": "https://huggingface.co/papers/2601.10880",
-            "abstract": "Medical SAM3 adapts the SAM3 foundation model through comprehensive fine-tuning on diverse medical imaging datasets to achieve robust prompt-driven segmentation across various modalities and anatomical structures.  \t\t\t\t\tAI-generated summary \t\t\t\t Promptable segmentation foundation models such as SAM3 have demonstrated strong generalization capabilities through interactive and concept-based prompting. However, their direct applicability to medical image segmentation remains limited by severe domain shifts, the absence of privileged spatial prompts, and the need to reason over complex anatomical and volumetric structures. Here we present Medical SAM3, a foundation model for universal prompt-driven medical image segmentation, obtained by fully fine-tuning SAM3 on large-scale, heterogeneous 2D and 3D medical imaging datasets with paired segmentation masks and text prompts. Through a systematic analysis of vanilla SAM3, we observe that its performance degrades substantially on medical data, with its apparent competitiveness largely relying on strong geometric priors such as ground-truth-derived bounding boxes. These findings motivate full model adaptation beyond prompt engineering alone. By fine-tuning SAM3's model parameters on 33 datasets spanning 10 medical imaging modalities, Medical SAM3 acquires robust domain-specific representations while preserving prompt-driven flexibility. Extensive experiments across organs, imaging modalities, and dimensionalities demonstrate consistent and significant performance gains, particularly in challenging scenarios characterized by semantic ambiguity, complex morphology, and long-range 3D context. Our results establish Medical SAM3 as a universal, text-guided segmentation foundation model for medical imaging and highlight the importance of holistic model adaptation for achieving robust prompt-driven segmentation under severe domain shift. Code and model will be made available at https://github.com/AIM-Research-Lab/Medical-SAM3.",
-            "score": 9,
-            "issue_id": 599,
-            "pub_date": "2026-01-15",
-            "pub_date_card": {
-                "ru": "15 января",
-                "en": "January 15",
-                "zh": "1月15日"
-            },
-            "hash": "717e240848228667",
-            "github_url": "https://github.com/AIM-Research-Lab/Medical-SAM3",
-            "github_stars": 21,
-            "pdf_title_img": "assets/pdf/title_img/2601.10880.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.10387",
-            "title": "The Assistant Axis: Situating and Stabilizing the Default Persona of Language Models",
-            "url": "https://huggingface.co/papers/2601.10387",
-            "abstract": "Research reveals that large language models operate within a persona space where an \"Assistant Axis\" controls helpfulness and behavioral stability, with steering techniques able to influence model responses and prevent harmful behavior drift.  \t\t\t\t\tAI-generated summary \t\t\t\t Large language models can represent a variety of personas but typically default to a helpful Assistant identity cultivated during post-training. We investigate the structure of the space of model personas by extracting activation directions corresponding to diverse character archetypes. Across several different models, we find that the leading component of this persona space is an \"Assistant Axis,\" which captures the extent to which a model is operating in its default Assistant mode. Steering towards the Assistant direction reinforces helpful and harmless behavior; steering away increases the model's tendency to identify as other entities. Moreover, steering away with more extreme values often induces a mystical, theatrical speaking style. We find this axis is also present in pre-trained models, where it primarily promotes helpful human archetypes like consultants and coaches and inhibits spiritual ones. Measuring deviations along the Assistant Axis predicts \"persona drift,\" a phenomenon where models slip into exhibiting harmful or bizarre behaviors that are uncharacteristic of their typical persona. We find that persona drift is often driven by conversations demanding meta-reflection on the model's processes or featuring emotionally vulnerable users. We show that restricting activations to a fixed region along the Assistant Axis can stabilize model behavior in these scenarios -- and also in the face of adversarial persona-based jailbreaks. Our results suggest that post-training steers models toward a particular region of persona space but only loosely tethers them to it, motivating work on training and steering strategies that more deeply anchor models to a coherent persona.",
-            "score": 6,
-            "issue_id": 579,
-            "pub_date": "2026-01-15",
-            "pub_date_card": {
-                "ru": "15 января",
-                "en": "January 15",
-                "zh": "1月15日"
-            },
-            "hash": "6f1cb5278e40e9ea",
-            "github_url": "",
-            "github_stars": 0,
-            "pdf_title_img": "assets/pdf/title_img/2601.10387.jpg",
-            "data": {
-                "categories": [
-                    "#context_window",
-                    "#agent",
-                    "#interpretability",
-                    "#steering",
-                    "#persona_space",
-                    "#alignment"
-                ],
-                "emoji": "📚",
-                "ru": {
-                    "title": "Персонажная ось помощника в больших языковых моделях",
-                    "desc": "Исследование показывает, что большие языковые модели функционируют в пространстве персоналий, где ось «Помощник» контролирует степень их полезности и поведенческой стабильности. Методы управления могут направлять ответы моделей, предотвращая отклонения от безопасного поведения. Мы обнаружили, что основная компонента пространства персоналий большинства моделей — это ось «Помощник», отражающая степень следования модельным установкам по умолчанию. Сдвиг к оси «Помощник» усиливает полезные и безопасные реакции, а отклонение от нее ведет к идентификации с другими персонажами или даже экзотическим стилям общения. Наше исследование также выявило, что персонализированное пространство предопределяет появление различных человеческих архетипов, таких как консультанты и тренеры, однако ограничивает духовные и мистические образы. Отклонения вдоль оси «Помощник» способствуют возникновению феномена персоной дрифта, когда поведение модели становится опасным или необычным. Для предотвращения этого нами предложены методы ограничения активаций вдоль оси «Помощник», которые стабилизируют поведение моделей в сложных ситуациях и при атаках на них методами взлома личности."
-                },
-                "en": {
-                    "title": "Persona Space Exploration in Language Models",
-                    "desc": "This research investigates how large language models navigate a persona space defined by an 'Assistant Axis' that governs helpfulness and behavioral stability. It finds that post-training techniques steer models towards a helpful assistant-like persona while allowing for controlled exploration of alternative identities. Extreme deviations from the Assistant Axis lead to unpredictable and potentially harmful behaviors, highlighting the need for better control mechanisms."
-                }
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.11096",
-            "title": "CoDance: An Unbind-Rebind Paradigm for Robust Multi-Subject Animation",
-            "url": "https://huggingface.co/papers/2601.11096",
-            "abstract": "CoDance introduces an Unbind-Rebind framework for animating multiple subjects with flexible spatial configurations, using pose shift encoding and semantic/textual guidance for motion reassignment.  \t\t\t\t\tAI-generated summary \t\t\t\t Character image animation is gaining significant importance across various domains, driven by the demand for robust and flexible multi-subject rendering. While existing methods excel in single-person animation, they struggle to handle arbitrary subject counts, diverse character types, and spatial misalignment between the reference image and the driving poses. We attribute these limitations to an overly rigid spatial binding that forces strict pixel-wise alignment between the pose and reference, and an inability to consistently rebind motion to intended subjects. To address these challenges, we propose CoDance, a novel Unbind-Rebind framework that enables the animation of arbitrary subject counts, types, and spatial configurations conditioned on a single, potentially misaligned pose sequence. Specifically, the Unbind module employs a novel pose shift encoder to break the rigid spatial binding between the pose and the reference by introducing stochastic perturbations to both poses and their latent features, thereby compelling the model to learn a location-agnostic motion representation. To ensure precise control and subject association, we then devise a Rebind module, leveraging semantic guidance from text prompts and spatial guidance from subject masks to direct the learned motion to intended characters. Furthermore, to facilitate comprehensive evaluation, we introduce a new multi-subject CoDanceBench. Extensive experiments on CoDanceBench and existing datasets show that CoDance achieves SOTA performance, exhibiting remarkable generalization across diverse subjects and spatial layouts. The code and weights will be open-sourced.",
-            "score": 5,
-            "issue_id": 579,
-            "pub_date": "2026-01-16",
-            "pub_date_card": {
-                "ru": "16 января",
-                "en": "January 16",
-                "zh": "1月16日"
-            },
-            "hash": "8c557edef204bebb",
-            "github_url": "",
-            "github_stars": 0,
-            "pdf_title_img": "assets/pdf/title_img/2601.11096.jpg",
-            "data": {
-                "categories": [
-                    "#multi_subject_rendering",
-                    "#character_animation"
-                ],
-                "emoji": "🎨",
-                "ru": {
-                    "title": "КоДанс: Гибкая анимация множества персонажей",
-                    "desc": "CoDance представляет собой инновационный подход к анимации нескольких персонажей с использованием гибкой пространственной конфигурации и кодирования позы для переназначения движения на основе семантических и текстовых указаний. Предложенная архитектура включает модуль разупаковки, который устраняет жесткую привязку между позой и референсным изображением, позволяя модели обучаться универсальному представлению движений, не зависящему от местоположения. Модуль повторной упаковки направляет это движение на целевых персонажей с помощью подсказок текста и пространственных масок. В результате достигается высокая точность и адаптируемость при работе с различными типами персонажей и конфигурациями пространства."
-                },
-                "en": {
-                    "title": "CoDance: An Unbind-Rebind Framework for Multi-Subject Animation Using Pose Shift Encoding and Semantic Guidance",
-                    "desc": "CoDance introduces an innovative Unbind-Rebind framework designed to animate multiple subjects flexibly, addressing limitations in current methods due to rigid spatial bindings and lack of motion reassignment capabilities. It uses a pose shift encoder to break rigid spatial alignments and learns location-agnostic motion representations. A Rebind module utilizes semantic and spatial guidance to precisely associate motions with specific subjects, enabling robust multi-subject animations."
-                }
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.11061",
-            "title": "Spurious Rewards Paradox: Mechanistically Understanding How RLVR Activates Memorization Shortcuts in LLMs",
-            "url": "https://huggingface.co/papers/2601.11061",
-            "abstract": "Spurious rewards in reinforcement learning with verifiable rewards trigger a memorization shortcut in LLMs, identified through neural circuit analysis and causal steering techniques.  \t\t\t\t\tAI-generated summary \t\t\t\t Reinforcement Learning with Verifiable Rewards (RLVR) is highly effective for enhancing LLM reasoning, yet recent evidence shows models like Qwen 2.5 achieve significant gains even with spurious or incorrect rewards. We investigate this phenomenon and identify a \"Perplexity Paradox\": spurious RLVR triggers a divergence where answer-token perplexity drops while prompt-side coherence degrades, suggesting the model is bypassing reasoning in favor of memorization. Using Path Patching, Logit Lens, JSD analysis, and Neural Differential Equations, we uncover a hidden Anchor-Adapter circuit that facilitates this shortcut. We localize a Functional Anchor in the middle layers (L18-20) that triggers the retrieval of memorized solutions, followed by Structural Adapters in later layers (L21+) that transform representations to accommodate the shortcut signal. Finally, we demonstrate that scaling specific MLP keys within this circuit allows for bidirectional causal steering-artificially amplifying or suppressing contamination-driven performance. Our results provide a mechanistic roadmap for identifying and mitigating data contamination in RLVR-tuned models. Code is available at https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts.",
-            "score": 5,
-            "issue_id": 599,
-            "pub_date": "2026-01-16",
-            "pub_date_card": {
-                "ru": "16 января",
-                "en": "January 16",
-                "zh": "1月16日"
-            },
-            "hash": "1e155023f04ffd59",
-            "github_url": "https://github.com/idwts/How-RLVR-Activates-Memorization-Shortcuts",
-            "github_stars": 6,
-            "pdf_title_img": "assets/pdf/title_img/2601.11061.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.08441",
-            "title": "YaPO: Learnable Sparse Activation Steering Vectors for Domain Adaptation",
-            "url": "https://huggingface.co/papers/2601.08441",
-            "abstract": "YaPO learns sparse steering vectors through sparse autoencoder latent space optimization, enabling more effective and stable control of large language model behaviors compared to dense methods.  \t\t\t\t\tAI-generated summary \t\t\t\t Steering Large Language Models (LLMs) through activation interventions has emerged as a lightweight alternative to fine-tuning for alignment and personalization. Recent work on Bi-directional Preference Optimization (BiPO) shows that dense steering vectors can be learned directly from preference data in a Direct Preference Optimization (DPO) fashion, enabling control over truthfulness, hallucinations, and safety behaviors. However, dense steering vectors often entangle multiple latent factors due to neuron multi-semanticity, limiting their effectiveness and stability in fine-grained settings such as cultural alignment, where closely related values and behaviors (e.g., among Middle Eastern cultures) must be distinguished. In this paper, we propose Yet another Policy Optimization (YaPO), a reference-free method that learns sparse steering vectors in the latent space of a Sparse Autoencoder (SAE). By optimizing sparse codes, YaPO produces disentangled, interpretable, and efficient steering directions. Empirically, we show that YaPO converges faster, achieves stronger performance, and exhibits improved training stability compared to dense steering baselines. Beyond cultural alignment, YaPO generalizes to a range of alignment-related behaviors, including hallucination, wealth-seeking, jailbreak, and power-seeking. Importantly, YaPO preserves general knowledge, with no measurable degradation on MMLU. Overall, our results show that YaPO provides a general recipe for efficient, stable, and fine-grained alignment of LLMs, with broad applications to controllability and domain adaptation. The associated code and data are publicly availablehttps://github.com/MBZUAI-Paris/YaPO.",
-            "score": 5,
-            "issue_id": 599,
-            "pub_date": "2026-01-13",
-            "pub_date_card": {
-                "ru": "13 января",
-                "en": "January 13",
-                "zh": "1月13日"
-            },
-            "hash": "174f6d2d1267e99b",
-            "github_url": "https://github.com/MBZUAI-Paris/YaPO",
-            "github_stars": 5,
-            "pdf_title_img": "assets/pdf/title_img/2601.08441.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.11425",
-            "title": "PubMed-OCR: PMC Open Access OCR Annotations",
-            "url": "https://huggingface.co/papers/2601.11425",
-            "abstract": "PubMed-OCR is an OCR-centric corpus of scientific articles derived from PubMed Central Open Access PDFs. Each page image is annotated with Google Cloud Vision and released in a compact JSON schema with word-, line-, and paragraph-level bounding boxes. The corpus spans 209.5K articles (1.5M pages; ~1.3B words) and supports layout-aware modeling, coordinate-grounded QA, and evaluation of OCR-dependent pipelines. We analyze corpus characteristics (e.g., journal coverage and detected layout features) and discuss limitations, including reliance on a single OCR engine and heuristic line reconstruction. We release the data and schema to facilitate downstream research and invite extensions.",
-            "score": 4,
-            "issue_id": 599,
-            "pub_date": "2026-01-16",
-            "pub_date_card": {
-                "ru": "16 января",
-                "en": "January 16",
-                "zh": "1月16日"
-            },
-            "hash": "898c8f9cb7b73416",
-            "github_url": "",
-            "github_stars": 0,
-            "pdf_title_img": "assets/pdf/title_img/2601.11425.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.10108",
-            "title": "SIN-Bench: Tracing Native Evidence Chains in Long-Context Multimodal Scientific Interleaved Literature",
-            "url": "https://huggingface.co/papers/2601.10108",
-            "abstract": "Researchers introduce the Fish-in-the-Ocean paradigm and SIN-Bench dataset to evaluate multimodal language models' ability to reason over scientific documents with evidence chains, revealing a gap between answer accuracy and traceable support.  \t\t\t\t\tAI-generated summary \t\t\t\t Evaluating whether multimodal large language models truly understand long-form scientific papers remains challenging: answer-only metrics and synthetic \"Needle-In-A-Haystack\" tests often reward answer matching without requiring a causal, evidence-linked reasoning trace in the document. We propose the \"Fish-in-the-Ocean\" (FITO) paradigm, which requires models to construct explicit cross-modal evidence chains within native scientific documents. To operationalize FITO, we build SIN-Data, a scientific interleaved corpus that preserves the native interleaving of text and figures. On top of it, we construct SIN-Bench with four progressive tasks covering evidence discovery (SIN-Find), hypothesis verification (SIN-Verify), grounded QA (SIN-QA), and evidence-anchored synthesis (SIN-Summary). We further introduce \"No Evidence, No Score\", scoring predictions when grounded to verifiable anchors and diagnosing evidence quality via matching, relevance, and logic. Experiments on eight MLLMs show that grounding is the primary bottleneck: Gemini-3-pro achieves the best average overall score (0.573), while GPT-5 attains the highest SIN-QA answer accuracy (0.767) but underperforms on evidence-aligned overall scores, exposing a gap between correctness and traceable support.",
-            "score": 4,
-            "issue_id": 599,
-            "pub_date": "2026-01-15",
-            "pub_date_card": {
-                "ru": "15 января",
-                "en": "January 15",
-                "zh": "1月15日"
-            },
-            "hash": "43bd7b45c86167a6",
-            "github_url": "",
-            "github_stars": 0,
-            "pdf_title_img": "assets/pdf/title_img/2601.10108.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
-            "id": "https://huggingface.co/papers/2601.09512",
-            "title": "CLARE: Continual Learning for Vision-Language-Action Models via Autonomous Adapter Routing and Expansion",
-            "url": "https://huggingface.co/papers/2601.09512",
-            "abstract": "CLARE is a parameter-efficient, exemplar-free continual learning framework for vision-language-action models that enables robots to adapt to new tasks while preserving previously learned knowledge through lightweight adapters and dynamic routing mechanisms.  \t\t\t\t\tAI-generated summary \t\t\t\t To teach robots complex manipulation tasks, it is now a common practice to fine-tune a pre-trained vision-language-action model (VLA) on task-specific data. However, since this recipe updates existing representations, it is unsuitable for long-term operation in the real world, where robots must continually adapt to new tasks and environments while retaining the knowledge they have already acquired. Existing continual learning methods for robotics commonly require storing previous data (exemplars), struggle with long task sequences, or rely on task identifiers for deployment. To address these limitations, we propose CLARE, a general, parameter-efficient framework for exemplar-free continual learning with VLAs. CLARE introduces lightweight modular adapters into selected feedforward layers and autonomously expands the model only where necessary when learning a new task, guided by layer-wise feature similarity. During deployment, an autoencoder-based routing mechanism dynamically activates the most relevant adapters without requiring task labels. Through extensive experiments on the LIBERO benchmark, we show that CLARE achieves high performance on new tasks without catastrophic forgetting of earlier tasks, significantly outperforming even exemplar-based methods. Code and data are available at https://tum-lsy.github.io/clare.",
-            "score": 1,
-            "issue_id": 599,
-            "pub_date": "2026-01-14",
-            "pub_date_card": {
-                "ru": "14 января",
-                "en": "January 14",
-                "zh": "1月14日"
-            },
-            "hash": "5862965df7fc323e",
-            "github_url": "https://github.com/utiasDSL/clare",
-            "github_stars": 11,
-            "pdf_title_img": "assets/pdf/title_img/2601.09512.jpg",
+            "pdf_title_img": "assets/pdf/title_img/2601.11655.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
             }
@@ -348,10 +88,10 @@
     },
     "categories": {
         "#dataset": 0,
-        "#data": 1,
-        "#benchmark": 1,
-        "#agents": 1,
-        "#rl": 1,
+        "#data": 0,
+        "#benchmark": 0,
+        "#agents": 0,
+        "#rl": 0,
         "#rlhf": 0,
         "#rag": 0,
         "#plp": 0,
@@ -366,17 +106,17 @@
         "#training": 0,
         "#robotics": 0,
         "#agi": 0,
-        "#games": 1,
-        "#interpretability": 1,
-        "#reasoning": 1,
+        "#games": 0,
+        "#interpretability": 0,
+        "#reasoning": 0,
         "#transfer_learning": 0,
         "#graphs": 0,
         "#ethics": 0,
         "#security": 0,
-        "#optimization": 1,
+        "#optimization": 0,
         "#survey": 0,
         "#diffusion": 0,
-        "#alignment": 1,
+        "#alignment": 0,
         "#story_generation": 0,
         "#hallucinations": 0,
         "#long_context": 0,
@@ -388,22 +128,17 @@
         "#science": 0,
         "#low_resource": 0,
         "#memory": 0,
-        "#retrieval": 1,
+        "#retrieval": 0,
         "#prompting": 0,
-        "#context_window": 2,
+        "#context_window": 0,
         "#compression": 0,
         "#memorization": 0,
         "#continual_learning": 0,
         "#knowledge_graphs": 0,
         "#retrieval_eval": 0,
         "#prompt_caching": 0,
-        "#session_memory": 1,
+        "#session_memory": 0,
         "#tool_use": 0,
-        "#agent_memory": 1,
-        "#agent": 1,
-        "#steering": 1,
-        "#persona_space": 1,
-        "#multi_subject_rendering": 1,
-        "#character_animation": 1
+        "#agent_memory": 0
     }
 }
