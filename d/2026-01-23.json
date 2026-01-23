@@ -4,9 +4,9 @@
         "en": "January 23",
         "zh": "1月23日"
     },
-    "time_utc": "2026-01-23 06:24",
+    "time_utc": "2026-01-23 07:21",
     "weekday": 4,
-    "issue_id": 647,
+    "issue_id": 648,
     "home_page_url": "https://huggingface.co/papers",
     "papers": [
         {
@@ -14,8 +14,8 @@
             "title": "The Flexibility Trap: Why Arbitrary Order Limits Reasoning Potential in Diffusion Language Models",
             "url": "https://huggingface.co/papers/2601.15165",
             "abstract": "Arbitrary order generation in diffusion large language models limits reasoning capability by causing premature solution space collapse, making standard policy optimization more effective.  \t\t\t\t\tAI-generated summary \t\t\t\t Diffusion Large Language Models (dLLMs) break the rigid left-to-right constraint of traditional LLMs, enabling token generation in arbitrary orders. Intuitively, this flexibility implies a solution space that strictly supersets the fixed autoregressive trajectory, theoretically unlocking superior reasoning potential for general tasks like mathematics and coding. Consequently, numerous works have leveraged reinforcement learning (RL) to elicit the reasoning capability of dLLMs. In this paper, we reveal a counter-intuitive reality: arbitrary order generation, in its current form, narrows rather than expands the reasoning boundary of dLLMs. We find that dLLMs tend to exploit this order flexibility to bypass high-uncertainty tokens that are crucial for exploration, leading to a premature collapse of the solution space. This observation challenges the premise of existing RL approaches for dLLMs, where considerable complexities, such as handling combinatorial trajectories and intractable likelihoods, are often devoted to preserving this flexibility. We demonstrate that effective reasoning is better elicited by intentionally forgoing arbitrary order and applying standard Group Relative Policy Optimization (GRPO) instead. Our approach, JustGRPO, is minimalist yet surprisingly effective (e.g., 89.1% accuracy on GSM8K) while fully retaining the parallel decoding ability of dLLMs. Project page: https://nzl-thu.github.io/the-flexibility-trap",
-            "score": 38,
-            "issue_id": 647,
+            "score": 40,
+            "issue_id": 648,
             "pub_date": "2026-01-21",
             "pub_date_card": {
                 "ru": "21 января",
@@ -35,8 +35,8 @@
             "title": "LLM-in-Sandbox Elicits General Agentic Intelligence",
             "url": "https://huggingface.co/papers/2601.16206",
             "abstract": "LLM-in-Sandbox enables large language models to perform general intelligence tasks across diverse domains by allowing them to explore a code sandbox environment, achieving robust generalization without additional training.  \t\t\t\t\tAI-generated summary \t\t\t\t We introduce LLM-in-Sandbox, enabling LLMs to explore within a code sandbox (i.e., a virtual computer), to elicit general intelligence in non-code domains. We first demonstrate that strong LLMs, without additional training, exhibit generalization capabilities to leverage the code sandbox for non-code tasks. For example, LLMs spontaneously access external resources to acquire new knowledge, leverage the file system to handle long contexts, and execute scripts to satisfy formatting requirements. We further show that these agentic capabilities can be enhanced through LLM-in-Sandbox Reinforcement Learning (LLM-in-Sandbox-RL), which uses only non-agentic data to train models for sandbox exploration. Experiments demonstrate that LLM-in-Sandbox, in both training-free and post-trained settings, achieves robust generalization spanning mathematics, physics, chemistry, biomedicine, long-context understanding, and instruction following. Finally, we analyze LLM-in-Sandbox's efficiency from computational and system perspectives, and open-source it as a Python package to facilitate real-world deployment.",
-            "score": 27,
-            "issue_id": 647,
+            "score": 29,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -45,7 +45,7 @@
             },
             "hash": "0d7b6e6eb59f8554",
             "github_url": "https://github.com/llm-in-sandbox/llm-in-sandbox",
-            "github_stars": 12,
+            "github_stars": 15,
             "pdf_title_img": "assets/pdf/title_img/2601.16206.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
@@ -57,7 +57,7 @@
             "url": "https://huggingface.co/papers/2601.15197",
             "abstract": "BayesianVLA addresses language-action grounding issues in robot manipulation by using Bayesian decomposition to prevent information collapse and improve out-of-distribution generalization.  \t\t\t\t\tAI-generated summary \t\t\t\t Vision-Language-Action (VLA) models have shown promise in robot manipulation but often struggle to generalize to new instructions or complex multi-task scenarios. We identify a critical pathology in current training paradigms where goal-driven data collection creates a dataset bias. In such datasets, language instructions are highly predictable from visual observations alone, causing the conditional mutual information between instructions and actions to vanish, a phenomenon we term Information Collapse. Consequently, models degenerate into vision-only policies that ignore language constraints and fail in out-of-distribution (OOD) settings. To address this, we propose BayesianVLA, a novel framework that enforces instruction following via Bayesian decomposition. By introducing learnable Latent Action Queries, we construct a dual-branch architecture to estimate both a vision-only prior p(a mid v) and a language-conditioned posterior π(a mid v, ell). We then optimize the policy to maximize the conditional Pointwise Mutual Information (PMI) between actions and instructions. This objective effectively penalizes the vision shortcut and rewards actions that explicitly explain the language command. Without requiring new data, BayesianVLA significantly improves generalization. Extensive experiments across on SimplerEnv and RoboCasa demonstrate substantial gains, including an 11.3% improvement on the challenging OOD SimplerEnv benchmark, validating the ability of our approach to robustly ground language in action.",
             "score": 25,
-            "issue_id": 647,
+            "issue_id": 648,
             "pub_date": "2026-01-21",
             "pub_date_card": {
                 "ru": "21 января",
@@ -73,12 +73,33 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.14724",
+            "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
+            "url": "https://huggingface.co/papers/2601.14724",
+            "abstract": "HERMES is a training-free architecture that enables real-time video stream understanding by utilizing a hierarchical memory framework based on KV cache reuse, achieving faster response times and maintained accuracy even with reduced video token input.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated significant improvement in offline video understanding. However, extending these capabilities to streaming video inputs, remains challenging, as existing models struggle to simultaneously maintain stable understanding performance, real-time responses, and low GPU memory overhead. To address this challenge, we propose HERMES, a novel training-free architecture for real-time and accurate understanding of video streams. Based on a mechanistic attention investigation, we conceptualize KV cache as a hierarchical memory framework that encapsulates video information across multiple granularities. During inference, HERMES reuses a compact KV cache, enabling efficient streaming understanding under resource constraints. Notably, HERMES requires no auxiliary computations upon the arrival of user queries, thereby guaranteeing real-time responses for continuous video stream interactions, which achieves 10times faster TTFT compared to prior SOTA. Even when reducing video tokens by up to 68% compared with uniform sampling, HERMES achieves superior or comparable accuracy across all benchmarks, with up to 11.4% gains on streaming datasets.",
+            "score": 24,
+            "issue_id": 648,
+            "pub_date": "2026-01-21",
+            "pub_date_card": {
+                "ru": "21 января",
+                "en": "January 21",
+                "zh": "1月21日"
+            },
+            "hash": "e6f92cc7d801bfe5",
+            "github_url": "https://github.com/haowei-freesky/HERMES",
+            "github_stars": 18,
+            "pdf_title_img": "assets/pdf/title_img/2601.14724.jpg",
+            "data": {
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.16093",
             "title": "SAMTok: Representing Any Mask with Two Words",
             "url": "https://huggingface.co/papers/2601.16093",
             "abstract": "SAMTok enables pixel-wise capabilities in multi-modal LLMs through discrete mask tokenization and standard training methods, achieving state-of-the-art performance on various vision-language tasks.  \t\t\t\t\tAI-generated summary \t\t\t\t Pixel-wise capabilities are essential for building interactive intelligent systems. However, pixel-wise multi-modal LLMs (MLLMs) remain difficult to scale due to complex region-level encoders, specialized segmentation decoders, and incompatible training objectives. To address these challenges, we present SAMTok, a discrete mask tokenizer that converts any region mask into two special tokens and reconstructs the mask using these tokens with high fidelity. By treating masks as new language tokens, SAMTok enables base MLLMs (such as the QwenVL series) to learn pixel-wise capabilities through standard next-token prediction and simple reinforcement learning, without architectural modifications and specialized loss design. SAMTok builds on SAM2 and is trained on 209M diverse masks using a mask encoder and residual vector quantizer to produce discrete, compact, and information-rich tokens. With 5M SAMTok-formatted mask understanding and generation data samples, QwenVL-SAMTok attains state-of-the-art or comparable results on region captioning, region VQA, grounded conversation, referring segmentation, scene graph parsing, and multi-round interactive segmentation. We further introduce a textual answer-matching reward that enables efficient reinforcement learning for mask generation, delivering substantial improvements on GRES and GCG benchmarks. Our results demonstrate a scalable and straightforward paradigm for equipping MLLMs with strong pixel-wise capabilities. Our code and models are available.",
-            "score": 21,
-            "issue_id": 647,
+            "score": 23,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -98,8 +119,8 @@
             "title": "Scaling Text-to-Image Diffusion Transformers with Representation Autoencoders",
             "url": "https://huggingface.co/papers/2601.16208",
             "abstract": "Representation Autoencoders (RAEs) demonstrate superior performance over VAEs in large-scale text-to-image generation, showing improved stability, faster convergence, and better quality while enabling unified multimodal reasoning in shared representation spaces.  \t\t\t\t\tAI-generated summary \t\t\t\t Representation Autoencoders (RAEs) have shown distinct advantages in diffusion modeling on ImageNet by training in high-dimensional semantic latent spaces. In this work, we investigate whether this framework can scale to large-scale, freeform text-to-image (T2I) generation. We first scale RAE decoders on the frozen representation encoder (SigLIP-2) beyond ImageNet by training on web, synthetic, and text-rendering data, finding that while scale improves general fidelity, targeted data composition is essential for specific domains like text. We then rigorously stress-test the RAE design choices originally proposed for ImageNet. Our analysis reveals that scaling simplifies the framework: while dimension-dependent noise scheduling remains critical, architectural complexities such as wide diffusion heads and noise-augmented decoding offer negligible benefits at scale Building on this simplified framework, we conduct a controlled comparison of RAE against the state-of-the-art FLUX VAE across diffusion transformer scales from 0.5B to 9.8B parameters. RAEs consistently outperform VAEs during pretraining across all model scales. Further, during finetuning on high-quality datasets, VAE-based models catastrophically overfit after 64 epochs, while RAE models remain stable through 256 epochs and achieve consistently better performance. Across all experiments, RAE-based diffusion models demonstrate faster convergence and better generation quality, establishing RAEs as a simpler and stronger foundation than VAEs for large-scale T2I generation. Additionally, because both visual understanding and generation can operate in a shared representation space, the multimodal model can directly reason over generated latents, opening new possibilities for unified models.",
-            "score": 16,
-            "issue_id": 647,
+            "score": 19,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -108,7 +129,7 @@
             },
             "hash": "d12bb0fdee88065f",
             "github_url": "https://github.com/ZitengWangNYU/Scale-RAE",
-            "github_stars": 13,
+            "github_stars": 14,
             "pdf_title_img": "assets/pdf/title_img/2601.16208.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
@@ -119,8 +140,8 @@
             "title": "Learning to Discover at Test Time",
             "url": "https://huggingface.co/papers/2601.16175",
             "abstract": "Test-time training enables AI systems to discover optimal solutions for specific scientific problems through continual learning focused on individual challenges rather than generalization.  \t\t\t\t\tAI-generated summary \t\t\t\t How can we use AI to discover a new state of the art for a scientific problem? Prior work in test-time scaling, such as AlphaEvolve, performs search by prompting a frozen LLM. We perform reinforcement learning at test time, so the LLM can continue to train, but now with experience specific to the test problem. This form of continual learning is quite special, because its goal is to produce one great solution rather than many good ones on average, and to solve this very problem rather than generalize to other problems. Therefore, our learning objective and search subroutine are designed to prioritize the most promising solutions. We call this method Test-Time Training to Discover (TTT-Discover). Following prior work, we focus on problems with continuous rewards. We report results for every problem we attempted, across mathematics, GPU kernel engineering, algorithm design, and biology. TTT-Discover sets the new state of the art in almost all of them: (i) Erdős' minimum overlap problem and an autocorrelation inequality; (ii) a GPUMode kernel competition (up to 2times faster than prior art); (iii) past AtCoder algorithm competitions; and (iv) denoising problem in single-cell analysis. Our solutions are reviewed by experts or the organizers. All our results are achieved with an open model, OpenAI gpt-oss-120b, and can be reproduced with our publicly available code, in contrast to previous best results that required closed frontier models. Our test-time training runs are performed using Tinker, an API by Thinking Machines, with a cost of only a few hundred dollars per problem.",
-            "score": 11,
-            "issue_id": 647,
+            "score": 14,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -129,7 +150,7 @@
             },
             "hash": "484b889a43728b97",
             "github_url": "https://github.com/test-time-training/discover",
-            "github_stars": 56,
+            "github_stars": 60,
             "pdf_title_img": "assets/pdf/title_img/2601.16175.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
@@ -140,8 +161,8 @@
             "title": "Rethinking Composed Image Retrieval Evaluation: A Fine-Grained Benchmark from Image Editing",
             "url": "https://huggingface.co/papers/2601.16125",
             "abstract": "A novel fine-grained composed image retrieval benchmark is introduced through image editing techniques, revealing significant capability gaps in existing multimodal models and exposing limitations of current benchmarks.  \t\t\t\t\tAI-generated summary \t\t\t\t Composed Image Retrieval (CIR) is a pivotal and complex task in multimodal understanding. Current CIR benchmarks typically feature limited query categories and fail to capture the diverse requirements of real-world scenarios. To bridge this evaluation gap, we leverage image editing to achieve precise control over modification types and content, enabling a pipeline for synthesizing queries across a broad spectrum of categories. Using this pipeline, we construct EDIR, a novel fine-grained CIR benchmark. EDIR encompasses 5,000 high-quality queries structured across five main categories and fifteen subcategories. Our comprehensive evaluation of 13 multimodal embedding models reveals a significant capability gap; even state-of-the-art models (e.g., RzenEmbed and GME) struggle to perform consistently across all subcategories, highlighting the rigorous nature of our benchmark. Through comparative analysis, we further uncover inherent limitations in existing benchmarks, such as modality biases and insufficient categorical coverage. Furthermore, an in-domain training experiment demonstrates the feasibility of our benchmark. This experiment clarifies the task challenges by distinguishing between categories that are solvable with targeted data and those that expose intrinsic limitations of current model architectures.",
-            "score": 11,
-            "issue_id": 647,
+            "score": 12,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -161,8 +182,8 @@
             "title": "Stable-DiffCoder: Pushing the Frontier of Code Diffusion Large Language Model",
             "url": "https://huggingface.co/papers/2601.15892",
             "abstract": "Stable-DiffCoder demonstrates superior code modeling performance compared to autoregressive baselines through block diffusion continual pretraining and efficient training mechanisms.  \t\t\t\t\tAI-generated summary \t\t\t\t Diffusion-based language models (DLLMs) offer non-sequential, block-wise generation and richer data reuse compared to autoregressive (AR) models, but existing code DLLMs still lag behind strong AR baselines under comparable budgets. We revisit this setting in a controlled study and introduce Stable-DiffCoder, a block diffusion code model that reuses the Seed-Coder architecture, data, and training pipeline. To enable efficient knowledge learning and stable training, we incorporate a block diffusion continual pretraining (CPT) stage enhanced by a tailored warmup and block-wise clipped noise schedule. Under the same data and architecture, Stable-DiffCoder overall outperforms its AR counterpart on a broad suite of code benchmarks. Moreover, relying only on the CPT and supervised fine-tuning stages, Stable-DiffCoder achieves stronger performance than a wide range of \\~8B ARs and DLLMs, demonstrating that diffusion-based training can improve code modeling quality beyond AR training alone. Moreover, diffusion-based any-order modeling improves structured code modeling for editing and reasoning, and through data augmentation, benefits low-resource coding languages.",
-            "score": 9,
-            "issue_id": 647,
+            "score": 10,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -178,33 +199,12 @@
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.15621",
-            "title": "Qwen3-TTS Technical Report",
-            "url": "https://huggingface.co/papers/2601.15621",
-            "abstract": "The Qwen3-TTS series presents advanced multilingual text-to-speech models with voice cloning and controllable speech generation capabilities, utilizing dual-track LM architecture and specialized speech tokenizers for efficient streaming synthesis.  \t\t\t\t\tAI-generated summary \t\t\t\t In this report, we present the Qwen3-TTS series, a family of advanced multilingual, controllable, robust, and streaming text-to-speech models. Qwen3-TTS supports state-of-the-art 3-second voice cloning and description-based control, allowing both the creation of entirely novel voices and fine-grained manipulation over the output speech. Trained on over 5 million hours of speech data spanning 10 languages, Qwen3-TTS adopts a dual-track LM architecture for real-time synthesis, coupled with two speech tokenizers: 1) Qwen-TTS-Tokenizer-25Hz is a single-codebook codec emphasizing semantic content, which offers seamlessly integration with Qwen-Audio and enables streaming waveform reconstruction via a block-wise DiT. 2) Qwen-TTS-Tokenizer-12Hz achieves extreme bitrate reduction and ultra-low-latency streaming, enabling immediate first-packet emission (97,ms) through its 12.5 Hz, 16-layer multi-codebook design and a lightweight causal ConvNet. Extensive experiments indicate state-of-the-art performance across diverse objective and subjective benchmark (e.g., TTS multilingual test set, InstructTTSEval, and our long speech test set). To facilitate community research and development, we release both tokenizers and models under the Apache 2.0 license.",
-            "score": 6,
-            "issue_id": 647,
-            "pub_date": "2026-01-22",
-            "pub_date_card": {
-                "ru": "22 января",
-                "en": "January 22",
-                "zh": "1月22日"
-            },
-            "hash": "5ce347d656d62b1f",
-            "github_url": "https://github.com/QwenLM/Qwen3-TTS",
-            "github_stars": 1044,
-            "pdf_title_img": "assets/pdf/title_img/2601.15621.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
             "id": "https://huggingface.co/papers/2601.15369",
             "title": "OpenVision 3: A Family of Unified Visual Encoder for Both Understanding and Generation",
             "url": "https://huggingface.co/papers/2601.15369",
             "abstract": "An advanced vision encoder named OpenVision 3 learns a unified visual representation for both image understanding and generation by combining VAE-compressed image latents with ViT architecture and joint optimization of reconstruction and semantic signals.  \t\t\t\t\tAI-generated summary \t\t\t\t This paper presents a family of advanced vision encoder, named OpenVision 3, that learns a single, unified visual representation that can serve both image understanding and image generation. Our core architecture is simple: we feed VAE-compressed image latents to a ViT encoder and train its output to support two complementary roles. First, the encoder output is passed to the ViT-VAE decoder to reconstruct the original image, encouraging the representation to capture generative structure. Second, the same representation is optimized with contrastive learning and image-captioning objectives, strengthening semantic features. By jointly optimizing reconstruction- and semantics-driven signals in a shared latent space, the encoder learns representations that synergize and generalize well across both regimes. We validate this unified design through extensive downstream evaluations with the encoder frozen. For multimodal understanding, we plug the encoder into the LLaVA-1.5 framework: it performs comparably with a standard CLIP vision encoder (e.g., 62.4 vs 62.2 on SeedBench, and 83.7 vs 82.9 on POPE). For generation, we test it under the RAE framework: ours substantially surpasses the standard CLIP-based encoder (e.g., gFID: 1.89 vs 2.54 on ImageNet). We hope this work can spur future research on unified modeling.",
-            "score": 6,
-            "issue_id": 647,
+            "score": 7,
+            "issue_id": 648,
             "pub_date": "2026-01-21",
             "pub_date_card": {
                 "ru": "21 января",
@@ -220,12 +220,33 @@
             }
         },
         {
+            "id": "https://huggingface.co/papers/2601.15621",
+            "title": "Qwen3-TTS Technical Report",
+            "url": "https://huggingface.co/papers/2601.15621",
+            "abstract": "The Qwen3-TTS series presents advanced multilingual text-to-speech models with voice cloning and controllable speech generation capabilities, utilizing dual-track LM architecture and specialized speech tokenizers for efficient streaming synthesis.  \t\t\t\t\tAI-generated summary \t\t\t\t In this report, we present the Qwen3-TTS series, a family of advanced multilingual, controllable, robust, and streaming text-to-speech models. Qwen3-TTS supports state-of-the-art 3-second voice cloning and description-based control, allowing both the creation of entirely novel voices and fine-grained manipulation over the output speech. Trained on over 5 million hours of speech data spanning 10 languages, Qwen3-TTS adopts a dual-track LM architecture for real-time synthesis, coupled with two speech tokenizers: 1) Qwen-TTS-Tokenizer-25Hz is a single-codebook codec emphasizing semantic content, which offers seamlessly integration with Qwen-Audio and enables streaming waveform reconstruction via a block-wise DiT. 2) Qwen-TTS-Tokenizer-12Hz achieves extreme bitrate reduction and ultra-low-latency streaming, enabling immediate first-packet emission (97,ms) through its 12.5 Hz, 16-layer multi-codebook design and a lightweight causal ConvNet. Extensive experiments indicate state-of-the-art performance across diverse objective and subjective benchmark (e.g., TTS multilingual test set, InstructTTSEval, and our long speech test set). To facilitate community research and development, we release both tokenizers and models under the Apache 2.0 license.",
+            "score": 6,
+            "issue_id": 648,
+            "pub_date": "2026-01-22",
+            "pub_date_card": {
+                "ru": "22 января",
+                "en": "January 22",
+                "zh": "1月22日"
+            },
+            "hash": "5ce347d656d62b1f",
+            "github_url": "https://github.com/QwenLM/Qwen3-TTS",
+            "github_stars": 1116,
+            "pdf_title_img": "assets/pdf/title_img/2601.15621.jpg",
+            "data": {
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
             "id": "https://huggingface.co/papers/2601.16163",
             "title": "Cosmos Policy: Fine-Tuning Video Models for Visuomotor Control and Planning",
             "url": "https://huggingface.co/papers/2601.16163",
             "abstract": "A pretrained video model is adapted into a robot policy through single-stage post-training, enabling direct action generation and planning capabilities without architectural modifications.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent video generation models demonstrate remarkable ability to capture complex physical interactions and scene evolution over time. To leverage their spatiotemporal priors, robotics works have adapted video models for policy learning but introduce complexity by requiring multiple stages of post-training and new architectural components for action generation. In this work, we introduce Cosmos Policy, a simple approach for adapting a large pretrained video model (Cosmos-Predict2) into an effective robot policy through a single stage of post-training on the robot demonstration data collected on the target platform, with no architectural modifications. Cosmos Policy learns to directly generate robot actions encoded as latent frames within the video model's latent diffusion process, harnessing the model's pretrained priors and core learning algorithm to capture complex action distributions. Additionally, Cosmos Policy generates future state images and values (expected cumulative rewards), which are similarly encoded as latent frames, enabling test-time planning of action trajectories with higher likelihood of success. In our evaluations, Cosmos Policy achieves state-of-the-art performance on the LIBERO and RoboCasa simulation benchmarks (98.5% and 67.1% average success rates, respectively) and the highest average score in challenging real-world bimanual manipulation tasks, outperforming strong diffusion policies trained from scratch, video model-based policies, and state-of-the-art vision-language-action models fine-tuned on the same robot demonstrations. Furthermore, given policy rollout data, Cosmos Policy can learn from experience to refine its world model and value function and leverage model-based planning to achieve even higher success rates in challenging tasks. We release code, models, and training data at https://research.nvidia.com/labs/dir/cosmos-policy/",
             "score": 4,
-            "issue_id": 647,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -246,7 +267,7 @@
             "url": "https://huggingface.co/papers/2601.15549",
             "abstract": "VIOLA is a label-efficient framework that combines minimal expert supervision with abundant unlabeled data to enable effective multimodal large language model adaptation in low-resource video domains through density-uncertainty-weighted sampling and confidence-aware retrieval mechanisms.  \t\t\t\t\tAI-generated summary \t\t\t\t Generalizing Multimodal Large Language Models (MLLMs) to novel video domains is essential for real-world deployment but remains challenging due to the scarcity of labeled data. While In-Context Learning (ICL) offers a training-free adaptation path, standard methods rely on large annotated pools, which are often impractical in specialized environments like industrial or surgical settings since they require the experts' annotations. To bridge this gap, we introduce VIOLA (Video In-cOntext Learning with minimal Annotation), a label-efficient framework that synergizes minimal expert supervision with abundant unlabeled data. First, to maximize the efficiency of a strict annotation budget, we propose density-uncertainty-weighted sampling. Unlike standard diversity or uncertainty strategies that risk selecting visual outliers, our method leverages density estimation to identify samples that are simultaneously diverse, representative, and informative. Second, to utilize the remaining unlabeled data without noise propagation, we construct a hybrid pool and introduce confidence-aware retrieval and confidence-aware prompting. These mechanisms explicitly model label reliability, retrieving demonstrations based on a composite score of similarity and confidence while enabling the MLLM to adaptively distinguish between verified ground truths and noisy pseudo-labels. Extensive experiments across nine diverse benchmarks using four MLLMs demonstrate that our framework significantly outperforms various baselines in low-resource settings, achieving robust adaptation with minimal annotation costs.",
             "score": 2,
-            "issue_id": 647,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -262,33 +283,12 @@
             }
         },
         {
-            "id": "https://huggingface.co/papers/2601.14724",
-            "title": "HERMES: KV Cache as Hierarchical Memory for Efficient Streaming Video Understanding",
-            "url": "https://huggingface.co/papers/2601.14724",
-            "abstract": "HERMES is a training-free architecture that enables real-time video stream understanding by utilizing a hierarchical memory framework based on KV cache reuse, achieving faster response times and maintained accuracy even with reduced video token input.  \t\t\t\t\tAI-generated summary \t\t\t\t Recent advancements in Multimodal Large Language Models (MLLMs) have demonstrated significant improvement in offline video understanding. However, extending these capabilities to streaming video inputs, remains challenging, as existing models struggle to simultaneously maintain stable understanding performance, real-time responses, and low GPU memory overhead. To address this challenge, we propose HERMES, a novel training-free architecture for real-time and accurate understanding of video streams. Based on a mechanistic attention investigation, we conceptualize KV cache as a hierarchical memory framework that encapsulates video information across multiple granularities. During inference, HERMES reuses a compact KV cache, enabling efficient streaming understanding under resource constraints. Notably, HERMES requires no auxiliary computations upon the arrival of user queries, thereby guaranteeing real-time responses for continuous video stream interactions, which achieves 10times faster TTFT compared to prior SOTA. Even when reducing video tokens by up to 68% compared with uniform sampling, HERMES achieves superior or comparable accuracy across all benchmarks, with up to 11.4% gains on streaming datasets.",
-            "score": 2,
-            "issue_id": 647,
-            "pub_date": "2026-01-21",
-            "pub_date_card": {
-                "ru": "21 января",
-                "en": "January 21",
-                "zh": "1月21日"
-            },
-            "hash": "e6f92cc7d801bfe5",
-            "github_url": "https://github.com/haowei-freesky/HERMES",
-            "github_stars": 7,
-            "pdf_title_img": "assets/pdf/title_img/2601.14724.jpg",
-            "data": {
-                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
-            }
-        },
-        {
             "id": "https://huggingface.co/papers/2601.11868",
             "title": "Terminal-Bench: Benchmarking Agents on Hard, Realistic Tasks in Command Line Interfaces",
             "url": "https://huggingface.co/papers/2601.11868",
             "abstract": "Terminal-Bench 2.0 presents a challenging benchmark with 89 terminal-based tasks to evaluate AI agents' capabilities in real-world scenarios.  \t\t\t\t\tAI-generated summary \t\t\t\t AI agents may soon become capable of autonomously completing valuable, long-horizon tasks in diverse domains. Current benchmarks either do not measure real-world tasks, or are not sufficiently difficult to meaningfully measure frontier models. To this end, we present Terminal-Bench 2.0: a carefully curated hard benchmark composed of 89 tasks in computer terminal environments inspired by problems from real workflows. Each task features a unique environment, human-written solution, and comprehensive tests for verification. We show that frontier models and agents score less than 65\\% on the benchmark and conduct an error analysis to identify areas for model and agent improvement. We publish the dataset and evaluation harness to assist developers and researchers in future work at https://www.tbench.ai/ .",
             "score": 1,
-            "issue_id": 647,
+            "issue_id": 648,
             "pub_date": "2026-01-17",
             "pub_date_card": {
                 "ru": "17 января",
@@ -297,7 +297,7 @@
             },
             "hash": "d9072e7a3723fbd8",
             "github_url": "https://github.com/laude-institute/terminal-bench",
-            "github_stars": 1400,
+            "github_stars": 1401,
             "pdf_title_img": "assets/pdf/title_img/2601.11868.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
@@ -309,7 +309,7 @@
             "url": "https://huggingface.co/papers/2601.16004",
             "abstract": "Implementation and benchmarking of quantum circuits for estimating operational inter-branch communication witnesses on IBM Quantum hardware demonstrates visibility and coherence witness measurements under realistic device conditions.  \t\t\t\t\tAI-generated summary \t\t\t\t We implement and benchmark on IBM Quantum hardware the circuit family proposed by Violaris for estimating operational inter-branch communication witnesses, defined as correlations in classical measurement records produced by compiled Wigner's-friend-style circuits. We realize a five-qubit instance of the protocol as an inter-register message-transfer pattern within a single circuit, rather than physical signaling, and evaluate its behavior under realistic device noise and compilation constraints. The circuit encodes branch-conditioned evolution of an observer subsystem whose dynamics depend on a control qubit, followed by a controlled transfer operation that probes correlations between conditional measurement contexts.   Executing on the ibm_fez backend with 20000 shots, we observe population-based visibility of 0.877, coherence witnesses of 0.840 and -0.811 along orthogonal axes, and a phase-sensitive magnitude of approximately 1.17. While the visibility metric is insensitive to some classes of dephasing, the coherence witnesses provide complementary sensitivity to off-diagonal noise.   This work does not test or discriminate among interpretations of quantum mechanics. Instead, it provides a reproducible operational constraint pipeline for evaluating detectability of non-ideal channels relative to calibrated device noise.",
             "score": 0,
-            "issue_id": 647,
+            "issue_id": 648,
             "pub_date": "2026-01-22",
             "pub_date_card": {
                 "ru": "22 января",
@@ -320,6 +320,27 @@
             "github_url": "https://github.com/christopher-altman/ibm-qml-kernel",
             "github_stars": 3,
             "pdf_title_img": "assets/pdf/title_img/2601.16004.jpg",
+            "data": {
+                "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
+            }
+        },
+        {
+            "id": "https://huggingface.co/papers/2601.15440",
+            "title": "Numba-Accelerated 2D Diffusion-Limited Aggregation: Implementation and Fractal Characterization",
+            "url": "https://huggingface.co/papers/2601.15440",
+            "abstract": "We present dla-ideal-solver, a high-performance framework for simulating two-dimensional Diffusion-Limited Aggregation (DLA) using Numba-accelerated Python. By leveraging just-in-time (JIT) compilation, we achieve computational throughput comparable to legacy static implementations while retaining high-level flexibility. We investigate the Laplacian growth instability across varying injection geometries and walker concentrations. Our analysis confirms the robustness of the standard fractal dimension D_f approx 1.71 for dilute regimes, consistent with the Witten-Sander universality class. However, we report a distinct crossover to Eden-like compact growth (D_f approx 1.87) in high-density environments, attributed to the saturation of the screening length. Beyond standard mass-radius scaling, we employ generalized Rényi dimensions and lacunarity metrics to quantify the monofractal character and spatial heterogeneity of the aggregates. This work establishes a reproducible, open-source testbed for exploring phase transitions in non-equilibrium statistical mechanics.",
+            "score": 0,
+            "issue_id": 648,
+            "pub_date": "2026-01-21",
+            "pub_date_card": {
+                "ru": "21 января",
+                "en": "January 21",
+                "zh": "1月21日"
+            },
+            "hash": "41b551f8998508a8",
+            "github_url": "https://github.com/sandyherho/dla-ideal-solver",
+            "github_stars": 1,
+            "pdf_title_img": "assets/pdf/title_img/2601.15440.jpg",
             "data": {
                 "error": "401 Client Error: Unauthorized for url: https://ngw.devices.sberbank.ru:9443/api/v2/oauth"
             }
